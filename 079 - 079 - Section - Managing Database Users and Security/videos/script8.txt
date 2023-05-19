@@ -1,0 +1,12 @@
+-- Managing Database Users and Security
+
+Hi everyone,
+
+This section of the course covers very important topics. We will learn the tasks performed to manage the database users and security.
+
+Specifically, we will learn how to manage the following:
+manage database users and their privileges, database roles, user profiles, local and common users, administrative accounts, OS authentication, and password file authentication.
+
+Understanding the details of all those topics are crucial for any DBA.
+
+So, take a deep breath, and let's dive in.

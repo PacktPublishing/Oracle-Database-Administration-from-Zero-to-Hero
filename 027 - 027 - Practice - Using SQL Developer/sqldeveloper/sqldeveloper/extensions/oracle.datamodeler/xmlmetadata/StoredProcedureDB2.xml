@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.db2.StoredProcedureDB2 parentClass="oracle.dbtools.crest.model.design.storage.StoredProcedure">
+   <property name="grantOption" dataType="java.lang.String" defaultValue="" xmlName="grantOption" xmlType="element" getter="getGrantOption" setter="setGrantOption" search="true" reffered="false"/>
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.storage.db2.Owner" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" reffered="true" search="true"/>
+   <property name="users" dataType="java.lang.String" defaultValue="" xmlName="users" xmlType="element" getter="getUsers" setter="setUsers" reffered="false" listOfRefs="true"/>
+   <roproperty name="userSet" dataType="oracle.dbtools.crest.model.design.storage.db2.StoredProcedureDB2$UserSet" getter="getUserSet"/>
+</oracle.dbtools.crest.model.design.storage.db2.StoredProcedureDB2>

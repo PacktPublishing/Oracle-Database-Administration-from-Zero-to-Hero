@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.PartitionSchemeSqlServer parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.AbstractStorageObjectSqlServer">
+   <property name="mappingTable" dataType="java.lang.String" defaultValue="" xmlName="mappingTable" xmlType="element" getter="getMappingTable" setter="setMappingTable" reffered="false" listOfRefs="true"/>
+   <property name="mappingType" dataType="java.lang.String" defaultValue="MULTIPLE FILE GROUPS" xmlName="mappingType" xmlType="element" getter="getMappingType" setter="setMappingType" reffered="false"/>
+   <roproperty name="partitionFunction" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PartitionFunctionSqlServer" getter="getPartitionFunction"/>
+   <property name="singleFileGroup" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.FileGroupSqlServer" defaultValue="" xmlName="singleFileGroup" xmlType="element" getter="getSingleFileGroup" setter="setSingleFileGroup" reffered="true"/>
+   <roproperty name="singleFileGroupSelected" dataType="boolean" getter="isSingleFileGroupSelected"/>
+   <bb_roproperty name="mappingTableSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PartitionSchemeSqlServer$MappingTable" getter="getMappingTableSet"/>
+   <roproperty name="database" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.DataBaseSqlServer" getter="getDatabase"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.PartitionSchemeSqlServer>

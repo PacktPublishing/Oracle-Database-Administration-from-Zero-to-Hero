@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.v81.IndexProxyUDBv81 parentClass="oracle.dbtools.crest.model.design.storage.udb.IndexProxyUDB">
+   <property name="collectStatistics" dataType="java.lang.String" defaultValue="NONE" xmlName="collectStatistics" xmlType="element" getter="getCollectStatistics" setter="setCollectStatistics" reffered="false"/>
+   <property name="inTablespace" dataType="oracle.dbtools.crest.model.design.storage.udb.TableSpaceUDB" defaultValue="" xmlName="inTablespace" xmlType="element" getter="getInTablespace" setter="setInTablespace" reffered="true"/>
+   <property name="level2percentageFree" dataType="int" defaultValue="10" xmlName="level2PercentageFree" xmlType="element" getter="getLevel2PercentageFree" setter="setLevel2PercentageFree" reffered="false"/>
+   <property name="pageSplit" dataType="java.lang.String" defaultValue="" xmlName="pageSplit" xmlType="element" getter="getPageSplit" setter="setPageSplit" reffered="false"/>
+   <property name="partitioned" dataType="boolean" defaultValue="true" xmlName="partitioned" xmlType="element" getter="getPartitioned" setter="setPartitioned" reffered="false"/>
+   <property name="xmlPattern" dataType="java.lang.String" defaultValue="" xmlName="xmlPattern" xmlType="element" getter="getXmlPattern" setter="setXmlPattern" reffered="false"/>
+   <property name="xmlType" dataType="java.lang.String" defaultValue="" xmlName="xmlType" xmlType="element" getter="getXmlType" setter="setXmlType" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.udb.v81.IndexProxyUDBv81>

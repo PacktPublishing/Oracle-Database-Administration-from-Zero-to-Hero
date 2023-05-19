@@ -1,0 +1,66 @@
+##############################################################################
+#
+# The format of this file is:
+#
+# Directive  Value
+#
+# with one or more spaces between the directive and the value. This file
+# can be in either UNIX or DOS format for end of line terminators. Use UNIX
+# style '/' path separators, although on Windows some directives, such as
+# SetJavaHome, can take '\' path separators.
+#
+##############################################################################
+
+#
+# By default, the product launcher will search for a JDK to use, and if none
+# can be found, it will ask for the location of a JDK and store its location
+# in this file. If a particular JDK should be used instead, uncomment the
+# line below and set the path to your preferred JDK.
+#
+# SetJavaHome /path/jdk
+
+#
+# Specify the initial size, in bytes, of the memory allocation pool. This
+# value must be a multiple of 1024 greater than 1MB. Append the letter k
+# or K to indicate kilobytes, or m or M to indicate megabytes, or g or G
+# to indicate gigabytes. The default value is chosen at runtime based on
+# the system configuration.
+# Examples:  -Xms6291456
+#            -Xms6144k
+#            -Xms6m
+#
+# You can specify one value for any JDK using AddVMOption, OR you can specify
+# separate values for 32-bit and 64-bit JDK's.
+#
+@@ADDVMOPTION_INITIAL_JAVA_MEMORY@@
+@@ADD32VMOPTION_INITIAL_JAVA_MEMORY@@
+@@ADD64VMOPTION_INITIAL_JAVA_MEMORY@@
+
+#
+# Specify the maximum size, in bytes, of the memory allocation pool. This
+# value must be a multiple of 1024 greater than 2MB. Append the letter k
+# or K to indicate kilobytes, or m or M to indicate megabytes, or g or G
+# to indicate gigabytes. The default value is chosen at runtime based on
+# the system configuration.
+# Examples:  -Xmx83886080
+#            -Xmx81920k
+#            -Xmx80m
+# On Solaris 7 and Solaris 8 SPARC platforms, the upper limit for this value
+# is approximately 4000m minus overhead amounts. On Solaris 2.6 and x86
+# platforms, the upper limit is approximately 2000m minus overhead amounts.
+# On Linux platforms, the upper limit is approximately 2000m minus overhead
+# amounts.
+#
+# If you are getting the 'Low Memory Warning' Message Dialog while running
+# the product, please increase the -Xmx value below from the default 800M to
+# something greater, like 1024M or 1250M.  If after increasing the value,
+# the product is no longer starting up because it fails to create a virtual
+# machine, then please reduce the modified -Xmx value, or use a 64bit JDK
+# which allows for very very large value for -Xmx.
+#
+# You can specify one value for any JDK using AddVMOption, OR you can specify
+# separate values for 32-bit and 64-bit JDK's.
+#
+@@ADDVMOPTION_MAXIMUM_JAVA_MEMORY@@
+@@ADD32VMOPTION_MAXIMUM_JAVA_MEMORY@@
+@@ADD64VMOPTION_MAXIMUM_JAVA_MEMORY@@

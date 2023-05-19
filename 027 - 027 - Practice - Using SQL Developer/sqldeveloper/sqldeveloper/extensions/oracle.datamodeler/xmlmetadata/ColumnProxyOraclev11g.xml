@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g parentClass="oracle.dbtools.crest.model.design.storage.oracle.v10g.ColumnProxyOraclev10g">
+   <property name="allowAnySchema" dataType="java.lang.String" defaultValue="" xmlName="allowAnySchema" xmlType="element" getter="getAllowAnySchema" setter="setAllowAnySchema" reffered="false"/>
+   <property name="allowNonSchema" dataType="java.lang.String" defaultValue="" xmlName="allowNonSchema" xmlType="element" getter="getAllowNonSchema" setter="setAllowNonSchema" reffered="false"/>
+   <property name="columnExpression" dataType="java.lang.String" defaultValue="" xmlName="columnExpression" xmlType="element" getter="getColumnExpression" setter="setColumnExpression" reffered="false"/>
+   <property name="encrypt" dataType="java.lang.String" defaultValue="" xmlName="encrypt" xmlType="element" getter="getEncrypt" setter="setEncrypt" reffered="false"/>
+   <property name="encryptionAlgorithm" dataType="java.lang.String" defaultValue="" xmlName="encryptionAlgorithm" xmlType="element" getter="getEncryptionAlgorithm" setter="setEncryptionAlgorithm" reffered="false"/>
+   <property name="expressionChanged" dataType="boolean" defaultValue="false" xmlName="expressionChanged" xmlType="element" getter="isExpressionChanged" setter="setExpressionChanged" reffered="false"/>
+   <property name="integrityAlgorithm" dataType="java.lang.String" defaultValue="" xmlName="integrityAlgorithm" xmlType="element" getter="getIntegrityAlgorithm" setter="setIntegrityAlgorithm" reffered="false"/>
+   <property name="lobStorageType" dataType="java.lang.String" defaultValue="" xmlName="lobStorageType" xmlType="element" getter="getLobStorageType" setter="setLobStorageType" reffered="false"/>
+   <property name="useSalt" dataType="java.lang.String" defaultValue="" xmlName="useSalt" xmlType="element" getter="getUseSalt" setter="setUseSalt" reffered="false"/>
+   <property name="storeAs" dataType="java.lang.String" defaultValue="BINARY XML" xmlName="storeAs" xmlType="element" getter="getStoreAs" setter="setStoreAs" reffered="false"/>
+   <roproperty name="computed" dataType="boolean" getter="isComputed"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g>

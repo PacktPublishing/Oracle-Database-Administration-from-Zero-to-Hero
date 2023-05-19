@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.StorageDesignSqlServer parentClass="oracle.dbtools.crest.model.design.storage.StorageDesign">
+<property name="dtdialogVisible" dataType="boolean" defaultValue="" xmlName="dtdialogVisible" xmlType="element" getter="isDtDialogVisible" setter="setDtDialogVisible" reffered="false"/>
+<property name="imported" dataType="boolean" defaultValue="" xmlName="imported" xmlType="element" getter="isImported" setter="setImported" reffered="false"/>
+<collection external="true" name="DataBasesSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.DataBaseSetSqlServer" xmlName="DataBasesSqlServer" itemXmlName="DataBaseSqlServer" getter="getDataBaseSet"  createItem="createDataBase"/>
+<collection external="true" name="LoginsSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.LoginSetSqlServer" xmlName="LoginsSqlServer" itemXmlName="LoginSqlServer" getter="getLoginSet"  createItem="createLogin"/>
+<collection external="true" name="UsersSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UserSetSqlServer" xmlName="UsersSqlServer" itemXmlName="UserSqlServer" getter="getUserSet"  createItem="createUser"/>
+<collection external="true" name="SchemasSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.SchemaSetSqlServer" xmlName="SchemasSqlServer" itemXmlName="SchemaSqlServer" getter="getSchemaSet"  createItem="createSchema"/>
+<collection external="true" name="RolesSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.RoleSetSqlServer" xmlName="RolesSqlServer" itemXmlName="RoleSqlServer" getter="getRoleSet"  createItem="createRole"/>
+<collection external="true" name="DefaultsSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.DefaultSetSqlServer" xmlName="DefaultsSqlServer" itemXmlName="DefaultSqlServer" getter="getDefaultSet"  createItem="createDefault"/>
+<collection external="true" name="UserDefinedTypesSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UserDefinedTypeSetSqlServer" xmlName="UserDefinedTypesSqlServer" itemXmlName="UserDefinedTypeSqlServer" getter="getUserDefinedTypeSet"  createItem="createType"/>
+<collection external="true" name="SqlServerDistinctTypes" dataType="oracle.dbtools.crest.model.design.storage.DistinctTypeProxySet" xmlName="SqlServerDistinctTypes" itemXmlName="SqlServerDistinctType" getter="getDistinctTypeProxySet"  proxyItem="true"/>
+<collection external="true" name="PartitionFunctionsSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PartitionFunctionSetSqlServer" xmlName="PartitionFunctionsSqlServer" itemXmlName="PartitionFunctionSqlServer" getter="getPartitionFunctionSet"  createItem="createPartitionFunction"/>
+<collection external="true" name="XmlSchemaCollections" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.XMLSchemaCollectionSetSqlServerv2k5" xmlName="XmlSchemaCollections" itemXmlName="XmlSchemaCollection" getter="getXmlSchemaCollectionSet"  createItem="createXMLSchemaCollectionSqlServer"/>
+<collection external="true" name="SqlServerTables" dataType="oracle.dbtools.crest.model.design.storage.TableProxySet" xmlName="SqlServerTables" itemXmlName="SqlServerTable" getter="getTableProxySet"  proxyItem="true"/>
+<collection external="true" name="SqlServerViews" dataType="oracle.dbtools.crest.model.design.storage.TableViewProxySet" xmlName="SqlServerViews" itemXmlName="SqlServerView" getter="getTableViewProxySet"  proxyItem="true"/>
+<collection external="true" name="RulesSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.RuleSetSqlServer" xmlName="RulesSqlServer" itemXmlName="RuleSqlServer" getter="getRuleSet"  createItem="createRule"/>
+<collection external="true" name="TriggersSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.TriggerSetSqlServer" xmlName="TriggersSqlServer" itemXmlName="TriggerSqlServer" getter="getTriggerSet"  createItem="createTrigger"/>
+<collection external="true" name="StoredProceduresSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.StoredProcedureSetSqlServer" xmlName="StoredProceduresSqlServer" itemXmlName="StoredProcedureSqlServer" getter="getStoredProcedureSet"  createItem="createStoredProcedure"/>
+<roproperty name="dataBaseSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.DataBaseSetSqlServer" getter="getDataBaseSet"/>
+<roproperty name="dataFileSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.DataFileSetSqlServer" getter="getDataFileSet"/>
+<roproperty name="defaultSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.DefaultSetSqlServer" getter="getDefaultSet"/>
+<roproperty name="distinctTypeProxySet" dataType="oracle.dbtools.crest.model.design.storage.DistinctTypeProxySet" getter="getDistinctTypeProxySet"/>
+<roproperty name="fkProxySet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.FKProxySetSqlServer" getter="getFKProxySet"/>
+<roproperty name="fileGroupSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.FileGroupSetSqlServer" getter="getFileGroupSet"/>
+<roproperty name="indexOnViewSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.IndexOnViewSetSqlServer" getter="getIndexOnViewSet"/>
+<roproperty name="instanceDescriptorColumnSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.InstanceDescriptorColumnSetSqlServer" getter="getInstanceDescriptorColumnSet"/>
+<roproperty name="loginSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.LoginSetSqlServer" getter="getLoginSet"/>
+<roproperty name="pkproxySet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PKProxySetSqlServer" getter="getPKProxySet"/>
+<roproperty name="permissionsSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PermissionsSetSqlServer" getter="getPermissionsSet"/>
+<roproperty name="roleSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.RoleSetSqlServer" getter="getRoleSet"/>
+<roproperty name="ruleSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.RuleSetSqlServer" getter="getRuleSet"/>
+<roproperty name="schemaset" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.SchemaSetSqlServer" getter="getSchemaSet"/>
+<roproperty name="selectedsubView" dataType="oracle.dbtools.crest.swingui.DesignPartView" getter="getSelectedSubView"/>
+<roproperty name="storageDesignsqlserverEstimates" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.StorageDesignSqlServerEstimates" getter="getStorageDesignSqlServerEstimates"/>
+<roproperty name="storedProcedureset" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.StoredProcedureSetSqlServer" getter="getStoredProcedureSet"/>
+<roproperty name="triggerSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.TriggerSetSqlServer" getter="getTriggerSet"/>
+<roproperty name="uniqueProxySet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UniqueProxySetSqlServer" getter="getUniqueProxySet"/>
+<roproperty name="useduserDefinedDataSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UsedUserDefinedDataSet" getter="getUsedUserDefinedDataSet"/>
+<roproperty name="userDefinedTypeSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UserDefinedTypeSetSqlServer" getter="getUserDefinedTypeSet"/>
+<roproperty name="userSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UserSetSqlServer" getter="getUserSet"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.StorageDesignSqlServer>

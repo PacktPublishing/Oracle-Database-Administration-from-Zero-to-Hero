@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.CollectionTypeProxy parentClass="oracle.dbtools.crest.model.design.storage.RelationalObjectProxy">
+   <roproperty name="collectionType" dataType="oracle.dbtools.crest.model.design.datatypes.CollectionType" getter="getCollectionType"/>
+</oracle.dbtools.crest.model.design.storage.CollectionTypeProxy>

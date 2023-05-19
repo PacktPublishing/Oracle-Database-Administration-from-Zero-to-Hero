@@ -1,0 +1,6 @@
+Compare between NOARCHIVELOG and ARCHIVELOG modes [3]
+Set archive destinations [5]
+Control the archived redo log file name format [9]
+Change the database archiving mode [10]
+Display the current archiving mode [13]
+Describe best practices of managing the archived redo log files [16]

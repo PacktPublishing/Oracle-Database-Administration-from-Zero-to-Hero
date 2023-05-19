@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.queries">
+    <module_version install_time="1619056589923" last="true" origin="Ant" specification_version="1.44">
+        <file crc="28992633" name="config/ModuleAutoDeps/org-netbeans-modules-queries.xml"/>
+        <file crc="4168841736" name="config/Modules/org-netbeans-modules-queries.xml"/>
+        <file crc="227892034" name="modules/locale/org-netbeans-modules-queries_de.jar"/>
+        <file crc="25713314" name="modules/locale/org-netbeans-modules-queries_es.jar"/>
+        <file crc="1557540772" name="modules/locale/org-netbeans-modules-queries_fr.jar"/>
+        <file crc="740389046" name="modules/locale/org-netbeans-modules-queries_it.jar"/>
+        <file crc="1189865346" name="modules/locale/org-netbeans-modules-queries_ja.jar"/>
+        <file crc="2643881415" name="modules/locale/org-netbeans-modules-queries_ko.jar"/>
+        <file crc="2453748539" name="modules/locale/org-netbeans-modules-queries_pt_BR.jar"/>
+        <file crc="3545446058" name="modules/locale/org-netbeans-modules-queries_zh_CN.jar"/>
+        <file crc="78625475" name="modules/locale/org-netbeans-modules-queries_zh_TW.jar"/>
+        <file crc="1339384676" name="modules/org-netbeans-modules-queries.jar"/>
+    </module_version>
+</module>

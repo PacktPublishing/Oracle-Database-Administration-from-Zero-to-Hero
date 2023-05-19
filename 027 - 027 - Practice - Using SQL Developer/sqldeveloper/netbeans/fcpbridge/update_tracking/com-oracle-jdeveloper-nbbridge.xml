@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="com.oracle.jdeveloper.nbbridge">
+    <module_version install_time="1619058352394" last="true" origin="installer" specification_version="1.2">
+        <file crc="2188335032" name="config/Modules/com-oracle-jdeveloper-nbbridge.xml"/>
+        <file crc="173306752" name="modules/com-oracle-jdeveloper-nbbridge.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.multidimensional.Measure.AggregateFunction parentClass="java.lang.Object" innerClass="true">
+   <property name="measureAlias" dataType="java.lang.String" defaultValue="" xmlName="measureAlias" xmlType="element" getter="getMeasureAlias" setter="setMeasureAlias" reffered="false"/>
+   <property name="name" dataType="java.lang.String" defaultValue="" xmlName="name" xmlType="attribute" getter="getName" setter="setName" reffered="false"/>
+   <property name="objectID" dataType="java.lang.String" defaultValue="" xmlName="id" xmlType="attribute" getter="getObjectID" setter="setObjectID" reffered="false"/>
+   <collection name="measureDimensions" dataType="java.util.List" xmlName="measureDimensions" itemXmlName="measureDimension" itemIsRef="true" getter="getDimensions" nativeList="true" orderTheList="true"/>
+   <collection name="summaryLevels" dataType="java.util.List" xmlName="summaryLevels" itemXmlName="summaryLevel" itemIsRef="true" getter="getLevels" nativeList="true" orderTheList="true"/>
+   <roproperty name="definedOndimension" dataType="boolean" getter="isDefinedOnDimension"/>
+   <roproperty name="name" dataType="java.lang.String" getter="getName"/>
+</oracle.dbtools.crest.model.design.multidimensional.Measure.AggregateFunction>

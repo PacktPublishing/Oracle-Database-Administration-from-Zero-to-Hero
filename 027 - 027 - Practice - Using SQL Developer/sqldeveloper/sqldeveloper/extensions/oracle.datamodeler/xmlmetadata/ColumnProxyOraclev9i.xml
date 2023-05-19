@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v9i.ColumnProxyOraclev9i parentClass="oracle.dbtools.crest.model.design.storage.oracle.ColumnProxyOracle">
+   <property name="additionalNTS" dataType="java.lang.String" defaultValue="" xmlName="additionalNTS" xmlType="element" getter="getAdditionalNTS" setter="setAdditionalNTS" reffered="false"/>
+   <property name="cache" dataType="java.lang.String" defaultValue="CACHE" xmlName="cache" xmlType="element" getter="getCacheValue" setter="setCache" reffered="false"/>
+   <property name="chunk" dataType="int" defaultValue="0" xmlName="chunk" xmlType="element" getter="getChunk" setter="setChunk" reffered="false"/>
+   <property name="elementType" dataType="java.lang.String" defaultValue="" xmlName="elementType" xmlType="element" getter="getElementType" setter="setElementType" reffered="false"/>
+   <property name="freepools" dataType="int" defaultValue="0" xmlName="freepools" xmlType="element" getter="getFreepools" setter="setFreepools" reffered="false"/>
+   <property name="lobSegmentName" dataType="java.lang.String" defaultValue="" xmlName="lobSegmentName" xmlType="element" getter="getLobSegmentName" setter="setLobSegmentName" reffered="false"/>
+   <property name="lobSegname" dataType="java.lang.String" defaultValue="" xmlName="lobSegname" xmlType="element" getter="getLobSegname" setter="setLobSegname" reffered="false"/>
+   <property name="logging" dataType="java.lang.String" defaultValue="" xmlName="logging" xmlType="element" getter="getLogging" setter="setLogging" reffered="false"/>
+   <property name="ntReturn" dataType="java.lang.String" defaultValue="" xmlName="ntReturn" xmlType="element" getter="getNtReturn" setter="setNtReturn" reffered="false"/>
+   <property name="ntStorageTable" dataType="java.lang.String" defaultValue="" xmlName="ntStorageTable" xmlType="element" getter="getNtStorageTable" setter="setNtStorageTable" reffered="false"/>
+   <property name="oldVersions" dataType="java.lang.String" defaultValue="RETENTION" xmlName="oldVersions" xmlType="element" getter="getOldVersions" setter="setOldVersions" reffered="false"/>
+   <property name="pctVersion" dataType="int" defaultValue="0" xmlName="pctVersion" xmlType="element" getter="getPCTVersion" setter="setPCTVersion" reffered="false"/>
+   <property name="scBufferPool" dataType="java.lang.String" defaultValue="DEFAULT" xmlName="scBufferPool" xmlType="element" getter="getSCBufferPool" setter="setSCBufferPool" reffered="false"/>
+   <property name="scFreeLists" dataType="int" defaultValue="1" xmlName="scFreeLists" xmlType="element" getter="getSCFreeLists" setter="setSCFreeLists" reffered="false"/>
+   <property name="scFreelistGroups" dataType="int" defaultValue="1" xmlName="scFreelistGroups" xmlType="element" getter="getSCFreelistGroups" setter="setSCFreelistGroups" reffered="false"/>
+   <property name="scInitialExtent" dataType="long" defaultValue="0" xmlName="scInitialExtent" xmlType="element" getter="getSCInitialExtent" setter="setSCInitialExtent" reffered="false"/>
+   <property name="scMaxExtents" dataType="java.lang.String" defaultValue="UNLIMITED" xmlName="scMaxExtents" xmlType="element" getter="getSCMaxExtents" setter="setSCMaxExtents" reffered="false"/>
+   <property name="scMinExtents" dataType="int" defaultValue="1" xmlName="scMinExtents" xmlType="element" getter="getSCMinExtents" setter="setSCMinExtents" reffered="false"/>
+   <property name="scNextExtent" dataType="long" defaultValue="0" xmlName="scNextExtent" xmlType="element" getter="getSCNextExtent" setter="setSCNextExtent" reffered="false"/>
+   <property name="scPctIncrease" dataType="int" defaultValue="0" xmlName="scPctIncrease" xmlType="element" getter="getSCPctIncrease" setter="setSCPctIncrease" reffered="false"/>
+   <property name="storageInRow" dataType="java.lang.String" defaultValue="ENABLE" xmlName="storageInRow" xmlType="element" getter="getStorageInRow" setter="setStorageInRow" reffered="false"/>
+   <property name="storeAs" dataType="java.lang.String" defaultValue="CLOB" xmlName="storeAs" xmlType="element" getter="getStoreAs" setter="setStoreAs" reffered="false"/>
+   <property name="substitutable" dataType="java.lang.String" defaultValue="" xmlName="substitutable" xmlType="element" getter="getSubtitutable" setter="setSubtitutable" reffered="false"/>
+   <property name="tablespace" dataType="oracle.dbtools.crest.model.design.storage.oracle.v9i.TableSpaceOraclev9i" defaultValue="" xmlName="tablespace" xmlType="element" getter="getTablespace" setter="setTablespace" reffered="true"/>
+   <property name="xmlSchemaElement" dataType="java.lang.String" defaultValue="" xmlName="xmlSchemaElement" xmlType="element" getter="getXmlSchemaElement" setter="setXmlSchemaElement" reffered="false"/>
+   <property name="xmlSchemaUrl" dataType="java.lang.String" defaultValue="" xmlName="xmlSchemaUrl" xmlType="element" getter="getXmlSchemaUrl" setter="setXmlSchemaUrl" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v9i.ColumnProxyOraclev9i>

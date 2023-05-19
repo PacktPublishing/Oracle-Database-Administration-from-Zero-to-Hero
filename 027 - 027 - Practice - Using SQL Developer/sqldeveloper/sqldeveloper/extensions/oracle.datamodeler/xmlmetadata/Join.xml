@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.Join parentClass="oracle.dbtools.crest.model.design.relational.ColumnUsage">
+   <property name="refColumn" dataType="oracle.dbtools.crest.model.design.relational.Column" defaultValue="" xmlName="refColumn" xmlType="element" getter="getRefColumn" setter="setRefColumn" reffered="true"/>
+   <property name="refColumnID" dataType="java.lang.String" defaultValue="" xmlName="refColumnID" xmlType="element" getter="getRefColumnID" setter="setRefColumnID" reffered="false"/>
+   <property name="refColumnName" dataType="java.lang.String" defaultValue="" xmlName="refColumnName" xmlType="element" getter="getRefColumnName" setter="setRefColumnName" reffered="false"/>
+   <property name="refSchema" dataType="java.lang.String" defaultValue="" xmlName="refSchema" xmlType="element" getter="getRefSchema" setter="setRefSchema" reffered="false"/>
+   <property name="refTable" dataType="java.lang.String" defaultValue="" xmlName="refTable" xmlType="element" getter="getRefTable" setter="setRefTable" reffered="false"/>
+</oracle.dbtools.crest.model.design.relational.Join>

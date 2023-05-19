@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.Design parentClass="oracle.dbtools.crest.model.ModelIDObject" xmlName="OSDM_Design">
+   <property name="modelPersistence" dataType="int" defaultValue="1" xmlName="modelPersistence" xmlType="element" getter="getModelPersistence" setter="setModelPersistence" reffered="false" presentationName="Model Persistence">
+    <codedEnum>
+	 <item code="1" value="Model in single file"/>
+	 <item code="2" value="Model in many files"/>
+	 <item code="3" value="Mixed mode"/>
+	</codedEnum>
+   </property>
+   <property name="capitalNames" dataType="boolean" defaultValue="" xmlName="capitalNames" xmlType="element" getter="isCapitalNames" setter="setCapitalNames" reffered="false"/>
+   <property name="designId" dataType="java.lang.String" defaultValue="" xmlName="designId" xmlType="element" getter="getDesignID" setter="setDesignID" reffered="false"/>
+   <property name="version" dataType="float" defaultValue="" xmlName="version" xmlType="attribute" getter="getVersion" setter="setLoadedVersion" reffered="false"/>
+   <property name="BusinessInfoModel" external="true" afterCollection="ChangeRequests" dataType="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign"  defaultValue="" xmlName="BusinessInfoModel" xmlType="element" getter="getBusinessInfoDesign" createItem="getBusinessInfoDesign" removeItem="getBusinessInfoDesign" reffered="false"/>
+   <property name="DataTypesModel" external="true" afterCollection="ChangeRequests" dataType="oracle.dbtools.crest.model.design.datatypes.DataTypesDesign"  defaultValue="" xmlName="DataTypesModel" xmlType="element" getter="getDataTypesDesign" createItem="getDataTypesDesign" removeItem="getDataTypesDesign" reffered="false"/>
+   <property name="LogicalModel" external="true" afterCollection="ChangeRequests" dataType="oracle.dbtools.crest.model.design.logical.LogicalDesign"  defaultValue="" xmlName="LogicalModel" xmlType="element" getter="getLogicalDesign" createItem="getLogicalDesign" removeItem="getLogicalDesign" reffered="false"/>
+   <property name="extendedMap" external="true" afterCollection="RelationalModels"  dataType="oracle.dbtools.crest.model.xtdmapping.ExtendedMap" defaultValue="" xmlName="extendedMap" xmlType="element" getter="getExtendedMap" createItem="getExtendedMap" removeItem="clearMappings" reffered="false"/>
+   <property name="ProcessModel" external="true" afterCollection="RelationalModels" dataType="oracle.dbtools.crest.model.design.process.ProcessModel"  defaultValue="" xmlName="ProcessModel" xmlType="element" getter="getProcessModel" createItem="getProcessModel" removeItem="getProcessModel" reffered="false"/>
+   <collection name="usedDesignStorageDescriptors" dataType="java.util.List" xmlName="usedDesignStorageDescriptors" itemXmlName="designDescr" getter="getDesignStorageDescriptors" createItem="createDesignStorageDesc" removeItem="removeDesignStorageDesc" getItemByID="getDesignStorageDesc"  nativeList="true" orderTheList="true"/>
+   <collection external="true" name="defaultDBSites" dataType="java.util.List" xmlName="defaultDBSites" itemXmlName="DBSite" getter="getDefaultRDBMSSites" createItem="createRDBMSSite" getItemByID="getRDBMSSiteByID" />
+   <collection external="true" name="designLevelDBSites" dataType="java.util.List" xmlName="designLevelDBSites" itemXmlName="DBSite" getter="getDL_RDBMSSites" createItem="createRDBMSSite" getItemByID="getRDBMSSiteByID" />
+   <collection external="true" name="defaultDomains" dataType="java.util.List" xmlName="defaultDomains" itemXmlName="Domain" getter="getDefaultDomainsList" createItem="createDomain" getItemByID="getDomainByID" />
+   <collection external="true" name="designLevelDomains" dataType="java.util.List" xmlName="designLevelDomains" itemXmlName="Domain" getter="getDL_DomainsList" createItem="createDomain" getItemByID="getDomainByID" />
+   <collection external="true" name="ChangeRequests" dataType="oracle.dbtools.crest.model.ChangeRequestSet" xmlName="ChangeRequests" itemXmlName="ChangeRequest" getter="getChangeRequestSet" createItem="createChangeRequest"/>
+   <collection external="true" name="RelationalModels" dataType="oracle.dbtools.crest.model.design.relational.RelationalDesignSet" xmlName="RelationalModels" itemXmlName="RelationalModel" getter="getRelationalDesigns" createItem="addRelationalDesign" removeItem="removeRelationalDesign"/>
+   <collection external="true" name="DimensionalModels" dataType="oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesignSet" xmlName="DimensionalModels" itemXmlName="DimensionalModel" getter="getMultidimensionalDesigns" createItem="addMultidimensionalDesign" removeItem="removeMultidimensionalDesign"/>
+   <processing afterInitExt="doAfterExternalLoad" />
+   <aa_property name="designLevelSettings" dataType="java.lang.String" defaultValue="" xmlName="designLevelSettings" xmlType="element" getter="getDesignLevelSettings" setter="setDesignLevelSettings" reffered="false"/>
+   <aa_property name="loadedVersion" dataType="float" defaultValue="" xmlName="loadedVersion" xmlType="element" getter="getLoadedVersion" setter="setLoadedVersion" reffered="false"/>
+   <aa_property name="propagatepKChahges" dataType="boolean" defaultValue="" xmlName="propagatepKChahges" xmlType="element" getter="isPropagatePKChahges" setter="setPropagatePKChahges" reffered="false"/>
+   <cc_property name="rdBMSSiteSet" dataType="oracle.dbtools.crest.model.design.storage.RDBMSSiteSet" defaultValue="" xmlName="rdBMSSiteSet" xmlType="element" getter="getRDBMSSiteSet" setter="setRDBMSSiteSet" reffered="true"/>
+   <bb_property name="relationalDesign" dataType="oracle.dbtools.crest.model.design.relational.RelationalDesign" defaultValue="" xmlName="relationalDesign" xmlType="element" getter="getRelationalDesign" setter="setRelationalDesign" reffered="true"/>
+   <roproperty name="design" dataType="boolean" getter="isDesign"/>
+   <roproperty name="editable" dataType="boolean" getter="isEditable"/>
+   <roproperty name="loading" dataType="boolean" getter="isLoading"/>
+   <roproperty name="repositoryrelated" dataType="boolean" getter="isRepositoryRelated"/>
+   <roproperty name="system" dataType="boolean" getter="isSystem"/>
+   <roproperty name="allTopLevelObjects" dataType="interface java.util.Collection" getter="getAllTopLevelObjects"/>
+   <roproperty name="businessInfoDesign" dataType="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" getter="getBusinessInfoDesign"/>
+   <roproperty name="changeRequestSet" dataType="oracle.dbtools.crest.model.ChangeRequestSet" getter="getChangeRequestSet"/>
+   <roproperty name="constraintSet" dataType="oracle.dbtools.crest.model.design.constraint.ConstraintSet" getter="getConstraintSet"/>
+   <roproperty name="corrObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getCorrObject"/>
+   <roproperty name="dldomains" dataType="oracle.dbtools.crest.model.design.DLDomains" getter="getDLDomains"/>
+   <roproperty name="dlSettingsObject" dataType="oracle.dbtools.crest.model.design.Design$DLSettingsObject" getter="getDLSettingsObject"/>
+   <roproperty name="dataTypesdesign" dataType="oracle.dbtools.crest.model.design.datatypes.DataTypesDesign" getter="getDataTypesDesign"/>
+   <roproperty name="defaultRdBMSTypeSet" dataType="oracle.dbtools.crest.model.design.storage.RDBMSTypeSet" getter="getDefaultRDBMSTypeSet"/>
+   <roproperty name="designObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getDesignObject"/>
+   <roproperty name="designPartView" dataType="oracle.dbtools.crest.swingui.DesignPartView" getter="getDesignPartView"/>
+   <roproperty name="designPartsTodeleteFromLocalFS" dataType="interface java.util.List" getter="getDesignPartsToDeleteFromLocalFS"/>
+   <roproperty name="designPartsTodeleteFromRepository" dataType="interface java.util.List" getter="getDesignPartsToDeleteFromRepository"/>
+   <col_property name="domainFileNames" dataType="interface java.util.Collection" getter="getDomainFileNames"/>
+   <roproperty name="domainSet" dataType="oracle.dbtools.crest.model.design.DomainSet" getter="getDomainSet"/>
+   <roproperty name="exportedDesignParts" dataType="interface java.util.List" getter="getExportedDesignParts"/>
+   <roproperty name="fkMap" dataType="interface java.util.Map" getter="getFKMap"/>
+   <roproperty name="fwDEngineering" dataType="oracle.dbtools.crest.model.design.engineering.FWDEngineering" getter="getFWDEngineering"/>
+   <roproperty name="firstOfType" dataType="oracle.dbtools.crest.model.design.storage.RDBMSSite" getter="getFirstOfType"/>
+   <roproperty name="firstOpenRelationalDesign" dataType="oracle.dbtools.crest.model.design.relational.RelationalDesign" getter="getFirstOpenRelationalDesign"/>
+   <roproperty name="importedDesignNames" dataType="[Ljava.lang.String" getter="getImportedDesignNames"/>
+   <roproperty name="logicalDatatypeSet" dataType="oracle.dbtools.crest.model.design.LogicalDatatypeSet" getter="getLogicalDatatypeSet"/>
+   <roproperty name="multidimensionalDesigns" dataType="oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesignSet" getter="getMultidimensionalDesigns"/>
+   <roproperty name="rdBMS" dataType="java.lang.String" getter="getRDBMS"/>
+   <roproperty name="rdBMSTypeSet" dataType="oracle.dbtools.crest.model.design.storage.RDBMSTypeSet" getter="getRDBMSTypeSet"/>
+   <roproperty name="rlDomains" dataType="oracle.dbtools.crest.model.design.RLDomains" getter="getRLDomains"/>
+   <roproperty name="relationalDesigns" dataType="oracle.dbtools.crest.model.design.relational.RelationalDesignSet" getter="getRelationalDesigns"/>
+   <roproperty name="reverseEngineering" dataType="oracle.dbtools.crest.model.design.engineering.ReverseEngineering" getter="getReverseEngineering"/>
+   <roproperty name="storableDesignObjects" dataType="interface java.util.Collection" getter="getStorableDesignObjects"/>
+   <roproperty name="storableDesignParts" dataType="interface java.util.List" getter="getStorableDesignParts"/>
+   <roproperty name="storageDesign" dataType="oracle.dbtools.crest.model.design.storage.StorageDesign" getter="getStorageDesign"/>
+   <roproperty name="storageDesignFactory" dataType="oracle.dbtools.crest.model.design.storage.StorageDesignFactory" getter="getStorageDesignFactory"/>
+   <roproperty name="topDesignObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getTopDesignObject"/>
+   <roproperty name="topDesignObjectId" dataType="java.lang.String" getter="getTopDesignObjectId"/>
+   <roproperty name="undoManager" dataType="oracle.dbtools.crest.model.design.undo.DP_UndoManager" getter="getUndoManager"/>
+</oracle.dbtools.crest.model.design.Design>

@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.MaskTemplateFileWrapper parentClass="java.lang.Object" xmlName="MaskTemplateFile">
+   <collection name="maskTemplates" dataType="java.util.List" xmlName="maskTemplates" itemXmlName="MaskTemplate" getter="getMaskTemplates" createItem="createMaskTemplate" removeItem="removeMaskTemplate" getItemByID="getMaskTemplateByID"  nativeList="true"/>
+   <roproperty name="maskTemplatesById" dataType="oracle.dbtools.crest.model.MaskTemplate" getter="getMaskTemplateByID"/>
+</oracle.dbtools.crest.model.MaskTemplateFileWrapper>

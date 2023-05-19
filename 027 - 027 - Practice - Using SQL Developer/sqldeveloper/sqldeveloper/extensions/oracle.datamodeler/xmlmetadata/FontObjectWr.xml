@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.FontObjectWr xmlName="FontObject">
+   <property name="foType" dataType="java.lang.String" defaultValue="" xmlName="foType" xmlType="element" getter="getFoType" setter="setFoType" reffered="false"/>
+   <property name="fontName" dataType="java.lang.String" defaultValue="Dialog" xmlName="fontName" xmlType="element" getter="getFontName" setter="setFontName" reffered="false"/>
+   <property name="fontSize" dataType="int" defaultValue="10" xmlName="fontSize" xmlType="element" getter="getFontSize" setter="setFontSize" reffered="false"/>
+   <property name="fontStyle" dataType="int" defaultValue="0" xmlName="fontStyle" xmlType="element" getter="getFontStyle" setter="setFontStyle" reffered="false"/>
+   <property name="colorRGB" dataType="int" defaultValue="" xmlName="colorRGB" xmlType="element" getter="getColor_RGB" setter="setColor_RGB" reffered="false" colorProperty="true"/>   
+   <property name="foTypeID" dataType="java.lang.String" defaultValue="" xmlName="foTypeID" xmlType="element" getter="getFoTypeID" setter="setFoTypeID" reffered="false"/>
+</oracle.dbtools.crest.model.design.FontObjectWr>

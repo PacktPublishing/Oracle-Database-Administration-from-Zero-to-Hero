@@ -1,0 +1,37 @@
+* intro:
+Hi everyone and welcome to the "Oracle database administration from zero to hero" course and I am so excited to have you on board.
+Oracle database is known to be the RDBMS number one in the world, and the Oracle DBA job is known to be a very well-paid profession. Yet, so many IT graduates find it challenging to get into it. They do not have a clear pathway with all the materials they can find online.
+My name is Ahmed Baraka and have been working as a DBA for more than 20 years... and I understand how it could be challenging for a beginner to get into the Oracle DBA career.
+Powered with my 7-year experience as an instructor together with my professional experience as a DBA, I designed this course to teach you on becoming a professional Oracle database administrator.
+Even if you have never worked with Oracle databases before, don't worry. The course takes by its step-by-step practices all the way from the very basics of managing Oracle database all the way up to the professional level.
+*skills:
+By the end of this course, you will be able to perform the following skills:
+create Oracle databases,
+implement Oracle database backup and recovery plans,
+administer Oracle database storage,
+apply patches and upgrade Oracle databases,
+manage Oracle database multitenancy,
+troubleshoot Oracle database issues,
+deploy Oracle Restart configuration,
+and perform fundamental Oracle database performance tuning tasks.
+* topics:
+The course covers so many topics.. it would be boring to mention them all. I'd rather list the areas that are covered by the course, which include the following:
+Oracle database basic administration,
+Managing database users and security,
+database backup and recovery,
+database patching and upgrade,
+database connectivity,
+Oracle automatic storage management,
+and many more.
+* Course Layout
+If you are already a student of any of my other courses, you should be aware of the course layout.
+Most course lectures are either Concept Lectures or Practice Lectures.
+In Concept Lectures, I will explain the concepts of the lecture topic.
+The Practice Lectures are actually practical exercises. You will have hands-on experience on implementing the most important concepts of each topic.
+As Oracle keeps developing and enhancing its database product, I will constantly add new materials and keep updating the course contents to keep you updated with the latest changes.
+* Accessing Downloadable Resource:
+Every concept and practice lecture comes with some files to download.
+To get access to those files, you should see a button beside the lecture name. Click on it and you should be able to download the lecture files from over there.
+* thanks:
+Thank you guys for registering into the course.
+And I look forward to seeing you in the first lecture… till then, thank you very much!

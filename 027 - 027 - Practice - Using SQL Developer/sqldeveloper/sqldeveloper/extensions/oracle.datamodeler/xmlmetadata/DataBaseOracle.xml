@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.DataBaseOracle parentClass="oracle.dbtools.crest.model.design.storage.StorageObject">
+   <property name="archiveLog" dataType="java.lang.String" defaultValue="YES" xmlName="archiveLog" xmlType="element" getter="getArchiveLog" setter="setArchiveLog" reffered="false"/>
+   <property name="characterSet" dataType="java.lang.String" defaultValue="" xmlName="characterSet" xmlType="element" getter="getCharacterSet" setter="setCharacterSet" reffered="false"/>
+   <property name="controlFileReuse" dataType="java.lang.String" defaultValue="YES" xmlName="controlFileReuse" xmlType="element" getter="getControlFileReuse" setter="setControlFileReuse" reffered="false"/>
+   <property name="maxDataFiles" dataType="int" defaultValue="10" xmlName="maxDataFiles" xmlType="element" getter="getMaxDataFiles" setter="setMaxDataFiles" reffered="false"/>
+   <property name="maxInstances" dataType="int" defaultValue="1" xmlName="maxInstances" xmlType="element" getter="getMaxInstances" setter="setMaxInstances" reffered="false"/>
+   <property name="maxLogFiles" dataType="int" defaultValue="1" xmlName="maxLogFiles" xmlType="element" getter="getMaxLogFiles" setter="setMaxLogFiles" reffered="false"/>
+   <property name="maxLogHistory" dataType="int" defaultValue="0" xmlName="maxLogHistory" xmlType="element" getter="getMaxLogHistory" setter="setMaxLogHistory" reffered="false"/>
+   <property name="maxLogMembers" dataType="int" defaultValue="1" xmlName="maxLogMembers" xmlType="element" getter="getMaxLogMembers" setter="setMaxLogMembers" reffered="false"/>
+   <property name="nationalCharacterSet" dataType="java.lang.String" defaultValue="" xmlName="nationalCharacterSet" xmlType="element" getter="getNationalCharacterSet" setter="setNationalCharacterSet" reffered="false"/>
+   <collection name="dataFileCollection" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="dataFiles" itemXmlName="DataFile" getter="getDataFileCollection" createItem="createDataFile"/>
+   <roproperty name="dataFiles" dataType="interface java.util.List" getter="getDataFiles"/>
+   <collection name="redoLogGroupCollection" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="redoLogGroups" itemXmlName="RedoLogGroup" getter="getRedoLogGroupCollection" createItem="createRedoLogGroup"/>
+   <roproperty name="redoLogGroups" dataType="interface java.util.List" getter="getRedoLogGroups"/>
+</oracle.dbtools.crest.model.design.storage.oracle.DataBaseOracle>

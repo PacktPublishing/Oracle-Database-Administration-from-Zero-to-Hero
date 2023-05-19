@@ -1,0 +1,10 @@
+# add the following to the listener.ora file in srv1:
+
+SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (GLOBAL_DBNAME = DB11G.WORLD)
+      (ORACLE_HOME = /u01/app/oracle/product/12.2.0/db_1)
+      (SID_NAME = ORADB2)
+    )
+  )

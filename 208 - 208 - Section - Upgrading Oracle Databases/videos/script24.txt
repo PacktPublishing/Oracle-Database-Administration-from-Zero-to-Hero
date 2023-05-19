@@ -1,0 +1,11 @@
+-- Upgrading Oracle Databases
+Hi everyone,
+Among the basic DBA responsibilities is upgrading Oracle databases to higher releases.
+
+Oracle provides tools to perform Oracle database upgrades as automated processes, with high availability, and adaptable with the configurations in use.
+
+In this section, we will learn the standard Oracle approach for upgrading  single-instance databases to the release 21c.
+
+First, we will upgrade a database with no ASM, then we will upgrade a database with ASM in place.
+
+Let's get started and see how Oracle faciliates the database upgrade process.

@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.multidimensional.CalculatedAttribute parentClass="oracle.dbtools.crest.model.design.DesignObject">
+   <property name="function" dataType="java.lang.String" defaultValue="" xmlName="function" xmlType="element" getter="getFunction" setter="setFunction" reffered="false"/>
+   <property name="level" dataType="oracle.dbtools.crest.model.design.multidimensional.Level" defaultValue="" xmlName="level" xmlType="element" getter="getLevel" setter="setLevel" reffered="true"/>
+</oracle.dbtools.crest.model.design.multidimensional.CalculatedAttribute>

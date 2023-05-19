@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexHashPartitionOraclev10g parentClass="oracle.dbtools.crest.model.design.storage.oracle.IndexHashPartitionOracle">
+   <collection name="lobItems" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="lobItems" itemXmlName="LobItem" getter="getLobItems" createItem="createLobItem"/>
+   <roproperty name="lobItems" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getLobItems"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexHashPartitionOraclev10g>

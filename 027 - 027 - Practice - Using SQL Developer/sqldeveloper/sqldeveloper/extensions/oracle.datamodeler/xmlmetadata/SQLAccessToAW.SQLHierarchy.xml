@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.multidimensional.SQLAccessToAW.SQLHierarchy parentClass="java.lang.Object" innerClass="true">
+   <property name="hierarchyID" dataType="java.lang.String" defaultValue="" xmlName="hierarchyID" xmlType="element" getter="getHierarchyID" setter="setHierarchyID" reffered="false"/>
+   <property name="labelAttribute" dataType="oracle.dbtools.crest.model.design.multidimensional.SQLAttribute" defaultValue="" xmlName="labelAttribute" xmlType="element" getter="getLabelAttribute" createItem="createLabelAttribute" removeItem="removeLabelAttribute" reffered="false"/>
+   <property name="rollupForm" dataType="boolean" defaultValue="" xmlName="rollupForm" xmlType="element" getter="isRollupForm" setter="setRollupForm" reffered="false"/>
+   <collection name="selectedLevels" dataType="java.util.List" xmlName="selectedLevels" itemXmlName="selectedLevel" itemIsRef="true" getter="getSelectedLevels" nativeList="true" orderTheList="true"/>
+   <roproperty name="levelSelected" dataType="boolean" getter="isLevelSelected"/>
+   <roproperty name="hierarchy" dataType="oracle.dbtools.crest.model.design.multidimensional.Hierarchy" getter="getHierarchy"/>
+   <roproperty name="selectedLevels" dataType="interface java.util.List" getter="getSelectedLevels"/>
+   <roproperty name="validSelLevels" dataType="interface java.util.List" getter="getValidSelLevels"/>
+</oracle.dbtools.crest.model.design.multidimensional.SQLAccessToAW.SQLHierarchy>

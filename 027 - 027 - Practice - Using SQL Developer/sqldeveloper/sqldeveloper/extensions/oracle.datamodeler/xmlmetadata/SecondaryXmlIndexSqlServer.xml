@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.SecondaryXmlIndexSqlServer parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.AbstractStorageObjectSqlServer">
+   <property name="indexType" dataType="java.lang.String" defaultValue="" xmlName="indexType" xmlType="element" getter="getIndexType" setter="setIndexType" reffered="false"/>
+   <roproperty name="primaryXmlIndex" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.IndexProxySqlServer" getter="getPrimaryXmlIndex"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.SecondaryXmlIndexSqlServer>

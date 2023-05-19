@@ -1,0 +1,11 @@
+-- Managing Database Segments
+
+In this section, we will concentrate on managing the segments.
+
+Specifically, we will learn how to shrink fragmented segments, use deferred segment creation, and utilize table compression.
+
+If you are in a rush, you can skip this section and come back to it later. Those tasks are not top priority tasks for DBAs.
+
+They are included in the curriculum because they could be part of the routine DBA job and because they are required by the DBA certifcation exams.
+
+Let's start with this section lectures.

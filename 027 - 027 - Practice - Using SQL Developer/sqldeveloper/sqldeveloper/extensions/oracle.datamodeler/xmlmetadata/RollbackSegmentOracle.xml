@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.RollbackSegmentOracle parentClass="oracle.dbtools.crest.model.design.storage.oracle.AbstractStorageObjectOracle">
+   <property name="initialSizeUnit" dataType="java.lang.String" defaultValue="" xmlName="initialSizeUnit" xmlType="element" getter="getInitialSizeUnit" setter="setInitialSizeUnit" search="true" reffered="false"/>
+   <property name="nextSizeUnit" dataType="java.lang.String" defaultValue="" xmlName="nextSizeUnit" xmlType="element" getter="getNextSizeUnit" setter="setNextSizeUnit" reffered="false"/>
+   <property name="public" dataType="java.lang.String" defaultValue="NO" xmlName="public" xmlType="element" getter="getPub" setter="setPub" search="true" reffered="false"/>
+   <property name="scInitialExtent" dataType="int" defaultValue="0" xmlName="scInitialExtent" xmlType="element" getter="getSCInitialExtent" setter="setSCInitialExtent" search="true" reffered="false"/>
+   <property name="scMaxExtents" dataType="java.lang.String" defaultValue="UNLIMITED" xmlName="scMaxExtents" xmlType="element" getter="getSCMaxExtents" setter="setSCMaxExtents" search="true" reffered="false"/>
+   <property name="scMinExtents" dataType="int" defaultValue="1" xmlName="scMinExtents" xmlType="element" getter="getSCMinExtents" setter="setSCMinExtents" search="true" reffered="false"/>
+   <property name="scNextExtent" dataType="int" defaultValue="0" xmlName="scNextExtent" xmlType="element" getter="getSCNextExtent" setter="setSCNextExtent" search="true" reffered="false"/>
+   <property name="scOptimal" dataType="java.lang.String" defaultValue="" xmlName="scOptimal" xmlType="element" getter="getScOptimal" setter="setScOptimal" search="true" reffered="false"/>
+   <property name="tablespaces" dataType="java.lang.String" defaultValue="" xmlName="tablespaces" xmlType="element" getter="getTablespaces" setter="setTablespaces" reffered="false" listOfRefs="true"/>
+   <bb_roproperty name="tablespaceSet" dataType="oracle.dbtools.crest.model.design.storage.oracle.RollbackSegmentOracle$InlineList" getter="getTablespaceSet"/>
+</oracle.dbtools.crest.model.design.storage.oracle.RollbackSegmentOracle>

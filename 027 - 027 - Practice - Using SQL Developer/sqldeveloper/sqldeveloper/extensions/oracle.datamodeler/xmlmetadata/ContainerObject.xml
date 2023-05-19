@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.ContainerObject parentClass="oracle.dbtools.crest.model.MultiShapedDesignObject">
+   <property name="afterAlter" dataType="java.lang.String" defaultValue="" xmlName="afterAlter" xmlType="element" getter="getAfterAlter" setter="setAfterAlter" reffered="false"/>
+   <aa_property name="afteralteradded" dataType="boolean" defaultValue="" xmlName="afteralteradded" xmlType="element" getter="isAfterAlterAdded" setter="setAfterAlterAdded" reffered="false"/>
+   <property name="afterCreate" dataType="java.lang.String" defaultValue="" xmlName="afterCreate" xmlType="element" getter="getAfterCreate" setter="setAfterCreate" cdata="true" reffered="false"/>
+   <property name="allowTypeSubstitution" dataType="boolean" defaultValue="true" xmlName="allowTypeSubstitution" xmlType="element" getter="isAllowTypeSubstitution" setter="setAllowTypeSubstitution" reffered="false"/>
+   <property name="basedOnStructuredType" dataType="oracle.dbtools.crest.model.design.datatypes.StructuredType" defaultValue="" xmlName="basedOnStructuredType" xmlType="element" getter="getBasedOnStructuredType" setter="setBasedOnStructuredType" reffered="true" search="true"/>
+   <property name="beforeAlter" dataType="java.lang.String" defaultValue="" xmlName="beforeAlter" xmlType="element" getter="getBeforeAlter" setter="setBeforeAlter" cdata="true" reffered="false" mergeCompare="true"/>
+   <aa_property name="beforeAlterAdded" dataType="boolean" defaultValue="" xmlName="beforeAlterAdded" xmlType="element" getter="isBeforeAlterAdded" setter="setBeforeAlterAdded" reffered="false"/>
+   <property name="beforeCreate" dataType="java.lang.String" defaultValue="" xmlName="beforeCreate" xmlType="element" getter="getBeforeCreate" setter="setBeforeCreate" cdata="true" reffered="false" mergeCompare="true"/>
+   <property name="beforeDrop" dataType="java.lang.String" defaultValue="" xmlName="beforeDrop" xmlType="element" getter="getBeforeDrop" setter="setBeforeDrop" cdata="true" reffered="false" mergeCompare="true"/>
+   <property name="endOfScript" dataType="java.lang.String" defaultValue="" xmlName="endOfScript" xmlType="element" getter="getEndOfScript" setter="setEndOfScript" cdata="true" reffered="false" mergeCompare="true"/>
+   <aa_property name="schema" dataType="java.lang.String" defaultValue="" xmlName="schema" xmlType="element" getter="getSchema" setter="setSchema" reffered="false"/>
+   <property name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="attribute" getter="getSchemaObject" setter="setSchemaObject" reffered="true" search="true"/>
+   <property name="remoteSchemaName" dataType="java.lang.String" defaultValue="" xmlName="remoteSchemaName" xmlType="element" getter="getRemoteSchemaName" setter="setRemoteSchemaName" search="true" reffered="false"/>
+   <property name="remoteSchemaID" dataType="java.lang.String" defaultValue="" xmlName="remoteSchemaID" xmlType="element" getter="getRemoteSchemaID" setter="setRemoteSchemaID" search="true" reffered="false"/>
+   <propertyDependency propDef="name" dependOnProperty="schemaObject" />
+   <property name="shouldGeneratescript" dataType="boolean" defaultValue="false" xmlName="shouldGeneratescript" xmlType="element" getter="getShouldGenerateScript" setter="setShouldGenerateScript" reffered="false"/>
+   <property name="typeSubstitution" dataType="oracle.dbtools.crest.model.TypeSubstitution" defaultValue="" xmlName="typeSubstitution" xmlType="element" getter="getTypeSubstitution" setter="setTypeSubstitution" reffered="true"/>
+   <property name="typeSubstitutionParentID" dataType="java.lang.String" defaultValue="" xmlName="typeSubstitutionParentID" xmlType="element" getter="getTypeSubstitutionParentID" setter="setTypeSubstitutionParentID" reffered="false"/>
+   <property name="typeSubstitutionID" dataType="java.lang.String" defaultValue="" xmlName="typeSubstitutionID" xmlType="element" getter="getTypeSubstitutionID" setter="setTypeSubstitutionID" reffered="false"/>
+   <roproperty name="bsT" dataType="boolean" getter="isBST"/>
+   <roproperty name="partOfTypeSubstHierarchy" dataType="boolean" getter="isPartOfTypeSubstHierarchy"/>
+   <roproperty name="root" dataType="boolean" getter="isRoot"/>
+   <roproperty name="substitutable" dataType="boolean" getter="isSubstitutable"/>
+   <roproperty name="allElementsGeneratedBy" dataType="[Loracle.dbtools.crest.model.design.ContainedObject" getter="getAllElementsGeneratedBy"/>
+   <roproperty name="allElementsListGeneratedBy" dataType="interface java.util.List" getter="getAllElementsListGeneratedBy"/>
+   <roproperty name="containedclass" dataType="java.lang.Class" getter="getContainedClass"/>
+   <roproperty name="containedSet" dataType="oracle.dbtools.crest.model.design.DesignObjectSet" getter="getContainedSet"/>
+   <roproperty name="containerListeners" dataType="interface java.util.Collection" getter="getContainerListeners"/>
+   <roproperty name="element" dataType="oracle.dbtools.crest.model.design.ContainedObject" getter="getElement"/>
+   <roproperty name="elementByID" dataType="oracle.dbtools.crest.model.design.ContainedObject" getter="getElementByID"/>
+   <roproperty name="elementByName" dataType="oracle.dbtools.crest.model.design.ContainedObject" getter="getElementByName"/>
+   <roproperty name="elementByStructAttributeID" dataType="oracle.dbtools.crest.model.design.ContainedObject" getter="getElementByStructAttributeID"/>
+   <roproperty name="elementGeneratedBy" dataType="oracle.dbtools.crest.model.design.ContainedObject" getter="getElementGeneratedBy"/>
+   <roproperty name="elements" dataType="[Loracle.dbtools.crest.model.design.ContainedObject" getter="getElements"/>
+   <roproperty name="elementsByStructuredType" dataType="interface java.util.List" getter="getElementsByStructuredType"/>
+   <roproperty name="elementsCollection" dataType="interface java.util.Collection" getter="getElementsCollection"/>
+   <roproperty name="elementsCollectionImmutable" dataType="interface java.util.Collection" getter="getElementsCollectionImmutable"/>
+   <roproperty name="indexOf" dataType="int" getter="getIndexOf"/>
+   <roproperty name="localIDGenerator" dataType="oracle.dbtools.crest.model.IDGenerator" getter="getLocalIDGenerator"/>
+   <roproperty name="localObject" dataType="oracle.dbtools.crest.model.ModelIDObject" getter="getLocalObject"/>
+   <roproperty name="nestedElements" dataType="interface java.util.List" getter="getNestedElements"/>
+   <roproperty name="numberOfnullsAllowingElements" dataType="int" getter="getNumberOfNullsAllowingElements"/>
+   <roproperty name="oidElement" dataType="oracle.dbtools.crest.model.design.ContainedObject" getter="getOidElement"/>
+   <roproperty name="referIDMap" dataType="interface java.util.Map" getter="getReferIDMap"/>
+   <roproperty name="subTypesubstitutions" dataType="interface java.util.List" getter="getSubTypeSubstitutions"/>
+   <roproperty name="topLevelContainer" dataType="oracle.dbtools.crest.model.design.ContainerObject" getter="getTopLevelContainer"/>
+</oracle.dbtools.crest.model.design.ContainerObject>

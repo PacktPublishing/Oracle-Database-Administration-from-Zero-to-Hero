@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.MultiShapedDesignObject parentClass="oracle.dbtools.crest.model.design.DesignObject">
+   <roproperty name="alwaysVisibleInMainView" dataType="boolean" getter="isAlwaysVisibleInMainView"/>
+   <roproperty name="visibleInMainview" dataType="boolean" getter="isVisibleInMainView"/>
+   <roproperty name="affectedDPVs" dataType="interface java.util.Collection" getter="getAffectedDPVs"/>
+   <roproperty name="allTopViews" dataType="interface java.util.List" getter="getAllTopViews"/>
+   <roproperty name="allViews" dataType="interface java.util.Collection" getter="getAllViews"/>
+   <roproperty name="allViewsWithCellViews" dataType="interface java.util.List" getter="getAllViewsWithCellViews"/>
+   <roproperty name="anotherView" dataType="oracle.dbtools.crest.swingui.TopView" getter="getAnotherView"/>
+   <roproperty name="viewSynonims" dataType="interface java.util.Collection" getter="getViewSynonims"/>
+   <roproperty name="usedInSubviews" dataType="java.util.ArrayList" getter="getUsedInSubviews"  search="true" itemClass="oracle.dbtools.crest.swingui.DesignPartView"/>
+</oracle.dbtools.crest.model.MultiShapedDesignObject>

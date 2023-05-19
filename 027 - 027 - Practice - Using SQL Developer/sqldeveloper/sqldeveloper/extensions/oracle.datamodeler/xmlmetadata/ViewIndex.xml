@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.ViewIndex parentClass="oracle.dbtools.crest.model.design.KeyObject">
+   <property name="idOfRecoveredintegrityindex" dataType="java.lang.String" defaultValue="" xmlName="idOfRecoveredintegrityindex" xmlType="element" getter="getIdOfRecoveredIntegrityIndex" setter="setIdOfRecoveredIntegrityIndex" reffered="false"/>
+   <property name="indexExpression" dataType="java.lang.String" defaultValue="" xmlName="indexExpression" xmlType="element" getter="getIndexExpression" setter="setIndexExpression" search="true" reffered="false"/>
+   <property name="indexState" dataType="java.lang.String" defaultValue="Plain Index" xmlName="indexState" xmlType="element" getter="getIndexState" setter="setIndexState" search="true" reffered="false"/>
+   <cccproperty name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="element" getter="getSchemaObject" setter="setSchemaObject" reffered="true" search="true"/>
+   <propertyDependency propDef="name" dependOnProperty="indexState" />
+   <!-- no need to be persisted for now   -->
+   <aa_property name="isSurrogateKey" dataType="boolean" defaultValue="true" xmlName="isSurrogateKey" xmlType="element" getter="isSurrogateKey" setter="setSurrogateKey" search="true" reffered="false"/>
+   <property name="relationGeneratorID" dataType="java.lang.String" defaultValue="" xmlName="relationGeneratorID" xmlType="element" getter="getRelationGeneratorID" setter="setRelationGeneratorID" reffered="false"/>
+   <roproperty name="view" dataType="oracle.dbtools.crest.model.design.relational.TableView" getter="getView" search="true"/>
+   <roproperty name="usedColumns" dataType="java.util.ArrayList" getter="getUsedColumns"  search="true"/>
+   <collection name="indexColumnUsage" dataType="java.util.List" xmlName="indexColumnUsage" itemXmlName="colUsage" getter="getIndexColumnUsageList" isMapItem="true" applyList="applyIndexColumnUsageList"/>
+   <property_moved_to_ContainerObject name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="element" getter="getSchemaObject" setter="setSchemaObject" reffered="true"/>
+</oracle.dbtools.crest.model.design.relational.ViewIndex>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.db2.v80.StorageDesignDB2v80 parentClass="oracle.dbtools.crest.model.design.storage.db2.AbstractStorageDesignDB2">
+   <collection external="true" name="DB2Sequences" dataType="oracle.dbtools.crest.model.design.storage.db2.SequenceSetDB2" xmlName="DB2Sequences" itemXmlName="DB2Sequence" getter="getSequenceSet"  createItem="createSequence"/>
+<roproperty name="fkProxySet" dataType="oracle.dbtools.crest.model.design.storage.db2.v80.FKProxySetDB2v80" getter="getFKProxySet"/>
+<roproperty name="indexSpaceSet" dataType="oracle.dbtools.crest.model.design.storage.db2.IndexSpaceSetDB2" getter="getIndexSpaceSet"/>
+<roproperty name="sequenceset" dataType="oracle.dbtools.crest.model.design.storage.db2.SequenceSetDB2" getter="getSequenceSet"/>
+<roproperty name="sortedTriggerset" dataType="oracle.dbtools.crest.model.design.storage.db2.v80.TriggerSetDB2v80" getter="getSortedTriggerSet"/>
+<roproperty name="subViewFKProxyset" dataType="oracle.dbtools.crest.model.design.storage.db2.v80.FKProxySetDB2v80" getter="getSubViewFKProxySet"/>
+<roproperty name="subViewIndexProxyset" dataType="oracle.dbtools.crest.model.design.storage.IndexProxySet" getter="getSubViewIndexProxySet"/>
+<roproperty name="subViewTriggerset" dataType="oracle.dbtools.crest.model.design.storage.db2.TriggerSetDB2" getter="getSubViewTriggerSet"/>
+<roproperty name="tablePartitionSet" dataType="oracle.dbtools.crest.model.design.storage.db2.TablePartitionSetDB2" getter="getTablePartitionSet"/>
+<roproperty name="visibleTables" dataType="oracle.dbtools.crest.model.design.storage.db2.VisibleTablesCollection" getter="getVisibleTables"/>
+</oracle.dbtools.crest.model.design.storage.db2.v80.StorageDesignDB2v80>

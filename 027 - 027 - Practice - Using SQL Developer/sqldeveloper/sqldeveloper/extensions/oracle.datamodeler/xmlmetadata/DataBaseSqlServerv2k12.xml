@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.DataBaseSqlServerv2k12 parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.DataBaseSqlServerv2k5">
+   <roproperty name="sequences" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getSequences"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.DataBaseSqlServerv2k12>

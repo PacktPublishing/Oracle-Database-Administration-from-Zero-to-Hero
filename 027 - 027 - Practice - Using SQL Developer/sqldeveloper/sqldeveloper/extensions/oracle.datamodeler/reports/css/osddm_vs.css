@@ -1,0 +1,55 @@
+/* 
+ Oracle Data Modeler Reporting 
+ Vendor specific styling for HTML output
+*/
+
+.flex {
+	/* basic styling */
+	width: 100%;
+	height: 100%;
+	border: none;
+	flex-wrap: nowrap;
+	/* flexbox setup */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+.toc {
+	-webkit-box-ordinal-group: 1;  /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-ordinal-group: 1;     /* OLD - Firefox 19- */
+	-ms-flex-order: 1;             /* TWEENER - IE 10 */
+	-webkit-order: 1;              /* NEW - Chrome */
+	order: 1;                      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-flex: auto; 
+	flex: auto;
+	min-width: 200px;
+	max-width: 200px;
+	padding-left: 5px;
+	padding-right: 5px;
+	overflow: auto;
+	word-wrap: break-word;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	font-family: Tahoma;
+	font-size:10pt;
+	height:100%;                   /* Safari */
+}
+.details {
+	-webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */
+	-ms-flex-order: 2;              /* TWEENER - IE 10 */
+	-webkit-order: 2;               /* NEW - Chrome */
+	order: 2;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-flex: auto; 
+	flex: auto;
+	padding-left: 5px;
+	overflow: auto;
+	overflow-y: scroll;            /* Safari */
+	word-wrap: break-word;
+	width:100%;
+}

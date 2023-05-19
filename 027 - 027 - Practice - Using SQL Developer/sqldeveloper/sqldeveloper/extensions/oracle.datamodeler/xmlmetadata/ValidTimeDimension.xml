@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.ValidTimeDimension parentClass="oracle.dbtools.crest.model.design.DesignObject">
+   <property name="endTimeColumn" dataType="oracle.dbtools.crest.model.design.relational.Column" defaultValue="" xmlName="endTimeColumn" xmlType="element" getter="getEndTimeColumn" setter="setEndTimeColumn" reffered="true"/>
+   <property name="startTimeColumn" dataType="oracle.dbtools.crest.model.design.relational.Column" defaultValue="" xmlName="startTimeColumn" xmlType="element" getter="getStartTimeColumn" setter="setStartTimeColumn" reffered="true"/>
+   <roproperty name="table" dataType="oracle.dbtools.crest.model.design.relational.Table" getter="getTable"/>
+</oracle.dbtools.crest.model.design.relational.ValidTimeDimension>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c parentClass="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g">
+   <property_moved_to_ColumnProxyOracle name="autoIncrementDDL" dataType="java.lang.String" defaultValue="" xmlName="autoIncrementDDL" xmlType="element" getter="getAutoIncrementDDL" setter="setAutoIncrementDDL" search="true" reffered="false"/>
+   <property name="defaultOnNull" dataType="java.lang.String" defaultValue="NO" xmlName="defaultOnNull" xmlType="element" getter="getOldDefaultOnNull" setter="setOldDefaultOnNull" search="true" reffered="false"/>
+   <property name="invisible" dataType="java.lang.String" defaultValue="NO" xmlName="invisible" xmlType="element" getter="getInvisible" setter="setInvisible" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c>

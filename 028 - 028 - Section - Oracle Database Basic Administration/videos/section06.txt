@@ -1,0 +1,13 @@
+Hi every one,
+
+In this section, we will start with Oracle Database Basic Administration.
+
+Sepcifically, we will learn the following tasks:
+start up and shut down database instances,
+manage the initialization parameters,
+retrieving from data dictionary views,
+and using Oracle database documentation.
+
+Those are basic tasks... every DBA must know how to perform them.
+
+Let's get started.

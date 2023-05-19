@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.SpatialColumnDefObject parentClass="java.lang.Object">
+   <property name="name" dataType="java.lang.String" defaultValue="" xmlName="name" xmlType="attribute" getter="getName" setter="setName" reffered="false"/>
+   <property name="objectID" dataType="java.lang.String" defaultValue="" xmlName="objectID" xmlType="attribute" getter="getObjectID" setter="setObjectID" reffered="false"/>
+   <property name="funcExpression" dataType="java.lang.String" defaultValue="" xmlName="funcExpression" xmlType="element" getter="getFuncExpression" setter="setFuncExpression" reffered="false"/>
+   <property name="function" dataType="boolean" defaultValue="" xmlName="function" xmlType="element" getter="isFunction" setter="setFunction" reffered="false"/>
+   <aa_property name="id" dataType="int" defaultValue="" xmlName="id" xmlType="element" getter="getId" setter="setId" reffered="false"/>
+   <property name="spatialColumn" dataType="oracle.dbtools.crest.model.design.relational.Column" defaultValue="" xmlName="spatialColumn" xmlType="element" getter="getSpatialColumn" setter="setSpatialColumn" reffered="true"/>
+   <property name="spatialIndex" dataType="oracle.dbtools.crest.model.design.relational.Index" defaultValue="" xmlName="spatialIndex" xmlType="element" getter="getSpatialIndex" setter="setSpatialIndex" reffered="true"/>
+   <property name="systemID" dataType="java.lang.String" defaultValue="" xmlName="systemID" xmlType="element" getter="getSystemID" setter="setSystemID" reffered="false"/>
+   <bb_property name="tableDimensions" dataType="interface java.util.List" defaultValue="" xmlName="tableDimensions" xmlType="element" getter="getTableDimensions" setter="setTableDimensions" reffered="false"/>
+   <collection name="spatialDimensions" dataType="java.util.List" xmlName="spatialDimensions" itemXmlName="spatialDimension" getter="getTableDimensions" createItem="createTableDimension" removeItem="removeTableDimension" getItemByID="getTableDimensionByID" />
+   <roproperty name="designLevelAccessibleObject" dataType="boolean" getter="isDesignLevelAccessibleObject"/>
+   <roproperty name="idPrefix" dataType="java.lang.String" getter="getIDPrefix"/>
+   <roproperty name="objectTypeName" dataType="java.lang.String" getter="getObjectTypeName"/>
+   <roproperty name="parent" dataType="oracle.dbtools.crest.model.design.relational.Table" getter="getParent"/>
+</oracle.dbtools.crest.model.design.relational.SpatialColumnDefObject>

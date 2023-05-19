@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle parentClass="oracle.dbtools.crest.model.design.storage.oracle.AbstractStorageObjectOracle">
+   <xx_property name="constraintID" dataType="java.lang.String" defaultValue="" xmlName="constraintID" xmlType="element" getter="getConstraintID" setter="setConstraintID" reffered="false"/>
+   <xx_property name="constraintName" dataType="java.lang.String" defaultValue="" xmlName="constraintName" xmlType="element" getter="getConstraintName" setter="setConstraintName" reffered="false"/>
+   <property name="deferrable" dataType="java.lang.String" defaultValue="NO" xmlName="deferrable" xmlType="element" getter="getDeferrable" setter="setDeferrable" search="true" reffered="false"/>
+   <property name="enable" dataType="java.lang.String" defaultValue="YES" xmlName="enable" xmlType="element" getter="getEnable" setter="setEnable" search="true" reffered="false"/>
+   <property name="exceptionsTable" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableProxyOracle" defaultValue="" xmlName="exceptionsTable" xmlType="element" getter="getExceptionsTable" setter="setExceptionsTable" search="true" reffered="true"/>
+   <property name="initially" dataType="java.lang.String" defaultValue="IMMEDIATE" xmlName="initially" xmlType="element" getter="getInitially" setter="setInitially" search="true" reffered="false"/>
+   <roproperty name="table" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableProxyOracle" getter="getTable"/>
+   <property name="validate" dataType="java.lang.String" defaultValue="YES" xmlName="validate" xmlType="element" getter="getValidate" setter="setValidate" reffered="false"/>
+   <roproperty name="tableConstraint" dataType="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" getter="getTableConstraint"/>
+   <roproperty name="rule" dataType="java.lang.String" getter="getRule" search="true"/>
+</oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle>

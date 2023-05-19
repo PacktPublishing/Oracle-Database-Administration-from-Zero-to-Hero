@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.v81.TableViewProxyUDBv81 parentClass="oracle.dbtools.crest.model.design.storage.udb.TableViewProxyUDB">
+   <property name="federated" dataType="java.lang.String" defaultValue="NO" xmlName="federated" xmlType="element" getter="getFederated" setter="setFederated" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.udb.v81.TableViewProxyUDBv81>

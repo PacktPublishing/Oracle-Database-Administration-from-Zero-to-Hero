@@ -1,0 +1,7 @@
+Hi every one,
+
+This section will go over the fundamentals of Oracle database architecture.
+
+This is a critical topic for understanding Oracle databases. You will comprehend what the components of an Oracle database are. What is the purpose of each component?
+
+Stay with me for the next lecture... because you will be unable to manage Oracle databases without this solid foundation.

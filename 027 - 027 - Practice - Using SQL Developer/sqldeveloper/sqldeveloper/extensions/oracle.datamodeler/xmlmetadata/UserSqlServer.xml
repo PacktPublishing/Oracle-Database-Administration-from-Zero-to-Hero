@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.UserSqlServer parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.AbstractStorageObjectSqlServer">
+   <property name="login" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.LoginSqlServer" defaultValue="" xmlName="login" xmlType="element" getter="getLogin" setter="setLogin" reffered="true" search="true"/>
+   <property name="systemPrivileges" dataType="java.lang.String" defaultValue="" xmlName="systemPrivileges" xmlType="element" getter="getSystemPrivileges" setter="setSystemPrivileges" reffered="false" listOfRefs="true"/>
+   <collection name="permissions" dataType="interface java.util.List" xmlName="permissions" itemXmlName="Permission" getter="getPermissions" createItem="createPermission"/>
+   <bb_roproperty name="privilegesSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UserSqlServer$InlineList" getter="getPrivilegesSet"/>
+   <property name="database" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.DataBaseSqlServer" defaultValue="" xmlName="database" xmlType="element" getter="getDatabase" setter="setDatabase" reffered="true" search="true"/>
+   <propertyDependency propDef="name" dependOnProperty="database" />
+</oracle.dbtools.crest.model.design.storage.sqlserver.UserSqlServer>

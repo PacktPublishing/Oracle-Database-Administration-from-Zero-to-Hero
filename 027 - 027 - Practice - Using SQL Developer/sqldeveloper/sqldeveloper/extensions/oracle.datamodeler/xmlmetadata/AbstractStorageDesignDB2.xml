@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.db2.AbstractStorageDesignDB2 parentClass="oracle.dbtools.crest.model.design.storage.StorageDesign">
+<aaproperty name="dtdialogVisible" dataType="boolean" defaultValue="" xmlName="dtdialogVisible" xmlType="element" getter="isDtDialogVisible" setter="setDtDialogVisible" reffered="false"/>
+<aaproperty name="scDialogVisible" dataType="boolean" defaultValue="" xmlName="scDialogVisible" xmlType="element" getter="isScDialogVisible" setter="setScDialogVisible" reffered="false"/>
+   <collection external="true" name="DB2Owners" dataType="oracle.dbtools.crest.model.design.storage.db2.OwnerSet" xmlName="DB2Owners" itemXmlName="DB2Owner" getter="getOwnerSet"  createItem="createOwner"/>
+   <collection external="true" name="DB2DataBases" dataType="oracle.dbtools.crest.model.design.storage.db2.DataBaseSetDB2" xmlName="DB2DataBases" itemXmlName="DB2Database" getter="getDataBaseSet"  createItem="createDataBase"/>
+   <collection external="true" name="DB2TableSpaces" dataType="oracle.dbtools.crest.model.design.storage.db2.TableSpaceSetDB2" xmlName="DB2TableSpaces" itemXmlName="DB2TableSpace" getter="getTableSpaceSet"  createItem="createTableSpace"/>
+   <collection external="true" name="DB2VCats" dataType="oracle.dbtools.crest.model.design.storage.db2.VCatSetDB2" xmlName="DB2VCats" itemXmlName="DB2VCat" getter="getVCatSet"  createItem="createVCat"/>
+   <collection external="true" name="DB2StorageGroups" dataType="oracle.dbtools.crest.model.design.storage.db2.StorageGroupSetDB2" xmlName="DB2StorageGroups" itemXmlName="DB2StorageGroup" getter="getStorageGroupSet"  createItem="createStorageGroup"/>
+   <collection external="true" name="DB2Aliases" dataType="oracle.dbtools.crest.model.design.storage.db2.AliasSetDB2" xmlName="DB2Aliases" itemXmlName="DB2Alias" getter="getAliasSet"  createItem="createAlias"/>
+   <!-- distinct types in DB2 are not  a proxy objects, thus they have createItem method   -->
+   <collection external="true" name="DB2DistinctTypes" dataType="oracle.dbtools.crest.model.design.storage.db2.DistinctTypeSetDB2" xmlName="DB2DistinctTypes" itemXmlName="DB2DistinctType" getter="getDistinctTypeSet"  createItem="createDistinctType"/>
+   <collection external="true" name="DB2Tables" dataType="oracle.dbtools.crest.model.design.storage.TableProxySet" xmlName="DB2Tables" itemXmlName="DB2Table" getter="getTableProxySet"  proxyItem="true"/>
+   <collection external="true" name="DB2AUXTables" dataType="oracle.dbtools.crest.model.design.storage.db2.AUXTableSetDB2" xmlName="DB2AUXTable" itemXmlName="DB2AUXTables" getter="getAUXTableSet"  createItem="createAUXTable"/>
+   <collection external="true" name="DB2Views" dataType="oracle.dbtools.crest.model.design.storage.TableViewProxySet" xmlName="DB2Views" itemXmlName="DB2View" getter="getTableViewProxySet"  proxyItem="true"/>
+   <!-- BufferPools in DB2 are fixed and created when storage design is created thus no createItem method   -->
+   <collection external="true" name="DB2BufferPools" dataType="oracle.dbtools.crest.model.design.storage.db2.BufferPoolSetDB2" xmlName="DB2BufferPools" itemXmlName="DB2BufferPool" getter="getBufferPoolSet"  createItem=""/>
+   <collection external="true" name="DB2Volumes" dataType="oracle.dbtools.crest.model.design.storage.db2.VolumesSetDB2" xmlName="DB2Volumes" itemXmlName="DB2Volume" getter="getVolumesSet"  createItem="createVolumes"/>
+   <collection external="true" name="DB2StorageTemplates" dataType="oracle.dbtools.crest.model.design.storage.db2.StorageTemplateSetDB2" xmlName="DB2StorageTemplates" itemXmlName="DB2StorageTemplate" getter="getStorageTemplateSet"  createItem="createStorageTemplate"/>
+   <collection external="true" name="DB2Triggers" dataType="oracle.dbtools.crest.model.design.storage.db2.TriggerSetDB2" xmlName="DB2Triggers" itemXmlName="DB2Trigger" getter="getTriggerSet"  createItem="createTrigger"/>
+   <collection external="true" name="DB2StoredProcedures" dataType="oracle.dbtools.crest.model.design.storage.db2.StoredProcedureSetDB2" xmlName="DB2StoredProcedures" itemXmlName="DB2StoredProcedure" getter="getStoredProcedureSet"  createItem="createStoredProcedure"/>
+<roproperty name="auXTableIndexSet" dataType="oracle.dbtools.crest.model.design.storage.db2.AUXTableIndexSetDB2" getter="getAUXTableIndexSet"/>
+<roproperty name="auXTableSet" dataType="oracle.dbtools.crest.model.design.storage.db2.AUXTableSetDB2" getter="getAUXTableSet"/>
+<roproperty name="aliasSet" dataType="oracle.dbtools.crest.model.design.storage.db2.AliasSetDB2" getter="getAliasSet"/>
+<roproperty name="bufferPoolSet" dataType="oracle.dbtools.crest.model.design.storage.db2.BufferPoolSetDB2" getter="getBufferPoolSet"/>
+<roproperty name="columnIdentitySet" dataType="oracle.dbtools.crest.model.design.storage.db2.ColumnIdentitySetDB2" getter="getColumnIdentitySet"/>
+<roproperty name="dataBaseSet" dataType="oracle.dbtools.crest.model.design.storage.db2.DataBaseSetDB2" getter="getDataBaseSet"/>
+<roproperty name="distinctTypeSet" dataType="oracle.dbtools.crest.model.design.storage.db2.DistinctTypeSetDB2" getter="getDistinctTypeSet"/>
+<roproperty name="indexPartitionSet" dataType="oracle.dbtools.crest.model.design.storage.db2.IndexPartitionSetDB2" getter="getIndexPartitionSet"/>
+<roproperty name="instanceDescriptorColumnSet" dataType="oracle.dbtools.crest.model.design.storage.db2.InstanceDescriptorColumnSetDB2" getter="getInstanceDescriptorColumnSet"/>
+<roproperty name="ownerSet" dataType="oracle.dbtools.crest.model.design.storage.db2.OwnerSet" getter="getOwnerSet"/>
+<roproperty name="partitionSet" dataType="oracle.dbtools.crest.model.design.storage.db2.PartitionSetDB2" getter="getPartitionSet"/>
+<roproperty name="permissionsSet" dataType="oracle.dbtools.crest.model.design.storage.db2.PermissionsSetDB2" getter="getPermissionsSet"/>
+<roproperty name="privilegesSet" dataType="oracle.dbtools.crest.model.design.storage.db2.PrivilegesSetDB2" getter="getPrivilegesSet"/>
+<roproperty name="publicAtAllLocations" dataType="oracle.dbtools.crest.model.design.storage.db2.Owner" getter="getPublicAtAllLocations"/>
+<roproperty name="storageGroupset" dataType="oracle.dbtools.crest.model.design.storage.db2.StorageGroupSetDB2" getter="getStorageGroupSet"/>
+<roproperty name="storageTemplateset" dataType="oracle.dbtools.crest.model.design.storage.db2.StorageTemplateSetDB2" getter="getStorageTemplateSet"/>
+<roproperty name="storedProcedureset" dataType="oracle.dbtools.crest.model.design.storage.db2.StoredProcedureSetDB2" getter="getStoredProcedureSet"/>
+<roproperty name="synonymset" dataType="oracle.dbtools.crest.model.design.storage.db2.SynonymSetDB2" getter="getSynonymSet"/>
+<roproperty name="tableSpaceSet" dataType="oracle.dbtools.crest.model.design.storage.db2.TableSpaceSetDB2" getter="getTableSpaceSet"/>
+<roproperty name="triggerSet" dataType="oracle.dbtools.crest.model.design.storage.db2.TriggerSetDB2" getter="getTriggerSet"/>
+<roproperty name="vcatSet" dataType="oracle.dbtools.crest.model.design.storage.db2.VCatSetDB2" getter="getVCatSet"/>
+<roproperty name="volumesSet" dataType="oracle.dbtools.crest.model.design.storage.db2.VolumesSetDB2" getter="getVolumesSet"/>
+</oracle.dbtools.crest.model.design.storage.db2.AbstractStorageDesignDB2>

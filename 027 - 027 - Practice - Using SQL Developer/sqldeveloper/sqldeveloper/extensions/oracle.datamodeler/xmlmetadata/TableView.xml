@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.TableView parentClass="oracle.dbtools.crest.model.design.AbstractView">
+   <property name="oidText" dataType="java.lang.String" defaultValue="" xmlName="oidText" xmlType="element" getter="getOidText" setter="setOidText" search="true" reffered="false"/>
+   <property name="abbreviation" dataType="java.lang.String" defaultValue="" xmlName="abbreviation" xmlType="element" getter="getAbbreviation" setter="setAbbreviation" reffered="false" search="true"/>
+   <property name="includeSchemaNameInQuery" dataType="boolean" defaultValue="false" xmlName="includeSchemaNameInQuery" xmlType="element" getter="includeSchemaNameInQuery" setter="setIncludeSchemaNameInQuery" search="true" reffered="false"/>
+   <property name="generateHeaderInDDL" dataType="boolean" defaultValue="true" xmlName="generateHeaderInDDL" xmlType="element" getter="isGenerateHeaderInDDL" setter="setGenerateHeaderInDDL"  search="true" reffered="false"/>
+   <collection name="impliedForeignKeys" dataType="java.util.List" xmlName="impliedForeignKeys" itemXmlName="impliedForeignKey" getter="getImpliedForeignKeyList" createItem="createImpliedForeignKey" itemClass="oracle.dbtools.crest.model.design.relational.ImpliedForeignKey" useInReport="true"/>
+   <cccproperty name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="element" getter="getSchemaObject" setter="setSchemaObject" reffered="true" search="true"/>
+   <bb_property name="primaryKey" dataType="oracle.dbtools.crest.model.design.relational.ViewIndex" defaultValue="" xmlName="primaryKey" xmlType="element" getter="getPK" setter="setPK" reffered="false"/>
+   <roproperty name="columnByObjectID" dataType="oracle.dbtools.crest.model.design.relational.ColumnView" getter="getColumnByObjectID"/>
+   <roproperty name="columnViewByLongName" dataType="oracle.dbtools.crest.model.design.relational.ColumnView" getter="getColumnViewByLongName"/>
+   <roproperty name="columnViewByName" dataType="oracle.dbtools.crest.model.design.relational.ColumnView" getter="getColumnViewByName"/>
+   <roproperty name="columnViewSet" dataType="oracle.dbtools.crest.model.design.relational.ColumnViewSet" getter="getColumnViewSet"/>
+   <roproperty name="columns" dataType="[Loracle.dbtools.crest.model.design.ContainedObject" getter="getColumns"/>
+   <roproperty name="deletedMapping" dataType="oracle.dbtools.crest.model.xtdmapping.XtdMapping" getter="getDeletedMapping"/>
+   <roproperty name="editableFonts" dataType="interface java.util.List" getter="getEditableFonts"/>
+   <roproperty name="engentityView" dataType="oracle.dbtools.crest.model.design.logical.EntityView" getter="getEngEntityView"/>
+   <roproperty name="fontObject" dataType="oracle.dbtools.crest.model.design.FontObject" getter="getFontObject"/>
+   <roproperty name="refColumns" dataType="interface java.util.List" getter="getRefColumns"/>
+   <property_moved_to_ContainerObject name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="element" getter="getSchemaObject" setter="setSchemaObject" reffered="true"/>
+<collection name="indexes" dataType="java.util.List" xmlName="indexes" itemXmlName="ind_PK_UK" getter="getAllInds_FKeyInds" createItem="createIndex" getItemByID="getKeyObject" applyList="applyIndexOrderFromList" itemClass="oracle.dbtools.crest.model.design.relational.ViewIndex" useInReport="true"/>
+</oracle.dbtools.crest.model.design.relational.TableView>

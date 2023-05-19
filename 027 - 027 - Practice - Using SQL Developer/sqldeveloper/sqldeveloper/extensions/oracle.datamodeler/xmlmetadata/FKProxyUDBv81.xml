@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81 parentClass="oracle.dbtools.crest.model.design.storage.udb.FKProxyUDB">
+   <property name="queryOptimization" dataType="java.lang.String" defaultValue="ENABLE" xmlName="queryOptimization" xmlType="element" getter="getQueryOptimization" setter="setQueryOptimization" reffered="false"/>
+   <property name="validation" dataType="java.lang.String" defaultValue="ENFORCED" xmlName="validation" xmlType="element" getter="getValidation" setter="setValidation" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81>

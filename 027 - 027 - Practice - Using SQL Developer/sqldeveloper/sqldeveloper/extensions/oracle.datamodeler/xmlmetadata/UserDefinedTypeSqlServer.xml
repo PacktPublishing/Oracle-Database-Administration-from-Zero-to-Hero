@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.UserDefinedTypeSqlServer parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.AbstractStorageObjectSqlServer">
+   <property name="domain" dataType="java.lang.String" defaultValue="" xmlName="domain" xmlType="element" getter="getDomain" setter="setDomain" reffered="false"/>
+   <property name="nullType" dataType="java.lang.String" defaultValue="" xmlName="nullType" xmlType="element" getter="getNullType" setter="setNullType" reffered="false"/>
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UserSqlServer" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" reffered="true"/>
+   <property name="usedUDDT" dataType="java.lang.String" defaultValue="" xmlName="usedUDDT" xmlType="element" getter="getUsedUDDT" setter="setUsedUDDT" reffered="false" listOfRefs="true"/>
+   <aa_property name="useduDDTSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.UserDefinedTypeSqlServer$UsedUDDTSet" defaultValue="" xmlName="useduDDTSet" xmlType="element" getter="getUsedUDDTSet" setter="setUsedUDDTSet" reffered="true"/>
+   <roproperty name="dataType" dataType="interface oracle.dbtools.crest.model.datatype.MDDataType" getter="getDataType"/>
+   <roproperty name="domainObj" dataType="oracle.dbtools.crest.model.design.Domain" getter="getDomainObj"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.UserDefinedTypeSqlServer>

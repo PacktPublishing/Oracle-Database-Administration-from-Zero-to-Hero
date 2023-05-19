@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.TableViewProxy parentClass="oracle.dbtools.crest.model.design.storage.RelationalObjectProxy">
+   <property name="checkOption" dataType="boolean" defaultValue="false" xmlName="checkOption" xmlType="element" getter="getCheckOption" setter="setCheckOption" search="true" reffered="false"/>
+   <property name="definition" dataType="java.lang.String" defaultValue="" xmlName="definition" xmlType="element" getter="getDefinitionInPhysicalModel" setter="setDefinition" cdata="true" search="true" reffered="false"/>
+   <aa_property name="userSchema" dataType="oracle.dbtools.crest.model.design.storage.StorageObject" defaultValue="" xmlName="userSchema" xmlType="element" getter="getUserSchema" setter="setUserSchema" reffered="true"/>
+</oracle.dbtools.crest.model.design.storage.TableViewProxy>

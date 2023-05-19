@@ -1,0 +1,8 @@
+Section 1
+Hi everyone, and welcome to the first section of the practice. In this section, we'll go over RDBMS in general and Oracle databases in particular.
+
+By the end of this section, you will have a solid understanding of Oracle database features and options, the technologies that can be configured with Oracle databases, the responsibilities of Database Administrators or DBAs, and the licensed options in Oracle databases.
+
+If you already know some of the topics in this section, skip ahead to the ones you don't know. But, if you want my advice, do not skip the entire section. It contains important information that every DBA should know, like Oracle database options and licenses.
+
+See you guys in the first lecture in this section. Thank you very much!

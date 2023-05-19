@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.openide.actions">
+    <module_version install_time="1619057809460" last="true" origin="Ant" specification_version="6.40">
+        <file crc="3556488737" name="config/Modules/org-openide-actions.xml"/>
+        <file crc="2763152248" name="modules/locale/org-openide-actions_de.jar"/>
+        <file crc="4216875416" name="modules/locale/org-openide-actions_es.jar"/>
+        <file crc="803625989" name="modules/locale/org-openide-actions_fr.jar"/>
+        <file crc="2780622089" name="modules/locale/org-openide-actions_it.jar"/>
+        <file crc="309945589" name="modules/locale/org-openide-actions_ja.jar"/>
+        <file crc="2122712880" name="modules/locale/org-openide-actions_ko.jar"/>
+        <file crc="1012100882" name="modules/locale/org-openide-actions_pt_BR.jar"/>
+        <file crc="2466927798" name="modules/locale/org-openide-actions_zh_CN.jar"/>
+        <file crc="900555885" name="modules/locale/org-openide-actions_zh_TW.jar"/>
+        <file crc="1878226472" name="modules/org-openide-actions.jar"/>
+    </module_version>
+</module>

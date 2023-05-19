@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.multidimensional.Slice.MeasureWrapper parentClass="java.lang.Object" innerClass="true">
+   <property name="aggrFuncId" dataType="java.lang.String" defaultValue="" xmlName="aggrFuncId" xmlType="element" getter="getAggrFuncId" setter="setAggrFuncId" reffered="false"/>
+   <property name="measureId" dataType="java.lang.String" defaultValue="" xmlName="measureId" xmlType="element" getter="getMeasureId" setter="setMeasureId" reffered="false"/>
+   <collection name="summaryLevels" dataType="java.util.List" xmlName="summaryLevels" itemXmlName="summaryLevel" itemIsRef="true" getter="getLevels" nativeList="true" orderTheList="true"/>
+   <roproperty name="aggrFunction" dataType="oracle.dbtools.crest.model.design.multidimensional.Measure$AggregateFunction" getter="getAggrFunction"/>
+   <roproperty name="functionName" dataType="java.lang.String" getter="getFunctionName"/>
+   <roproperty name="levels" dataType="interface java.util.List" getter="getLevels"/>
+   <roproperty name="measure" dataType="oracle.dbtools.crest.model.design.multidimensional.Measure" getter="getMeasure"/>
+   <roproperty name="measureAlias" dataType="java.lang.String" getter="getMeasureAlias"/>
+</oracle.dbtools.crest.model.design.multidimensional.Slice.MeasureWrapper>

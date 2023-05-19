@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.FKArc parentClass="oracle.dbtools.crest.model.design.ContainerObject">
+   <property name="mandatory" dataType="boolean" defaultValue="" xmlName="mandatory" xmlType="element" getter="isMandatory" setter="setMandatory" search="true" reffered="false"/>
+   <property name="reverseArc" dataType="boolean" defaultValue="false" xmlName="reverseArc" xmlType="element" getter="isReverse" setter="setReverse" reffered="false"/>
+   <aa_property name="sizeIndex" dataType="int" defaultValue="" xmlName="sizeIndex" xmlType="element" getter="getSizeIndex" setter="setSizeIndex" reffered="false"/>
+   <property name="table" dataType="oracle.dbtools.crest.model.design.relational.FKContainer" defaultValue="" xmlName="table" xmlType="element" getter="getTable" setter="setTable" reffered="true"/>
+   <property name="discriminatorColumn" dataType="oracle.dbtools.crest.model.design.relational.Column" defaultValue="" xmlName="discriminatorColumn" xmlType="element" getter="getDiscriminatorColumn" setter="setDiscriminatorColumn" search="true" reffered="true"/>
+   <collection name="fkeys" dataType="java.util.List" xmlName="fkeys" itemXmlName="fkeyID" getter="getFkeys" itemIsRef="true" removeItem="removeFkey" addItem="addFkey" nativeList="true" orderTheList="true"/>
+   <roproperty name="usedForeignKeys" dataType="java.util.List" getter="getFkeys" search="true"/>
+   <roproperty name="reverseArc" dataType="boolean" getter="isReverse" search="true"/>
+   <roproperty name="inContainer" dataType="oracle.dbtools.crest.model.design.relational.FKContainer" getter="getTable" search="true"/>
+</oracle.dbtools.crest.model.design.relational.FKArc>

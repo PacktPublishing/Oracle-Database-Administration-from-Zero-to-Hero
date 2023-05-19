@@ -1,0 +1,8 @@
+-- Using RMAN in Multitenant Databases
+hi everyone,
+We have seen how to use RMAN to implement backup and recovery plan in non-CDB databases.
+
+In this section, we will discuss about using RMAN in Multitenant Databases. We will also conver using RMAN for duplicating the CDBs and PDBs.
+
+Let's get started.
+

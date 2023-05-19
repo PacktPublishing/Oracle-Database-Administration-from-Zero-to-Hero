@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.PrivilegesUDB parentClass="oracle.dbtools.crest.model.design.storage.StorageObject">
+   <property name="grantOption" dataType="java.lang.String" defaultValue="" xmlName="grantOption" xmlType="element" getter="getGrantOption" setter="setGrantOption" reffered="false"/>
+   <property name="group" dataType="oracle.dbtools.crest.model.design.storage.udb.UserGroupUDB" defaultValue="" xmlName="group" xmlType="element" getter="getGroup" setter="setGroup" reffered="true"/>
+   <property name="schema" dataType="oracle.dbtools.crest.model.design.storage.udb.SchemaUDB" defaultValue="" xmlName="schema" xmlType="element" getter="getSchema" setter="setSchema" reffered="true"/>
+   <property name="systemPrivileges" dataType="java.lang.String" defaultValue="" xmlName="systemPrivileges" xmlType="element" getter="getSystemPrivileges" setter="setSystemPrivileges" reffered="false" listOfRefs="true"/>
+   <aa_property name="user" dataType="oracle.dbtools.crest.model.design.storage.udb.OwnerUDB" defaultValue="" xmlName="user" xmlType="element" getter="getUser" setter="setUser" reffered="true"/>
+   <roproperty name="systemPrivilegesset" dataType="oracle.dbtools.crest.model.design.storage.udb.PrivilegesUDB$PrivilegesSet" getter="getSystemPrivilegesSet"/>
+</oracle.dbtools.crest.model.design.storage.udb.PrivilegesUDB>

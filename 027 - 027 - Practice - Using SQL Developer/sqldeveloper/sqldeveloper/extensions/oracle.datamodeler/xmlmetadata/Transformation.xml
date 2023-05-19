@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.process.Transformation parentClass="oracle.dbtools.crest.model.design.process.AbstractProcessObject">
+   <property name="filterCondition" dataType="java.lang.String" defaultValue="" xmlName="filterCondition" xmlType="element" getter="getFilterCondition" setter="setFilterCondition" search="true" reffered="false"/>
+   <property name="joinCondition" dataType="java.lang.String" defaultValue="" xmlName="joinCondition" xmlType="element" getter="getJoinCondition" setter="setJoinCondition" search="true" reffered="false"/>
+   <property name="primary" dataType="boolean" defaultValue="" xmlName="primary" xmlType="element" getter="isPrimary" setter="setPrimary" search="true" reffered="false"/>
+   <collection name="targetMappings" dataType="java.util.List" xmlName="targetMappings" itemXmlName="targetMapping" getter="getTargetElements" createItem="createTargetElement" removeItem="removeTargetElement" addItem="addTargetElement" getItemByID="getTargetElementByID" nativeList="true"  itemClass="oracle.dbtools.crest.model.design.process.TargetElement" useInReport="true"  orderTheList="true"/>
+   <roproperty name="composite" dataType="boolean" getter="isComposite"/>
+   <roproperty name="connectedToStore" dataType="boolean" getter="isConnectedToStore"/>
+   <roproperty name="editableFonts" dataType="interface java.util.List" getter="getEditableFonts"/>
+   <roproperty name="fontObject" dataType="oracle.dbtools.crest.model.design.FontObject" getter="getFontObject"/>
+   <roproperty name="infoStructures" dataType="interface java.util.List" getter="getInfoStructures"/>
+   <roproperty name="processNumber" dataType="java.lang.String" getter="getProcessNumber"/>
+   <roproperty name="processedAttributes" dataType="interface java.util.List" getter="getProcessedAttributes"/>
+   <roproperty name="processedEntities" dataType="interface java.util.List" getter="getProcessedEntities"/>
+   <roproperty name="sourceElements" dataType="interface java.util.List" getter="getSourceElements"/>
+   <roproperty name="sourceElements_WithParams" dataType="interface java.util.List" getter="getSourceElements_WithParams"/>
+   <roproperty name="targetAttributes" dataType="interface java.util.List" getter="getTargetAttributes"/>
+   <roproperty name="targetElements" dataType="interface java.util.List" getter="getTargetElements"/>
+   <roproperty name="type" dataType="int" getter="getType"/>
+</oracle.dbtools.crest.model.design.process.Transformation>

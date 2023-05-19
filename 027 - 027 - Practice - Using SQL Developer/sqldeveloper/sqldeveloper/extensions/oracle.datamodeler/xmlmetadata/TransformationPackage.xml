@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.process.TransformationPackage parentClass="oracle.dbtools.crest.model.design.process.AbstractProcessObject">
+   <property name="systemObjective" dataType="java.lang.String" defaultValue="" xmlName="systemObjective" xmlType="element" getter="getSystemObjective" setter="setSystemObjective" reffered="false"/>
+   <collection external="true" name="TransformationTasks" dataType="oracle.dbtools.crest.model.design.process.TransformationTaskSet" xmlName="TransformationTasks" itemXmlName="TransformationTask" getter="getTransformationTaskSet" createItem="createTransformationTask"/>
+   <aa_property name="transformationtaskListChanged" dataType="boolean" defaultValue="" xmlName="transformationtaskListChanged" xmlType="element" getter="isTransformationTaskListChanged" setter="setTransformationTaskListChanged" reffered="false"/>
+   <roproperty name="element" dataType="oracle.dbtools.crest.model.ModelObject" getter="getElement"/>
+   <roproperty name="indexOf" dataType="int" getter="getIndexOf"/>
+   <roproperty name="lastTaskAdded" dataType="oracle.dbtools.crest.model.design.process.TransformationTask" getter="getLastTaskAdded"/>
+   <roproperty name="lastTaskRemoved" dataType="oracle.dbtools.crest.model.design.process.TransformationTask" getter="getLastTaskRemoved"/>
+   <roproperty name="transformationtaskSet" dataType="oracle.dbtools.crest.model.design.process.TransformationTaskSet" getter="getTransformationTaskSet"/>
+</oracle.dbtools.crest.model.design.process.TransformationPackage>

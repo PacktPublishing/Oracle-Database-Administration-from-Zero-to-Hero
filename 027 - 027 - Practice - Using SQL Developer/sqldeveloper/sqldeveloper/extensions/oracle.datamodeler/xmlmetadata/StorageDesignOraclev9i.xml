@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v9i.StorageDesignOraclev9i parentClass="oracle.dbtools.crest.model.design.storage.oracle.StorageDesignOracle">
+   <roproperty name="externalColumnSet" dataType="oracle.dbtools.crest.model.design.storage.oracle.ExternalTableColumnSetOracle" getter="getExternalColumnSet"/>
+   <roproperty name="externalTableSet" dataType="oracle.dbtools.crest.model.design.storage.oracle.ExternalTableSetOracle" getter="getExternalTableSet"/>
+   <roproperty name="undoTablespaceSet" dataType="oracle.dbtools.crest.model.design.storage.oracle.UndoTablespaceSetOracle" getter="getUndoTablespaceSet"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v9i.StorageDesignOraclev9i>

@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v10g.DiskGroupOraclev10g parentClass="oracle.dbtools.crest.model.design.storage.oracle.AbstractStorageObjectOracle">
+   <property name="redundancy" dataType="java.lang.String" defaultValue="NORMAL" xmlName="redundancy" xmlType="element" getter="getRedundancy" setter="setRedundancy" reffered="false"/>
+   <collection name="failGroupCollection" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="failGroups" itemXmlName="FailGroup" getter="getFailGroupCollection" createItem="createFailGroup"/>
+   <roproperty name="failGroups" dataType="interface java.util.List" getter="getFailGroups"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v10g.DiskGroupOraclev10g>

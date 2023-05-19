@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.MethodProxyUDB parentClass="oracle.dbtools.crest.model.design.storage.MethodProxy">
+   <property name="deterministic" dataType="java.lang.String" defaultValue="" xmlName="deterministic" xmlType="element" getter="getDeterministic" setter="setDeterministic" reffered="false"/>
+   <property name="ext_R_DBInfo" dataType="java.lang.String" defaultValue="" xmlName="ext_R_DBInfo" xmlType="element" getter="getExt_R_DBInfo" setter="setExt_R_DBInfo" reffered="false"/>
+   <property name="ext_R_FinalCall" dataType="java.lang.String" defaultValue="" xmlName="ext_R_FinalCall" xmlType="element" getter="getExt_R_FinalCall" setter="setExt_R_FinalCall" reffered="false"/>
+   <property name="ext_R_Name" dataType="java.lang.String" defaultValue="" xmlName="ext_R_Name" xmlType="element" getter="getExt_R_Name" setter="setExt_R_Name" reffered="false"/>
+   <property name="ext_R_ParallelInvocation" dataType="java.lang.String" defaultValue="" xmlName="ext_R_ParallelInvocation" xmlType="element" getter="getExt_R_ParallelInvocation" setter="setExt_R_ParallelInvocation" reffered="false"/>
+   <property name="ext_R_ParameterStyle" dataType="java.lang.String" defaultValue="" xmlName="ext_R_ParameterStyle" xmlType="element" getter="getExt_R_ParameterStyle" setter="setExt_R_ParameterStyle" reffered="false"/>
+   <property name="ext_R_Safeness" dataType="java.lang.String" defaultValue="" xmlName="ext_R_Safeness" xmlType="element" getter="getExt_R_Safeness" setter="setExt_R_Safeness" reffered="false"/>
+   <property name="ext_R_Scratchpad" dataType="java.lang.String" defaultValue="" xmlName="ext_R_Scratchpad" xmlType="element" getter="getExt_R_Scratchpad" setter="setExt_R_Scratchpad" reffered="false"/>
+   <property name="ext_R_TransformGroup" dataType="java.lang.String" defaultValue="" xmlName="ext_R_TransformGroup" xmlType="element" getter="getExt_R_TransformGroup" setter="setExt_R_TransformGroup" reffered="false"/>
+   <property name="externalAction" dataType="java.lang.String" defaultValue="" xmlName="externalAction" xmlType="element" getter="getExternalAction" setter="setExternalAction" reffered="false"/>
+   <property name="federated" dataType="java.lang.String" defaultValue="" xmlName="federated" xmlType="element" getter="getFederated" setter="setFederated" reffered="false"/>
+   <property name="language" dataType="java.lang.String" defaultValue="" xmlName="language" xmlType="element" getter="getLanguage" setter="setLanguage" reffered="false"/>
+   <property name="nullParametersTreatment" dataType="java.lang.String" defaultValue="" xmlName="nullParametersTreatment" xmlType="element" getter="getNullParametersTreatment" setter="setNullParametersTreatment" reffered="false"/>
+   <property name="returnSelfAsresult" dataType="java.lang.String" defaultValue="" xmlName="returnSelfAsresult" xmlType="element" getter="getReturnSelfAsResult" setter="setReturnSelfAsResult" reffered="false"/>
+   <property name="returnValue" dataType="java.lang.String" defaultValue="" xmlName="returnValue" xmlType="element" getter="getReturnValue" setter="setReturnValue" reffered="false"/>
+   <property name="specificName" dataType="java.lang.String" defaultValue="" xmlName="specificName" xmlType="element" getter="getSpecificName" setter="setSpecificName" reffered="false"/>
+   <property name="sqlMethodBody" dataType="java.lang.String" defaultValue="" xmlName="sqlMethodBody" xmlType="element" getter="getSqlMethodBody" setter="setSqlMethodBody" reffered="false"/>
+   <property name="sqlstatementType" dataType="java.lang.String" defaultValue="" xmlName="sqlstatementType" xmlType="element" getter="getSqlStatementType" setter="setSqlStatementType" reffered="false"/>
+   <roproperty name="exT_R_PARAMeTeR_STYLeS" dataType="[Ljava.lang.String" getter="getEXT_R_PARAMETER_STYLES"/>
+   <roproperty name="exT_R_SAFeNeSS" dataType="[Ljava.lang.String" getter="getEXT_R_SAFENESS"/>
+   <roproperty name="sqL_sTATEMENT_TYPEs" dataType="[Ljava.lang.String" getter="getSQL_STATEMENT_TYPES"/>
+</oracle.dbtools.crest.model.design.storage.udb.MethodProxyUDB>

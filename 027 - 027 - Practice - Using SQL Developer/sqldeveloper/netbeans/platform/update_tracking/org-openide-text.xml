@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.openide.text">
+    <module_version install_time="1619057440378" last="true" origin="Ant" specification_version="6.68">
+        <file crc="2441864466" name="config/ModuleAutoDeps/org-openide-text.xml"/>
+        <file crc="1795978028" name="config/Modules/org-openide-text.xml"/>
+        <file crc="2572143708" name="modules/locale/org-openide-text_de.jar"/>
+        <file crc="729698252" name="modules/locale/org-openide-text_es.jar"/>
+        <file crc="2502278753" name="modules/locale/org-openide-text_fr.jar"/>
+        <file crc="4009204574" name="modules/locale/org-openide-text_it.jar"/>
+        <file crc="2658712154" name="modules/locale/org-openide-text_ja.jar"/>
+        <file crc="910301957" name="modules/locale/org-openide-text_ko.jar"/>
+        <file crc="1319624738" name="modules/locale/org-openide-text_pt_BR.jar"/>
+        <file crc="3417624786" name="modules/locale/org-openide-text_zh_CN.jar"/>
+        <file crc="2955134953" name="modules/locale/org-openide-text_zh_TW.jar"/>
+        <file crc="579224335" name="modules/org-openide-text.jar"/>
+    </module_version>
+</module>

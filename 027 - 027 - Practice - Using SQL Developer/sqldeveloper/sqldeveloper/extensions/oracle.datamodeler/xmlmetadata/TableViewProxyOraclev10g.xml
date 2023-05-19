@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g parentClass="oracle.dbtools.crest.model.design.storage.oracle.v9i.TableViewProxyOraclev9i">
+<property name="editioning" dataType="java.lang.String" defaultValue="NO" xmlName="editioning" xmlType="element" getter="getEditioning" setter="setEditioning" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g>

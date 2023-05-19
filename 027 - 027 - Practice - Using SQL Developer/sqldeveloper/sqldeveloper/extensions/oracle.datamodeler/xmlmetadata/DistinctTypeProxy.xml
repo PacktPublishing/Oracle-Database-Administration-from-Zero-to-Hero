@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.DistinctTypeProxy parentClass="oracle.dbtools.crest.model.design.storage.RelationalObjectProxy">
+   <property name="nullType" dataType="java.lang.String" defaultValue="" xmlName="nullType" xmlType="element" getter="getNullType" setter="setNullType" reffered="false"/>
+   <property name="usedDistinctType" dataType="java.lang.String" defaultValue="" xmlName="usedDistinctType" xmlType="element" getter="getUsedDistinctType" setter="setUsedDistinctType" reffered="false" listOfRefs="true"/>
+   <roproperty name="datatypeString" dataType="java.lang.String" getter="getDatatypeString"/>
+   <roproperty name="distinctType" dataType="oracle.dbtools.crest.model.design.datatypes.DistinctType" getter="getDistinctType"/>
+   <bb_roproperty name="usedDTSet" dataType="oracle.dbtools.crest.model.design.storage.DistinctTypeProxy$UsedDistinctTypeSet" getter="getUsedDTSet"/>
+</oracle.dbtools.crest.model.design.storage.DistinctTypeProxy>

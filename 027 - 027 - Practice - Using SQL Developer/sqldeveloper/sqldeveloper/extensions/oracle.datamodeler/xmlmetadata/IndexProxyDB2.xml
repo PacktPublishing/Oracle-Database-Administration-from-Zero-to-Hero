@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.db2.IndexProxyDB2 parentClass="oracle.dbtools.crest.model.design.storage.IndexProxy">
+   <aa_property name="allowIntegrityIndexNR" dataType="boolean" defaultValue="" xmlName="allowIntegrityIndexNR" xmlType="element" getter="isAllowIntegrityIndexNR" setter="setAllowIntegrityIndexNR" reffered="false"/>
+   <property name="bufferPool" dataType="oracle.dbtools.crest.model.design.storage.db2.BufferPoolDB2" defaultValue="" xmlName="bufferPool" xmlType="element" getter="getBufferPool" setter="setBufferPool" reffered="true"/>
+   <property name="calculatePrimaryQuantity" dataType="boolean" defaultValue="true" xmlName="calculatePrimaryQuantity" xmlType="element" getter="getCalculatePrimaryQuantity" setter="setCalculatePrimaryQuantity" reffered="false"/>
+   <property name="calculateSecondaryQuantity" dataType="boolean" defaultValue="true" xmlName="calculateSecondaryQuantity" xmlType="element" getter="getCalculateSecondaryQuantity" setter="setCalculateSecondaryQuantity" reffered="false"/>
+   <property name="catalogSpace" dataType="int" defaultValue="0" xmlName="catalogSpace" xmlType="element" getter="getCatalogSpace" setter="setCatalogSpace" reffered="false"/>
+   <property name="close" dataType="boolean" defaultValue="true" xmlName="close" xmlType="element" getter="isClose" setter="setClose" reffered="false"/>
+   <property name="clusterRatio" dataType="int" defaultValue="0" xmlName="clusterRatio" xmlType="element" getter="getClusterRatio" setter="setClusterRatio" reffered="false"/>
+   <property name="clusterType" dataType="java.lang.String" defaultValue="NONE" xmlName="clusterType" xmlType="element" getter="getClusterType" setter="setClusterType" reffered="false"/>
+   <property name="copy" dataType="boolean" defaultValue="false" xmlName="copy" xmlType="element" getter="isCopy" setter="setCopy" reffered="false"/>
+   <property name="defer" dataType="boolean" defaultValue="true" xmlName="defer" xmlType="element" getter="isDefer" setter="setDefer" reffered="false"/>
+   <property name="firstKeyCard" dataType="int" defaultValue="0" xmlName="firstKeyCard" xmlType="element" getter="getFirstKeyCard" setter="setFirstKeyCard" reffered="false"/>
+   <property name="frequencyCount" dataType="long" defaultValue="0" xmlName="frequencyCount" xmlType="element" getter="getFrequencyCount" setter="setFrequencyCount" reffered="false"/>
+   <property name="frequencyPercent" dataType="float" defaultValue="0.0" xmlName="frequencyPercent" xmlType="element" getter="getFrequencyPercent" setter="setFrequencyPercent" reffered="false"/>
+   <property name="fullKeyCard" dataType="int" defaultValue="0" xmlName="fullKeyCard" xmlType="element" getter="getFullKeyCard" setter="setFullKeyCard" reffered="false"/>
+   <aa_property name="hasAssignedIntgrityIndex" dataType="boolean" defaultValue="" xmlName="hasAssignedIntgrityIndex" xmlType="element" getter="isHasAssignedIntgrityIndex" setter="setHasAssignedIntgrityIndex" reffered="false"/>
+   <property name="initial" dataType="long" defaultValue="0" xmlName="initial" xmlType="element" getter="getInitial" setter="setInitial" reffered="false"/>
+   <property name="isobid" dataType="int" defaultValue="0" xmlName="isobid" xmlType="element" getter="getIsobid" setter="setIsobid" reffered="false"/>
+   <property name="maintenanceInterval" dataType="int" defaultValue="0" xmlName="maintenanceInterval" xmlType="element" getter="getMaintenanceInterval" setter="setMaintenanceInterval" reffered="false"/>
+   <property name="noIntegrity" dataType="boolean" defaultValue="false" xmlName="noIntegrity" xmlType="element" getter="isNoIntegrity" setter="setNoIntegrity" reffered="false"/>
+   <property name="numberLeaf" dataType="int" defaultValue="0" xmlName="numberLeaf" xmlType="element" getter="getNumberLeaf" setter="setNumberLeaf" reffered="false"/>
+   <property name="numberLevels" dataType="int" defaultValue="0" xmlName="numberLevels" xmlType="element" getter="getNumberLevels" setter="setNumberLevels" reffered="false"/>
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.storage.db2.Owner" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" reffered="true"/>
+   <property name="pieceSize" dataType="java.lang.String" defaultValue=" " xmlName="pieceSize" xmlType="element" getter="getPieceSize" setter="setPieceSize" reffered="false"/>
+   <aa_property name="processedInDDLImport" dataType="boolean" defaultValue="" xmlName="processedInDDLImport" xmlType="element" getter="isProcessedInDDLImport" setter="setProcessedInDDLImport" reffered="false"/>
+   <property name="spaceAllocationInterval" dataType="int" defaultValue="0" xmlName="spaceAllocationInterval" xmlType="element" getter="getSpaceAllocationInterval" setter="setSpaceAllocationInterval" reffered="false"/>
+   <property name="storageGroup" dataType="oracle.dbtools.crest.model.design.storage.db2.StorageGroupDB2" defaultValue="" xmlName="storageGroup" xmlType="element" getter="getStorageGroup" setter="setStorageGroup" reffered="true"/>
+   <property name="storageTemplate" dataType="oracle.dbtools.crest.model.design.storage.db2.StorageTemplateDB2" defaultValue="" xmlName="storageTemplate" xmlType="element" getter="getStorageTemplate" setter="setStorageTemplate" reffered="true"/>
+   <property name="tablespace" dataType="oracle.dbtools.crest.model.design.storage.db2.TableSpaceDB2" defaultValue="" xmlName="tablespace" xmlType="element" getter="getTablespace" setter="setTablespace" reffered="true"/>
+   <property name="updateRatePercent" dataType="float" defaultValue="0.0" xmlName="updateRatePercent" xmlType="element" getter="getUpdateRatePercent" setter="setUpdateRatePercent" reffered="false"/>
+   <property name="whereNotNull" dataType="boolean" defaultValue="" xmlName="whereNotNull" xmlType="element" getter="isWhereNotNull" setter="setWhereNotNull" reffered="false"/>
+   <collection name="indexPartitions" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="indexPartitions" itemXmlName="IndexPartition" getter="getIndexPartitions" createItem="createIndexPartition" />
+   <roproperty name="uniqueConstraint" dataType="boolean" getter="isUniqueConstraint"/>
+   <roproperty name="uniquePlainIndex" dataType="boolean" getter="isUniquePlainIndex"/>
+   <roproperty name="indexPartitions" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getIndexPartitions"/>
+   <roproperty name="indexSpace" dataType="oracle.dbtools.crest.model.design.storage.db2.IndexSpaceDB2" getter="getIndexSpace"/>
+   <roproperty name="initialNumberUsedKB" dataType="long" getter="getInitialNumberUsedKB"/>
+   <roproperty name="initialNumberUsedPages" dataType="int" getter="getInitialNumberUsedPages"/>
+   <roproperty name="maxNumberUsedKB" dataType="long" getter="getMaxNumberUsedKB"/>
+   <roproperty name="maxNumberUsedPages" dataType="int" getter="getMaxNumberUsedPages"/>
+   <roproperty name="numParts" dataType="int" getter="getNumParts"/>
+   <roproperty name="numberOfDuplicates" dataType="int" getter="getNumberOfDuplicates"/>
+   <roproperty name="oldStatusGroup" dataType="int" getter="getOldStatusGroup"/>
+   <roproperty name="partitions" dataType="[Loracle.dbtools.crest.model.design.storage.db2.IndexPartitionDB2" getter="getPartitions"/>
+   <roproperty name="pieceSizeKB" dataType="int" getter="getPieceSizeKB"/>
+   <roproperty name="propertyWrapperList" dataType="interface java.util.List" getter="getPropertyWrapperList"/>
+   <roproperty name="proposedpRIQTY" dataType="int" getter="getProposedPRIQTY"/>
+   <roproperty name="proposedQTY" dataType="int" getter="getProposedQTY"/>
+   <roproperty name="proposedQTYRemarks" dataType="java.lang.String" getter="getProposedQTYRemarks"/>
+   <roproperty name="proposedSECQTY" dataType="int" getter="getProposedSECQTY"/>
+   <roproperty name="statusGroup" dataType="int" getter="getStatusGroup"/>
+</oracle.dbtools.crest.model.design.storage.db2.IndexProxyDB2>

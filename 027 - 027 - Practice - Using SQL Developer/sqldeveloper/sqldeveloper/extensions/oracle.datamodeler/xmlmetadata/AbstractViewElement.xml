@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.AbstractViewElement parentClass="oracle.dbtools.crest.model.design.ContainedObject">
+   <property name="alias" dataType="java.lang.String" defaultValue="" xmlName="alias" xmlType="element" getter="getAlias" setter="setAlias" reffered="false"/>
+   <property name="dataType" dataType="java.lang.String" defaultValue="" xmlName="dataType" xmlType="element" getter="getDataTypeString" setter="setDataType" reffered="false"/>
+   <property name="headerAlias" dataType="java.lang.String" defaultValue="" xmlName="headerAlias" xmlType="element" getter="getHeaderAlias" setter="setHeaderAlias" reffered="false"/>
+   <property name="expression" dataType="java.lang.String" defaultValue="" xmlName="expression" xmlType="element" getter="getExpression" setter="setExpression" search="true" reffered="false"/>
+   <property name="reference" dataType="boolean" defaultValue="" xmlName="reference" xmlType="element" getter="isReference" setter="setReference" reffered="false"/>
+   <property name="referencedColumn" dataType="oracle.dbtools.crest.model.design.ContainedObjectWithDomain" defaultValue="" xmlName="referencedColumn" xmlType="element" getter="getReferencedColumn" setter="setReferencedColumn" reffered="true"/>
+   <aa_property name="referencedColumnView" dataType="oracle.dbtools.crest.model.design.ContainedObject" defaultValue="" xmlName="referencedColumnView" xmlType="element" getter="getReferencedColumnView" setter="setReferencedColumnView" reffered="true"/>
+   <property name="referencedColumnViewID" dataType="java.lang.String" defaultValue="" xmlName="referencedColumnViewID" xmlType="element" getter="getReferencedColumnViewID" setter="setReferencedColumnViewID" reffered="false"/>
+   <property name="table" dataType="oracle.dbtools.crest.model.design.ContainerWithKeyObject" defaultValue="" xmlName="table" xmlType="element" getter="getTable" setter="setTable" reffered="true"/>
+   <property name="tableAlias" dataType="java.lang.String" defaultValue="" xmlName="tableAlias" xmlType="element" getter="getTableAlias" setter="setTableAlias" reffered="false"/>
+   <property name="previousColumn" dataType="boolean" defaultValue="true" xmlName="previousColumn" xmlType="element" getter="isPreviousColumn" setter="setPreviousColumn" reffered="false"/>
+   <aa_property name="view" dataType="oracle.dbtools.crest.model.design.AbstractView" defaultValue="" xmlName="view" xmlType="element" getter="getView" setter="setView" reffered="true"/>
+   <property name="viewID" dataType="java.lang.String" defaultValue="" xmlName="viewID" xmlType="element" getter="getViewID" setter="setViewID" reffered="false"/>
+   <collection name="associations" dataType="java.util.List" xmlName="associations" itemXmlName="colAssociation" getter="getFKAssociationMaps" isMapItem="true" applyList="addFKAssociationMaps"/>
+   <roproperty name="referencedContainer" dataType="oracle.dbtools.crest.model.design.ContainerObject" getter="getReferencedContainer"/>
+   <roproperty name="referencedName" dataType="java.lang.String" getter="getReferencedName"/>
+   <roproperty name="container" dataType="oracle.dbtools.crest.model.design.ContainerObject" getter="getContainer" search="true"/>
+</oracle.dbtools.crest.model.design.AbstractViewElement>

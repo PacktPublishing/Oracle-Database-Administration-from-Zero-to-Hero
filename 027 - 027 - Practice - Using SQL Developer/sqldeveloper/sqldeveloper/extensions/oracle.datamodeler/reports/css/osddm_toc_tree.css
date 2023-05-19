@@ -1,0 +1,71 @@
+/* 
+ Oracle Data Modeler Reporting 
+ CSS TOC tree styling
+*/
+
+ol.tree {
+	padding: 0 0 0 30px;
+	width: 300px;
+}
+
+li { 
+	position: relative; 
+	margin-left: -60px;
+	list-style: none;
+}
+
+li.obj {
+	margin-left: -1px !important;
+}
+
+li.obj a {
+	margin: 0 0 0 15px;
+	text-decoration: none;
+}
+		
+li input {
+	position: absolute;
+	left: 0;
+	margin-left: 30;
+	opacity: 0;
+	z-index: 2;
+	cursor: pointer;
+	height: 1em;
+	width: 1em;
+	top: 0;
+}
+
+li input + ol{
+	background: url(../img/disclosecollapsed_ena.png) 15px 0px no-repeat;
+	margin: -1em 0 0 15px;
+	height: 1em;
+}
+
+li input + ol > li { 
+	display: none; 
+	margin-left: -14px !important; 
+	padding-left: 1px; 
+}
+
+li label {
+	cursor: pointer;
+	/*display: block;*/
+	margin: 0 0 0 45px;
+}
+
+li input:checked + ol{
+	background: url(../img/discloseexpanded_ena.png) 15px 0px no-repeat;
+	margin: -1em 0 0 15px;
+	padding: 1.563em 0 0 20px;
+	height: auto;
+}
+
+li input:checked + ol > li { 
+	display: block; 
+	margin: 0 0 0.125em;
+	word-wrap: break-word;
+}
+
+li input:checked + ol > li:last-child { 
+	margin: 0 0 0.063em; 
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.editor.guards">
+    <module_version install_time="1619056634216" last="true" origin="Ant" specification_version="1.34">
+        <file crc="591587818" name="config/Modules/org-netbeans-modules-editor-guards.xml"/>
+        <file crc="3899220233" name="modules/locale/org-netbeans-modules-editor-guards_de.jar"/>
+        <file crc="2985897112" name="modules/locale/org-netbeans-modules-editor-guards_es.jar"/>
+        <file crc="1171226247" name="modules/locale/org-netbeans-modules-editor-guards_fr.jar"/>
+        <file crc="577871554" name="modules/locale/org-netbeans-modules-editor-guards_it.jar"/>
+        <file crc="2885313557" name="modules/locale/org-netbeans-modules-editor-guards_ja.jar"/>
+        <file crc="970933117" name="modules/locale/org-netbeans-modules-editor-guards_ko.jar"/>
+        <file crc="3735916011" name="modules/locale/org-netbeans-modules-editor-guards_pt_BR.jar"/>
+        <file crc="2473767940" name="modules/locale/org-netbeans-modules-editor-guards_zh_CN.jar"/>
+        <file crc="1965555003" name="modules/locale/org-netbeans-modules-editor-guards_zh_TW.jar"/>
+        <file crc="2785854413" name="modules/org-netbeans-modules-editor-guards.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+-- more about using RMAN
+hi every one,
+In this section we will cover more topics about using RMAN.
+
+Specifically, we will learn how to perform the following:
+use RMAN recovery catalog,
+use Data Recovery Advisor,
+and Handle corrupted blocks.
+
+see you guys in the next lecture.

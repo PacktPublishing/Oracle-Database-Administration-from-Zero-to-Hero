@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.SynonymOracle parentClass="oracle.dbtools.crest.model.design.storage.oracle.AbstractStorageObjectOracle">
+   <property name="dbLink" dataType="java.lang.String" defaultValue="" xmlName="dbLink" xmlType="element" getter="getDBLink" setter="setDBLink" search="true" reffered="false"/>
+   <property name="objNameHasQuotes" dataType="boolean" defaultValue="false" xmlName="objNameHasQuotes" xmlType="element" getter="getObjNameHasQuotes" setter="setObjNameHasQuotes" search="true" reffered="false"/>
+   <property name="objectName" dataType="java.lang.String" defaultValue="" xmlName="objectName" oldXmlName="object" xmlType="element" getter="getObject" setter="setObject" search="true" reffered="false"/>
+   <property name="objectUser" dataType="oracle.dbtools.crest.model.design.storage.oracle.UserOracle" defaultValue="" xmlName="objectUser" xmlType="element" getter="getObjectUser" setter="setObjectUser" search="true" reffered="true"/>
+   <property name="public" dataType="java.lang.String" defaultValue="NO" xmlName="public" xmlType="element" getter="getPublic" setter="setPublic" search="true" reffered="false"/>
+   <property name="user" dataType="oracle.dbtools.crest.model.design.storage.oracle.UserOracle" defaultValue="" xmlName="user" xmlType="element" getter="getUser" setter="setUser" search="true" reffered="true"/>
+   <property name="referredObjectID" dataType="java.lang.String" defaultValue="" xmlName="referredObjectID" xmlType="element" getter="getReferredObjectID" setter="setReferredObjectID" search="false" reffered="false"/>
+   <collection name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="synonyms" itemXmlName="Synonym" getter="getSynonyms" addItem="addSynonym" createItem="createSynonym" />
+</oracle.dbtools.crest.model.design.storage.oracle.SynonymOracle>

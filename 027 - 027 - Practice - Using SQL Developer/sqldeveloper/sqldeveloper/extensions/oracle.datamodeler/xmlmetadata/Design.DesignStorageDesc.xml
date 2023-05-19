@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.Design.DesignStorageDesc parentClass="java.lang.Object" innerClass="true">
+<property name="id" dataType="java.lang.String" defaultValue="" xmlName="id" xmlType="attribute" getter="getDesignID" setter="setDesignID" reffered="false"/>
+<property name="designStoragePath" dataType="java.lang.String" defaultValue="" xmlName="designStoragePath" xmlType="element" getter="getDesignStoragePath" setter="setDesignStoragePath" reffered="false"/>
+</oracle.dbtools.crest.model.design.Design.DesignStorageDesc>

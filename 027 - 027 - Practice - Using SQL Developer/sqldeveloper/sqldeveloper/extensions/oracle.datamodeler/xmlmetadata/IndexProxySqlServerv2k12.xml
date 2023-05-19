@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.IndexProxySqlServerv2k12 parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.IndexProxySqlServerv2k5">
+   <property name="columnstoreIndex" dataType="boolean" defaultValue="false" xmlName="columnstoreIndex" xmlType="element" getter="isColumnstoreIndex" setter="setColumnstoreIndex" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.IndexProxySqlServerv2k12>

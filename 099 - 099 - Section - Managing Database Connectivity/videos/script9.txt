@@ -1,0 +1,9 @@
+-- Managing Database Connectivity
+
+Hi everyone,
+
+In this section, we will discuss about Oracle database connectivity topics. 
+
+Specifically, we will learn how to configure Oracle network environment and use database links.
+
+See you in the next lecture.

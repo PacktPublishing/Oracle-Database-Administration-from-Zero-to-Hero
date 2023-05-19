@@ -1,0 +1,10 @@
+-- Taking Backups in Oracle Databases
+Hi everyone,
+There is nothing worse than running a production database without a backup and recovery plan in place.
+In this section, we will discuss about taking backups in Oracle databases.
+
+We will learn how to use RMAN to take full and incremental backups in Oracle databases.
+
+This section concentrates on non-CDB databases. Later in the course, we will covery the backup and recovery in CDB databases.
+
+We'll see you guys in the next lecture.

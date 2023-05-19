@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.SensitiveTypeFileWrapper parentClass="java.lang.Object">
+<collection name="sensitiveTypes" dataType="java.util.List" xmlName="sensitiveTypes" itemXmlName="SensitiveType" getter="getSensitiveTypes" createItem="createSensitiveType" removeItem="removeSensitiveType" getItemByID="getSensitiveTypeByID"  nativeList="true"/>
+<roproperty name="sensitiveTypeByID" dataType="oracle.dbtools.crest.model.SensitiveType" getter="getSensitiveTypeByID"/>
+</oracle.dbtools.crest.model.SensitiveTypeFileWrapper>

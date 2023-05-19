@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.swingui.TopView>
+<collection name="fonts" dataType="java.util.List" xmlName="fonts" itemXmlName="FontObject" getter="getFontObjectWrappers" createItem="createFontObjectWr" addItem="addFontObjectWrapper" itemClass="oracle.dbtools.crest.model.design.FontObjectWr"/>
+<collection name="hiddenElements" dataType="java.util.List" xmlName="hiddenElements" itemXmlName="element" getter="getHiddenElements" itemIsRef="true" listOfRefs="true" refsXMLName="elements" nativeList="true" orderTheList="true"/>
+<property name="hideElementsInCurrentOnly" dataType="boolean" defaultValue="" xmlName="hideElementsInCurrentOnly" xmlType="element" getter="isHideElementsInCurrentOnly" setter="setHideElementsInCurrentOnly" search="true" reffered="false"/>
+</oracle.dbtools.crest.swingui.TopView>

@@ -1,0 +1,11 @@
+-- Fundamentals of Oracle Database Multitenancy
+
+Hi everyone,
+
+In this section, we will explain about the fundamentals of Oracle Database Multitenancy.
+
+Oracle is pushing all its clients to shift their databases to a multitenant environment. Starting from Oracle 21c, we cannot create a database without the multitenancy option.
+
+In this section, we will understand what the Multitenancy is in Oracle databases. We will learn how to create CDB databases, Pluggagle Databases, and perform the basic administration tasks on those databases.
+
+This is an exciting topic, so, let's dive in.

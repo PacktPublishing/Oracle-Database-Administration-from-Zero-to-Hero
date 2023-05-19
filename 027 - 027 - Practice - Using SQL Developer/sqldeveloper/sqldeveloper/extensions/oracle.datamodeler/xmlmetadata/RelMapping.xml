@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.xtdmapping.RelMapping parentClass="java.lang.Object">
+   <aa_property name="creationTime" dataType="long" defaultValue="" xmlName="cTime" xmlType="attribute" getter="getCreationTime" setter="setCreationTime" reffered="false"/>
+   <property name="id" dataType="java.lang.String" defaultValue="" xmlName="id" xmlType="attribute" getter="getID" setter="setID" reffered="false"/>
+   <property name="inheritanceType" dataType="int" defaultValue="0" xmlName="iT" xmlType="attribute" getter="getInheritanceType" setter="setInheritanceType" reffered="false"/>
+   <property name="logContainerID" dataType="java.lang.String" defaultValue="" xmlName="logConID" xmlType="attribute" getter="getLogContainerID" setter="setLogContainerID" reffered="false"/>
+   <property name="logID" dataType="java.lang.String" defaultValue="" xmlName="lID" xmlType="attribute" getter="getLogID" setter="setLogID" reffered="false"/>
+   <property name="logType" dataType="int" defaultValue="1" xmlName="lT" xmlType="attribute" getter="getLogType" setter="setLogType" reffered="false"/>
+   <property name="relContainerID" dataType="java.lang.String" defaultValue="" xmlName="relContID" xmlType="attribute" getter="getRelContainerID" setter="setRelContainerID" reffered="false"/>
+   <property name="relID" dataType="java.lang.String" defaultValue="" xmlName="rID" xmlType="attribute" getter="getRelID" setter="setRelID" reffered="false"/>
+   <property name="relType" dataType="int" defaultValue="5" xmlName="rT" xmlType="attribute" getter="getRelType" setter="setRelType" reffered="false"/>
+   <property name="attributesSelection" dataType="java.lang.String" defaultValue="" xmlName="attributesSelection" xmlType="element" getter="getAttributesSelection" setter="setAttributesSelection" reffered="false"/>
+   <property name="columnsSelection" dataType="java.lang.String" defaultValue="" xmlName="columnsSelection" xmlType="element" getter="getColumnsSelection" setter="setColumnsSelection" reffered="false"/>
+   <property name="indexesSelections" dataType="java.lang.String" defaultValue="" xmlName="indexesSelections" xmlType="element" getter="getIndexesSelections" setter="setIndexesSelections" reffered="false"/>
+   <property name="keysSelection" dataType="java.lang.String" defaultValue="" xmlName="keysSelection" xmlType="element" getter="getKeysSelection" setter="setKeysSelection" reffered="false"/>
+   <roproperty name="xtdMapping" dataType="oracle.dbtools.crest.model.xtdmapping.XtdMapping" getter="getXtdMapping"/>
+   <property name="realSourceEntityID" dataType="java.lang.String" defaultValue="" xmlName="rSEnt" xmlType="attribute" getter="getRealSourceEntityID" setter="setRealSourceEntityID" reffered="false"/>
+   <property name="realTargetEntityID" dataType="java.lang.String" defaultValue="" xmlName="rTEnt" xmlType="attribute" getter="getRealTargetEntityID" setter="setRealTargetEntityID" reffered="false"/>
+</oracle.dbtools.crest.model.xtdmapping.RelMapping>

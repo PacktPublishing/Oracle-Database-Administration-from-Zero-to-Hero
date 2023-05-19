@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.v81.BufferPoolUDBv81 parentClass="oracle.dbtools.crest.model.design.storage.udb.BufferPoolUDB">
+   <property name="createImmediate" dataType="java.lang.String" defaultValue="" xmlName="createImmediate" xmlType="element" getter="getCreateImmediate" setter="setCreateImmediate" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.udb.v81.BufferPoolUDBv81>

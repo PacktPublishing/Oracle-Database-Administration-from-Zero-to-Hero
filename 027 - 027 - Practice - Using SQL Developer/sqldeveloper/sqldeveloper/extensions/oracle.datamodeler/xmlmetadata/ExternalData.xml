@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.process.ExternalData parentClass="oracle.dbtools.crest.model.design.process.AbstractProcessObject">
+   <property name="description" dataType="java.lang.String" defaultValue="" xmlName="description" xmlType="element" getter="getDescription" setter="setDescription" cdata="true" reffered="false" search="true"/>
+   <property name="mappedDesignObject" dataType="oracle.dbtools.crest.model.design.DesignObject" defaultValue="" xmlName="mappedDesignObject" xmlType="element" getter="getMappedDesignObject" setter="setMappedDesignObject" reffered="true" search="true"/>
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.process.RecordStructure" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" reffered="true" search="true"/>
+   <property name="recordStructure" dataType="oracle.dbtools.crest.model.design.process.RecordStructure" defaultValue="" xmlName="recordStructure" xmlType="element" getter="getRecordStructure" setter="setRecordStructure" reffered="true" search="true"/>
+   <property name="startingPos" dataType="int" defaultValue="" xmlName="startingPos" xmlType="element" getter="getStartingPos" setter="setStartingPos" reffered="false" search="true"/>
+   <property name="structured" dataType="boolean" defaultValue="" xmlName="structured" xmlType="element" getter="isStructured" setter="setStructured" reffered="false" search="true"/>
+   <property name="type" dataType="oracle.dbtools.crest.model.design.LogicalDatatype" defaultValue="" xmlName="type" xmlType="element" getter="getType" setter="setType" reffered="true" search="true"/>
+</oracle.dbtools.crest.model.design.process.ExternalData>

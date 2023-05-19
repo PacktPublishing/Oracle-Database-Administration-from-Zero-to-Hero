@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.multidimensional.Hierarchy parentClass="oracle.dbtools.crest.model.design.multidimensional.AbstractMDObject">
+   <property name="defaultHierarchy" dataType="boolean" defaultValue="" xmlName="defaultHierarchy" xmlType="element" getter="isDefaultHierarchy" setter="setDefaultHierarchy" search="true" reffered="false"/>
+   <aa_property name="dimension" dataType="oracle.dbtools.crest.model.design.multidimensional.Dimension" defaultValue="" xmlName="dimension" xmlType="element" getter="getDimension" setter="setDimension" reffered="true"/>
+   <property name="linkToDimension" dataType="oracle.dbtools.crest.model.design.multidimensional.Link" defaultValue="" xmlName="linkToDimension" xmlType="element" getter="getLinkToDimension" setter="applyLinkToDimension" reffered="true"/>
+   <collection name="usedLevels" dataType="java.util.List" xmlName="usedLevels" itemXmlName="usedLevel" itemIsRef="true" getter="getLevels" nativeList="true" orderTheList="true"/>
+   <collection name="usedRULinks" dataType="java.util.List" xmlName="usedRULinks" itemXmlName="usedLink" itemIsRef="true" getter="getLinks" nativeList="true" orderTheList="true"/>
+   <roproperty name="equalToLevelList" dataType="boolean" getter="isEqualToLevelList"/>
+   <roproperty name="last" dataType="boolean" getter="isLast"/>
+   <roproperty name="raggedHierarchy" dataType="boolean" getter="isRaggedHierarchy" search="true"/>
+   <roproperty name="valueBasedHierarchy" dataType="boolean" getter="isValueBasedHierarchy" search="true"/>
+   <roproperty name="levels" dataType="java.util.ArrayList" getter="getLevels" search="true"/>
+   <roproperty name="links" dataType="interface java.util.List" getter="getLinks"/>
+   <roproperty name="pathTo" dataType="interface java.util.List" getter="getPathTo"/>
+   <roproperty name="dimension" dataType="oracle.dbtools.crest.model.design.multidimensional.Dimension" getter="getDimension" search="true"/>
+</oracle.dbtools.crest.model.design.multidimensional.Hierarchy>

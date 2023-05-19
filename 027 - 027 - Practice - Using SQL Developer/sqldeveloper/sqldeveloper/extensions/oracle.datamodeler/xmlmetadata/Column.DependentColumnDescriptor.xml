@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.relational.Column.DependentColumnDescriptor parentClass="java.lang.Object" innerClass="true">
+<aa_property name="column" dataType="oracle.dbtools.crest.model.design.relational.Column" defaultValue="" xmlName="column" xmlType="element" getter="getColumn" setter="setColumn" reffered="true"/>
+<property name="columnID" dataType="java.lang.String" defaultValue="" xmlName="columnID" xmlType="element" getter="getColumnID" setter="setColumnID" reffered="false"/>
+<property name="dependAsMandatory" dataType="boolean" defaultValue="" xmlName="dependAsMandatory" xmlType="element" getter="isDependAsMandatory" setter="setDependAsMandatory" reffered="false"/>
+<property name="dependOnValue" dataType="boolean" defaultValue="" xmlName="dependOnValue" xmlType="element" getter="isDependOnValue" setter="setDependOnValue" reffered="false"/>
+<property name="discriminatorValue" dataType="java.lang.String" defaultValue="" xmlName="discriminatorValue" xmlType="element" getter="getDiscriminatorValue" setter="setDiscriminatorValue" reffered="false"/>
+<property name="id" dataType="java.lang.String" defaultValue="" xmlName="id" xmlType="element" getter="getID" setter="setID" reffered="false"/>
+<roproperty name="owner" dataType="oracle.dbtools.crest.model.design.relational.Column" getter="getOwner"/>
+</oracle.dbtools.crest.model.design.relational.Column.DependentColumnDescriptor>

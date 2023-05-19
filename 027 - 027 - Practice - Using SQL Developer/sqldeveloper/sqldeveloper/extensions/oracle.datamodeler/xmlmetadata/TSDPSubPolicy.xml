@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.TSDPSubPolicy parentClass="oracle.dbtools.crest.model.ModelIDObject">
+<property name="expression" dataType="java.lang.String" defaultValue="" xmlName="expression" xmlType="element" getter="getExpression" setter="setExpression" reffered="false"/>
+<property name="maskType" dataType="java.lang.String" defaultValue="" xmlName="maskType" xmlType="element" getter="getMaskType" setter="setMaskType" reffered="true"/>
+<property name="maskTemplate" dataType="oracle.dbtools.crest.model.MaskTemplate" defaultValue="" xmlName="maskTemplate" xmlType="element" getter="getMaskTemplate" setter="setMaskTemplate" reffered="true"/>
+<property name="propertyDatatype" dataType="java.lang.String" defaultValue="" xmlName="propertyDatatype" xmlType="element" getter="getPropertyDatatype" setter="setPropertyDatatype" reffered="false"/>
+<property name="propertyLenght" dataType="int" defaultValue="" xmlName="propertyLenght" xmlType="element" getter="getPropertyLenght" setter="setPropertyLenght" reffered="false"/>
+<property name="propertyparentSchema" dataType="java.lang.String" defaultValue="" xmlName="propertyparentSchema" xmlType="element" getter="getPropertyParentSchema" setter="setPropertyParentSchema" reffered="false"/>
+<property name="propertyparentTable" dataType="java.lang.String" defaultValue="" xmlName="propertyparentTable" xmlType="element" getter="getPropertyParentTable" setter="setPropertyParentTable" reffered="false"/>
+</oracle.dbtools.crest.model.TSDPSubPolicy>

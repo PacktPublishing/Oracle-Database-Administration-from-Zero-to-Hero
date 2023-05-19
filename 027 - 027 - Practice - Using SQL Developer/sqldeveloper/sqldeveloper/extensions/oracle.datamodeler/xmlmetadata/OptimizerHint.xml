@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.imports.OptimizerHint>
+   <property name="hint" dataType="java.lang.String" defaultValue="" xmlName="hint" xmlType="element" getter="getHint" setter="setHint" reffered="false"/>
+</oracle.dbtools.crest.imports.OptimizerHint>

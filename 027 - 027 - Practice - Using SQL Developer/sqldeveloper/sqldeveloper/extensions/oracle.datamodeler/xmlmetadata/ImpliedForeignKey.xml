@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.ImpliedForeignKey parentClass="oracle.dbtools.crest.model.design.DesignObject">
+<property name="localColumn" dataType="oracle.dbtools.crest.model.design.relational.FKElement" defaultValue="" xmlName="localColumn" xmlType="element" getter="getLocalColumn" setter="setLocalColumn" search="true" reffered="true"/>
+<property name="referredTableID" dataType="java.lang.String" defaultValue="" xmlName="referredTableID" xmlType="element" getter="getReferredTableID" setter="setReferredTableID" reffered="false"/>
+<property name="referredColumnID" dataType="java.lang.String" defaultValue="" xmlName="referredColumnID" xmlType="element" getter="getReferredColumnID" setter="setReferredColumnID" reffered="false"/>
+<property name="referredTableLongName" dataType="java.lang.String" defaultValue="" xmlName="referredTableLongName" xmlType="element" getter="getReferredTableLongName" setter="setReferredTableLongName" search="true" reffered="false"/>
+<property name="referredColumnName" dataType="java.lang.String" defaultValue="" xmlName="referredColumnName" xmlType="element" getter="getReferredColumnName" setter="setReferredColumnName" search="true" reffered="false"/>
+<property name="discoverySources" dataType="java.lang.String" defaultValue="" xmlName="discoverySources" xmlType="element" getter="getDiscoverySources" setter="setDiscoverySources" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.design.relational.ImpliedForeignKey>

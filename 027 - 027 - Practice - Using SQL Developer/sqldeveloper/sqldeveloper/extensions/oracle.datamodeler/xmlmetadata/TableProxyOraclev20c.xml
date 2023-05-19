@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c parentClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c">
+   <property name="blockChainTable" dataType="boolean" defaultValue="false" xmlName="blockChainTable" xmlType="element" getter="isBlockChainTable" setter="setBlockChainTable" reffered="false"/>
+   <property name="blockChainDatFormatVersion" dataType="java.lang.String" defaultValue="V1" xmlName="blockChainDatFormatVersion" xmlType="element" getter="getBlockChainDatFormatVersion" setter="setBlockChainDatFormatVersion" reffered="false"/>
+   <property name="blockChainHashAlgorithm" dataType="java.lang.String" defaultValue="SHA2_512" xmlName="blockChainHashAlgorithm" xmlType="element" getter="getBlockChainHashAlgorithm" setter="setBlockChainHashAlgorithm" reffered="false"/>
+   <property name="rowDeleteretentionDays" dataType="java.lang.String" defaultValue="" xmlName="rowDeleteretentionDays" xmlType="element" getter="getRowDeleteRetentionDays" setter="setRowDeleteRetentionDays" reffered="false"/>
+   <property name="rowDeleteretentionLock" dataType="boolean" defaultValue="false" xmlName="rowDeleteretentionLock" xmlType="element" getter="isRowDeleteRetentionLock" setter="setRowDeleteRetentionLock" reffered="false"/>
+   <property name="tableDropRetentionDays" dataType="java.lang.String" defaultValue="" xmlName="tableDropRetentionDays" xmlType="element" getter="getTableDropRetentionDays" setter="setTableDropRetentionDays" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c>

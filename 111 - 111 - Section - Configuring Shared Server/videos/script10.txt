@@ -1,0 +1,9 @@
+-- Configuring Shared Server
+
+hi everyone,
+
+In this section, we will discuss about a database option that has been there in Oracle databases since it early releases. That is  "shared server option".
+
+This option comes in handy when the server resources are under high stress due to high number of connected users.
+
+We will see you in the next lecture.

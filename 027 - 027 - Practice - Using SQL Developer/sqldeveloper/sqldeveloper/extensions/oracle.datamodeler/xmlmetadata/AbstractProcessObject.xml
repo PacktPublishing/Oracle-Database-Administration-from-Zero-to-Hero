@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.process.AbstractProcessObject parentClass="oracle.dbtools.crest.model.design.DesignObject">
+   <property name="synonym" dataType="java.lang.String" defaultValue="" xmlName="synonym" xmlType="element" getter="getSynonym" setter="setSynonym" reffered="false"/>
+   <roproperty name="affectedDPVs" dataType="interface java.util.Collection" getter="getAffectedDPVs"/>
+   <roproperty name="allFlows" dataType="[Loracle.dbtools.crest.model.design.process.Flow$Connection" getter="getAllFlows"/>
+   <roproperty name="allViews" dataType="interface java.util.Collection" getter="getAllViews"/>
+   <roproperty name="allViewsForCurrentDPV" dataType="interface java.util.Collection" getter="getAllViewsForCurrentDPV"/>
+   <roproperty name="anotherView" dataType="oracle.dbtools.crest.swingui.TopView" getter="getAnotherView"/>
+   <roproperty name="incomingFlows" dataType="java.util.List" getter="getIncomingFlows" search="true"/>
+   <roproperty name="incomingFlowsFrom" dataType="interface java.util.List" getter="getIncomingFlowsFrom"/>
+   <roproperty name="numberOfFlows" dataType="int" getter="getNumberOfFlows"/>
+   <roproperty name="outgoingFlows" dataType="java.util.List" getter="getOutgoingFlows" search="true"/>
+   <roproperty name="outgoingFlowsTo" dataType="interface java.util.List" getter="getOutgoingFlowsTo"/>
+   <roproperty name="viewSynonims" dataType="interface java.util.Collection" getter="getViewSynonims"/>
+</oracle.dbtools.crest.model.design.process.AbstractProcessObject>

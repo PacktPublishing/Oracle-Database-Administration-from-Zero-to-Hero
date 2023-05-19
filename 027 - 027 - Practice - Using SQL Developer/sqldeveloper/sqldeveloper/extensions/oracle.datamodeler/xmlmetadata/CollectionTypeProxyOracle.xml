@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.CollectionTypeProxyOracle parentClass="oracle.dbtools.crest.model.design.storage.CollectionTypeProxy">
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.storage.oracle.UserOracle" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" reffered="true"/>
+   <roproperty name="arrayType" dataType="boolean" getter="isArrayType"/>
+   <roproperty name="dataType" dataType="java.lang.String" getter="getDataType"/>
+   <roproperty name="maxElement" dataType="int" getter="getMaxElement"/>
+   <roproperty name="type" dataType="java.lang.String" getter="getType"/>
+   <collection name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="synonyms" itemXmlName="Synonym" getter="getSynonyms" addItem="addSynonym" createItem="createSynonym" />
+   <roproperty name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getSynonyms"/>
+</oracle.dbtools.crest.model.design.storage.oracle.CollectionTypeProxyOracle>

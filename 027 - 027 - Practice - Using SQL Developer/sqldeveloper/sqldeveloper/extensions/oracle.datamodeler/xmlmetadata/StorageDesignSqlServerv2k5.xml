@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.StorageDesignSqlServerv2k5 parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.StorageDesignSqlServer">
+<collection external="true" name="PartitionFunctionsSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PartitionFunctionSetSqlServer" xmlName="PartitionFunctionsSqlServer" itemXmlName="PartitionFunctionSqlServer" getter="getPartitionFunctionSet"  createItem="createPartitionFunction"/>
+<collection external="true" name="XmlSchemaCollections" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.XMLSchemaCollectionSetSqlServerv2k5" xmlName="XmlSchemaCollections" itemXmlName="XmlSchemaCollection" getter="getXmlSchemaCollectionSet"  createItem="createXMLSchemaCollectionSqlServer"/>
+<roproperty name="partitionFunctionSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PartitionFunctionSetSqlServer" getter="getPartitionFunctionSet"/>
+<roproperty name="partitionSchemeSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PartitionSchemeSetSqlServer" getter="getPartitionSchemeSet"/>
+<roproperty name="secondaryXmlIndexsetv2k5" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.SecondaryXmlIndexSetSqlServerv2k5" getter="getSecondaryXmlIndexSetv2k5"/>
+<roproperty name="subViewFKProxyset" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.FKProxySetSqlServer" getter="getSubViewFKProxySet"/>
+<roproperty name="subViewPKProxyset" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PKProxySetSqlServer" getter="getSubViewPKProxySet"/>
+<roproperty name="subViewTriggerset" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.TriggerSetSqlServer" getter="getSubViewTriggerSet"/>
+<roproperty name="synonymset" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.SynonymSetSqlServer" getter="getSynonymSet"/>
+<roproperty name="visibleTables" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.VisibleTablesCollectionv2k5" getter="getVisibleTables"/>
+<roproperty name="xmlSchemaCollectionSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.XMLSchemaCollectionSetSqlServerv2k5" getter="getXmlSchemaCollectionSet"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.StorageDesignSqlServerv2k5>

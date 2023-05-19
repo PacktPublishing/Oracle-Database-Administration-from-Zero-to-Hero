@@ -1,0 +1,6 @@
+-- Using Oracle Database Utilities
+hi everyone,
+In the subsequent lectures, we will introduce the Oracle database utilities that are used in data movement.
+They are as follows: Data Pump, SQL Loader, and External tables.
+So, stick around ... we will discuss about those utilities one by one.
+

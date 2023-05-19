@@ -1,0 +1,11 @@
+-- Applying Patches on Oracle Databases
+hi everyone,
+
+There might be a debate about implementing some features or options in production Oracle databases. But there is a total agreement among all the managers to keep applying approved patches on production systems.
+
+The patches fixed known bugs including the security issues.
+
+In this section, you will understand applying patches on Oracle databases.
+This is an important, topic... so, please stick around for the next lecture.
+
+See you guys!

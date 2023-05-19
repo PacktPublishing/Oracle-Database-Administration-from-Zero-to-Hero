@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.StorageDesignSqlServerv2k12 parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.v2k8.StorageDesignSqlServerv2k8">
+<collection external="true" name="SequencesSqlServer" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.SequenceSetSqlServerv2k12" xmlName="SequencesSqlServer" itemXmlName="SequenceSqlServer" getter="getSequenceSet"  createItem="createSequence"/>
+<roproperty name="sequenceset" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.SequenceSetSqlServerv2k12" getter="getSequenceSet"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.StorageDesignSqlServerv2k12>

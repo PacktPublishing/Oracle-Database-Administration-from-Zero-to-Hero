@@ -1,0 +1,13 @@
+-- Managing Oracle Database Components
+
+hi everyone, 
+
+So far, we learnt how to create non-CDB and CDB databases and perform basic administration tasks on them.
+
+Now, it's time to manage their components.
+
+In this section, we will learn how to manage the memory areas in Oracle databases. Then, we will shift to the storage side and learn  how to manage the tablespaces and datafiles.
+
+Those are again important tasks that every DBA should learn.
+
+Let's get started.

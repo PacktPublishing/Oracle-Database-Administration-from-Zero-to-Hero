@@ -1,0 +1,14 @@
+Flash backup database can be used as a replacement to the RMAN backups for database point-in-time recovery (PITR) purposes.
+False
+Flash backup database cannot be used to perform database point-in-time recovery from physical loss (like deleting a datafile).
+
+Flashback logs are archived to allow you to rewind to a point in time that your FRA cannot accommodate. 
+True
+False
+
+
+You can use Flashback Database, when you want to:
+Repair logical data corruptions
+Recover a tablespace that has been dropped
+Recover to a point prior to when a data file has been reduced in size
+Recover to a point prior to when you re-created the control file

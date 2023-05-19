@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.DataBaseSqlServerv2k5 parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.DataBaseSqlServer">
+   <property name="ansiNullDefault" dataType="java.lang.String" defaultValue="OFF" xmlName="ansiNullDefault" xmlType="element" getter="getAnsiNullDefault" setter="setAnsiNullDefault" reffered="false"/>
+   <property name="autoUpdateStatisticsAsync" dataType="java.lang.String" defaultValue="OFF" xmlName="autoUpdateStatisticsAsync" xmlType="element" getter="getAutoUpdateStatisticsAsync" setter="setAutoUpdateStatisticsAsync" reffered="false"/>
+   <property name="dateCorrelationOptimization" dataType="java.lang.String" defaultValue="OFF" xmlName="dateCorrelationOptimization" xmlType="element" getter="getDateCorrelationOptimization" setter="setDateCorrelationOptimization" reffered="false"/>
+   <property name="trustworthy" dataType="java.lang.String" defaultValue="OFF" xmlName="trustworthy" xmlType="element" getter="getTrustworthy" setter="setTrustworthy" reffered="false"/>
+   <property name="allowSnapshotIsolation" dataType="java.lang.String" defaultValue="OFF" xmlName="allowSnapshotIsolation" xmlType="element" getter="getAllowSnapshotIsolation" setter="setAllowSnapshotIsolation" reffered="false"/>
+   <property name="readCommittedSnapshot" dataType="java.lang.String" defaultValue="OFF" xmlName="readCommittedSnapshot" xmlType="element" getter="getReadCommittedSnapshot" setter="setReadCommittedSnapshot" reffered="false"/>
+   <property name="dbChaining" dataType="java.lang.String" defaultValue="OFF" xmlName="dbChaining" xmlType="element" getter="getDbChaining" setter="setDbChaining" reffered="false"/>
+   <property name="enableBroker" dataType="boolean" defaultValue="false" xmlName="enableBroker" xmlType="element" getter="getEnableBroker" setter="setEnableBroker" reffered="false"/>
+   <property name="disableBroker" dataType="boolean" defaultValue="false" xmlName="disableBroker" xmlType="element" getter="getDisableBroker" setter="setDisableBroker" reffered="false"/>
+   <property name="newBroker" dataType="boolean" defaultValue="false" xmlName="newBroker" xmlType="element" getter="getNewBroker" setter="setNewBroker" reffered="false"/>
+   <property name="errorBrokerConversations" dataType="boolean" defaultValue="false" xmlName="errorBrokerConversations" xmlType="element" getter="getErrorBrokerConversations" setter="setErrorBrokerConversations" reffered="false"/>
+   <property name="readWrite" dataType="boolean" defaultValue="false" xmlName="readWrite" xmlType="element" getter="getReadWrite" setter="setReadWrite" reffered="false"/>
+   <property name="readOnly" dataType="boolean" defaultValue="false" xmlName="readOnly" xmlType="element" getter="getReadOnly" setter="setReadOnly" reffered="false"/>
+   <property name="parameterization" dataType="java.lang.String" defaultValue="SIMPLE" xmlName="parameterization" xmlType="element" getter="getParameterization" setter="setParameterization" reffered="false"/>
+   <property name="pageVerify" dataType="java.lang.String" defaultValue="NONE" xmlName="pageVerify" xmlType="element" getter="getPageVerify" setter="setPageVerify" reffered="false"/>
+   <property name="honorBrokerPriority" dataType="java.lang.String" defaultValue="OFF" xmlName="honorBrokerPriority" xmlType="element" getter="getHonorBrokerPriority" setter="setHonorBrokerPriority" reffered="false"/>
+   <property name="compatibilityLevel" dataType="java.lang.String" defaultValue="80" xmlName="compatibilityLevel" xmlType="element" getter="getCompatibilityLevel" setter="setCompatibilityLevel" reffered="false"/>
+   <property name="rollbackAfter" dataType="java.lang.String" defaultValue="" xmlName="rollbackAfter" xmlType="element" getter="getRollbackAfter" setter="setRollbackAfter" reffered="false"/>
+   <property name="rollbackImmediate" dataType="boolean" defaultValue="false" xmlName="rollbackImmediate" xmlType="element" getter="getRollbackImmediate" setter="setRollbackImmediate" reffered="false"/>
+   <property name="noWait" dataType="boolean" defaultValue="false" xmlName="noWait" xmlType="element" getter="getNoWait" setter="setNoWait" reffered="false"/>
+   <property name="changeTracking" dataType="java.lang.String" defaultValue="OFF" xmlName="changeTracking" xmlType="element" getter="getChangeTracking" setter="setChangeTracking" reffered="false"/>
+   <property name="autoCleanup" dataType="java.lang.String" defaultValue="OFF" xmlName="autoCleanup" xmlType="element" getter="getAutoCleanup" setter="setAutoCleanup" reffered="false"/>
+   <property name="encryption" dataType="java.lang.String" defaultValue="OFF" xmlName="encryption" xmlType="element" getter="getEncryption" setter="setEncryption" reffered="false"/>
+   <roproperty name="partitionFunctions" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getPartitionFunction"/>
+   <roproperty name="tablesList" dataType="interface java.util.List" getter="getTablesList"/>
+   <collection name="usedDistinctTypes" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="usedDistinctTypes" itemXmlName="UsedDistinctType" getter="getUsedDistinctTypes" createItem="createUsedDistinctType"/>
+   <collection name="userDefinedDomains" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="userDefinedDomains" itemXmlName="UserDefinedDomain" getter="getUserDefinedDomains" createItem="createUserDefinedDomain"/>
+   <roproperty name="xmlSchemaCollections" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getXmlSchemaCollection"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.DataBaseSqlServerv2k5>

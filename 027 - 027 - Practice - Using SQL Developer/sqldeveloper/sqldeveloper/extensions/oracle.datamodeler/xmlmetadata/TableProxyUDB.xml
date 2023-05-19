@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.TableProxyUDB parentClass="oracle.dbtools.crest.model.design.storage.TableProxy">
+   <property name="dataCapture" dataType="java.lang.String" defaultValue="NONE" xmlName="dataCapture" xmlType="element" getter="getDataCapture" setter="setDataCapture" search="true" reffered="false"/>
+   <property name="federated" dataType="java.lang.String" defaultValue="NONE" xmlName="federated" xmlType="element" getter="getFederated" setter="setFederated" search="true" reffered="false"/>
+   <property name="hierarchyName" dataType="java.lang.String" defaultValue="" xmlName="hierarchyName" xmlType="element" getter="getHierarchyName" setter="setHierarchyName" search="true" reffered="false"/>
+   <property name="indexinTableSpace" dataType="oracle.dbtools.crest.model.design.storage.udb.TableSpaceUDB" defaultValue="" xmlName="indexinTableSpace" xmlType="element" getter="getIndexInTableSpace" setter="setIndexInTableSpace" reffered="true"/>
+   <property name="initialLogging" dataType="boolean" defaultValue="true" xmlName="initialLogging" xmlType="element" getter="getInitialLogging" setter="setInitialLogging" search="true" reffered="false"/>
+   <property name="longInTableSpace" dataType="oracle.dbtools.crest.model.design.storage.udb.TableSpaceUDB" defaultValue="" xmlName="longInTableSpace" xmlType="element" getter="getLongInTableSpace" setter="setLongInTableSpace" search="true" reffered="true"/>
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.storage.udb.OwnerUDB" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" reffered="true" search="true"/>
+   <property name="partKeyHashing" dataType="boolean" defaultValue="false" xmlName="partKeyHashing" xmlType="element" getter="getPartKeyHashing" setter="setPartKeyHashing" search="true" reffered="false"/>
+   <property name="partitioningKey" dataType="java.lang.String" defaultValue="" xmlName="partitioningKey" xmlType="element" getter="getPartitioningKey" setter="setPartitioningKey" reffered="false" listOfRefs="true"/>
+   <property name="replicated" dataType="java.lang.String" defaultValue="NO" xmlName="replicated" xmlType="element" getter="getReplicated" setter="setReplicated" search="true" reffered="false"/>
+   <property name="schema" dataType="oracle.dbtools.crest.model.design.storage.udb.SchemaUDB" defaultValue="" xmlName="schema" xmlType="element" getter="getSchema" setter="setSchema" reffered="true" search="true"/>
+   <property name="summaryCopyColumnDefaults" dataType="java.lang.String" defaultValue="NONE" xmlName="summaryCopyColumnDefaults" xmlType="element" getter="getSummaryCopyColumnDefaults" setter="setSummaryCopyColumnDefaults" search="true" reffered="false"/>
+   <property name="summaryIdentityColumn" dataType="java.lang.String" defaultValue="EXCLUDING" xmlName="summaryIdentityColumn" xmlType="element" getter="getSummaryIdentityColumn" setter="setSummaryIdentityColumn" search="true" reffered="false"/>
+   <property name="summaryMaintenance" dataType="java.lang.String" defaultValue="BY SYSTEM" xmlName="summaryMaintenance" xmlType="element" getter="getSummaryMaintenance" setter="setSummaryMaintenance" search="true" reffered="false"/>
+   <property name="summaryQuery" dataType="java.lang.String" defaultValue="NO" xmlName="summaryQuery" xmlType="element" getter="getSummaryQuery" setter="setSummaryQuery" search="true" reffered="false"/>
+   <property name="summaryQueryChanged" dataType="boolean" defaultValue="true" xmlName="summaryQueryChanged" xmlType="element" getter="isSummaryQueryChanged" setter="setSummaryQueryChanged" reffered="false"/>
+   <property name="summaryQueryDefinition" dataType="java.lang.String" defaultValue="" xmlName="summaryQueryDefinition" xmlType="element" getter="getSummaryQueryDefinition" setter="setSummaryQueryDefinition" search="true" reffered="false"/>
+   <property name="summaryQueryDefinitionChanged" dataType="boolean" defaultValue="true" xmlName="summaryQueryDefinitionChanged" xmlType="element" getter="isSummaryQueryDefinitionChanged" setter="setSummaryQueryDefinitionChanged" reffered="false"/>
+   <property name="summaryQueryOptimization" dataType="java.lang.String" defaultValue="ENABLE" xmlName="summaryQueryOptimization" xmlType="element" getter="getSummaryQueryOptimization" setter="setSummaryQueryOptimization" search="true" reffered="false"/>
+   <property name="summaryRefreshOptions" dataType="java.lang.String" defaultValue="DEFERRED" xmlName="summaryRefreshOptions" xmlType="element" getter="getSummaryRefreshOptions" setter="setSummaryRefreshOptions" search="true" reffered="false"/>
+   <property name="summarystatus" dataType="java.lang.String" defaultValue="MATERIALIZED QUERY" xmlName="summarystatus" xmlType="element" getter="getSummaryStatus" setter="setSummaryStatus" search="true" reffered="false"/>
+   <property name="tableSpace" dataType="oracle.dbtools.crest.model.design.storage.udb.TableSpaceUDB" defaultValue="" xmlName="tableSpace" xmlType="element" getter="getTableSpace" setter="setTableSpace" search="true" reffered="true"/>
+   <roproperty name="column" dataType="oracle.dbtools.crest.model.design.storage.udb.ColumnProxyUDB" getter="getColumn"/>
+   <roproperty name="columnSet" dataType="oracle.dbtools.crest.model.design.storage.udb.TableProxyUDB$ColumnSet" getter="getColumnSet"/>
+   <roproperty name="propertyWrapperList" dataType="interface java.util.List" getter="getPropertyWrapperList"/>
+   <roproperty name="superTableName" dataType="java.lang.String" getter="getSuperTableName" search="true"/>
+   <collection name="foreignKeys" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="foreignKeys" itemXmlName="ForeignKey" getter="getFKeys" proxyItem="true" />
+   <roproperty name="triggers" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getTriggers"/>
+</oracle.dbtools.crest.model.design.storage.udb.TableProxyUDB>

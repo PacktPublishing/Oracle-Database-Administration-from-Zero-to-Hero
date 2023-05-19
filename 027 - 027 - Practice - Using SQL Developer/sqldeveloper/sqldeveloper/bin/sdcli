@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#=============================================================================
+#  Launcher for Oracle SQL Developer
+#  Copyright (c) 2005, Oracle. All rights reserved.
+#=============================================================================
+
+#I could have got here by some/path/sdsql
+PRG="$0"
+export PATH="$(dirname "$PRG"):$PATH"
+. "sqldeveloper"
+
+#-----------------------------------------------------------------------------
+#  product-specific function overrides
+#-----------------------------------------------------------------------------
+GetFullProductName()
+{
+    echo "Oracle SQL Developer"
+}
+
+GetShortProductName()
+{
+    echo "SQL Developer"
+}
+

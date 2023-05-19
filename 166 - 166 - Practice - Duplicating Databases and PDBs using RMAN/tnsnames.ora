@@ -1,0 +1,9 @@
+# add the following to the tnsnames.ora file in srv1
+ORADB2 =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = srv1.localdomain)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SID = ORADB2)
+    )
+  )

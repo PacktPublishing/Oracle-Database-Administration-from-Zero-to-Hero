@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.SupplementalLogGroup>
+   <property name="id" dataType="java.lang.String" defaultValue="" xmlName="id" xmlType="attribute" getter="getId" setter="setId" reffered="false" listOfRefs="false"/>
+   <property name="name" dataType="java.lang.String" defaultValue="" xmlName="name" xmlType="element" getter="getName" setter="setName" search="false" reffered="false"/>
+   <property name="columns" dataType="java.lang.String" defaultValue="" xmlName="columns" xmlType="element" getter="getColumns" setter="setColumns" reffered="false" listOfRefs="true"/>
+   <property name="columnsNoLog" dataType="java.lang.String" defaultValue="" xmlName="columnsNoLog" xmlType="element" getter="getColumnsNoLog" setter="setColumnsNoLog" reffered="false" listOfRefs="true"/>
+   <property name="condition" dataType="java.lang.String" defaultValue="ON UPDATE" xmlName="condition" xmlType="element" getter="getCondition" setter="setCondition" search="false" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.SupplementalLogGroup>

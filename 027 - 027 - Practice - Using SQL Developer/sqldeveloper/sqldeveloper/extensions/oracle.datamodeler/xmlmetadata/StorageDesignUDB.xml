@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.udb.StorageDesignUDB parentClass="oracle.dbtools.crest.model.design.storage.StorageDesign">
+<collection external="true" name="DB2UOwners" dataType="oracle.dbtools.crest.model.design.storage.db2.OwnerSet" xmlName="DB2UOwners" itemXmlName="DB2UOwner" getter="getOwnerSet"  createItem="createOwner"/>
+<collection external="true" name="UserGroupsUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.UserGroupSetUDB" xmlName="UserGroupsUDB" itemXmlName="UserGroupUDB" getter="getUserGroupSet"  createItem="createUserGroup"/>
+<collection external="true" name="SchemasUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.SchemaSetUDB" xmlName="SchemasUDB" itemXmlName="SchemaUDB" getter="getSchemaSet"  createItem="createSchema"/>
+<collection external="true" name="StructuredTypesUDB" dataType="oracle.dbtools.crest.model.design.storage.StructuredTypeProxySet" xmlName="StructuredTypesUDB" itemXmlName="StructuredTypeUDB" getter="getStructuredTypeProxySet"  proxyItem="true"/>
+<collection external="true" name="InstancesUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.InstanceSetUDB" xmlName="InstancesUDB" itemXmlName="InstanceUDB" getter="getInstanceSet"  createItem="createInstance"/>
+<collection external="true" name="DataBasesUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.DataBaseSetUDB" xmlName="DataBasesUDB" itemXmlName="DataBaseUDB" getter="getDataBaseSet"  createItem="createDataBase"/>
+<collection external="true" name="BufferPoolsUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.BufferPoolSetUDB" xmlName="BufferPoolsUDB" itemXmlName="BufferPoolUDB" getter="getBufferPoolSet"  createItem="createBufferPool"/>
+<collection external="true" name="ContainersUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.ContainerSetUDB" xmlName="ContainersUDB" itemXmlName="ContainerUDB" getter="getContainerSet"  createItem="createContainer"/>
+<collection external="true" name="AliasesUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.AliasSetUDB" xmlName="AliasesUDB" itemXmlName="AliasUDB" getter="getAliasSet"  createItem="createAlias"/>
+<collection external="true" name="NodeGroupsUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.NodeGroupSetUDB" xmlName="NodeGroupsUDB" itemXmlName="NodeGroupUDB" getter="getNodeGroupSet"  createItem="createNodeGroup"/>
+<collection external="true" name="TableSpacesUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.TableSpaceSetUDB" xmlName="TableSpacesUDB" itemXmlName="TableSpaceUDB" getter="getTableSpaceSet"  createItem="createTableSpace"/>
+   <!-- distinct types in UDB are not  a proxy objects, thus they have createItem method   -->
+<collection external="true" name="DistinctTypesUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.DistinctTypeSetUDB" xmlName="DistinctTypesUDB" itemXmlName="DistinctTypeUDB" getter="getDistinctTypeSet"  createItem="createDistinctType"/>
+<collection external="true" name="TablesUDB" dataType="oracle.dbtools.crest.model.design.storage.TableProxySet" xmlName="TablesUDB" itemXmlName="TableUDB" getter="getTableProxySet"  proxyItem="true"/>
+<collection external="true" name="ViewsUDB" dataType="oracle.dbtools.crest.model.design.storage.TableViewProxySet" xmlName="ViewsUDB" itemXmlName="ViewUDB" getter="getTableViewProxySet"  proxyItem="true"/>
+<collection external="true" name="StagingTablesUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.StagingTableSetUDB" xmlName="StagingTablesUDB" itemXmlName="StagingTablesUDB" getter="getStagingTableSet"  createItem="createStagingTable"/>
+<collection external="true" name="SequencesUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.SequenceSetUDB" xmlName="SequencesUDB" itemXmlName="SequenceUDB" getter="getSequenceSet"  createItem="createSequence"/>
+<collection external="true" name="TriggersUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.TriggerSetUDB" xmlName="TriggersUDB" itemXmlName="TriggerUDB" getter="getTriggerSet"  createItem="createTrigger"/>
+<collection external="true" name="StoredProceduresUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.StoredProcedureSetUDB" xmlName="StoredProceduresUDB" itemXmlName="StoredProcedureUDB" getter="getStoredProcedureSet"  createItem="createStoredProcedure"/>
+<collection external="true" name="FunctionsUDB" dataType="oracle.dbtools.crest.model.design.storage.udb.FunctionSetUDB" xmlName="FunctionsUDB" itemXmlName="FunctionsUDB" getter="getFunctionSet"  createItem="createFunction"/>
+<property name="dtdialogVisible" dataType="boolean" defaultValue="" xmlName="dtdialogVisible" xmlType="element" getter="isDtDialogVisible" setter="setDtDialogVisible" reffered="false"/>
+<roproperty name="aliasSet" dataType="oracle.dbtools.crest.model.design.storage.udb.AliasSetUDB" getter="getAliasSet"/>
+<roproperty name="bufferPoolSet" dataType="oracle.dbtools.crest.model.design.storage.udb.BufferPoolSetUDB" getter="getBufferPoolSet"/>
+<roproperty name="containerSet" dataType="oracle.dbtools.crest.model.design.storage.udb.ContainerSetUDB" getter="getContainerSet"/>
+<roproperty name="dataBaseSet" dataType="oracle.dbtools.crest.model.design.storage.udb.DataBaseSetUDB" getter="getDataBaseSet"/>
+<roproperty name="distinctTypeSet" dataType="oracle.dbtools.crest.model.design.storage.udb.DistinctTypeSetUDB" getter="getDistinctTypeSet"/>
+<roproperty name="fkProxySet" dataType="oracle.dbtools.crest.model.design.storage.udb.FKProxySetUDB" getter="getFKProxySet"/>
+<roproperty name="functionSet" dataType="oracle.dbtools.crest.model.design.storage.udb.FunctionSetUDB" getter="getFunctionSet"/>
+<roproperty name="instanceSet" dataType="oracle.dbtools.crest.model.design.storage.udb.InstanceSetUDB" getter="getInstanceSet"/>
+<roproperty name="nodeGroupSet" dataType="oracle.dbtools.crest.model.design.storage.udb.NodeGroupSetUDB" getter="getNodeGroupSet"/>
+<roproperty name="ownerSet" dataType="oracle.dbtools.crest.model.design.storage.db2.OwnerSet" getter="getOwnerSet"/>
+<roproperty name="permissionsSet" dataType="oracle.dbtools.crest.model.design.storage.udb.PermissionsSetUDB" getter="getPermissionsSet"/>
+<roproperty name="privilegesSet" dataType="oracle.dbtools.crest.model.design.storage.udb.PrivilegesSetUDB" getter="getPrivilegesSet"/>
+<roproperty name="schemaset" dataType="oracle.dbtools.crest.model.design.storage.udb.SchemaSetUDB" getter="getSchemaSet"/>
+<roproperty name="storageDesignUDBEstimates" dataType="oracle.dbtools.crest.model.design.storage.udb.StorageDesignUDBEstimates" getter="getStorageDesignUDBEstimates"/>
+<roproperty name="storedProcedureset" dataType="oracle.dbtools.crest.model.design.storage.udb.StoredProcedureSetUDB" getter="getStoredProcedureSet"/>
+<roproperty name="tableSpaceSet" dataType="oracle.dbtools.crest.model.design.storage.udb.TableSpaceSetUDB" getter="getTableSpaceSet"/>
+<roproperty name="triggerSet" dataType="oracle.dbtools.crest.model.design.storage.udb.TriggerSetUDB" getter="getTriggerSet"/>
+<roproperty name="userGroupSet" dataType="oracle.dbtools.crest.model.design.storage.udb.UserGroupSetUDB" getter="getUserGroupSet"/>
+</oracle.dbtools.crest.model.design.storage.udb.StorageDesignUDB>

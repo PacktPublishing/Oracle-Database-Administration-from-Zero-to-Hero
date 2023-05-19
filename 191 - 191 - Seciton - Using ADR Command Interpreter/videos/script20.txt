@@ -1,0 +1,8 @@
+-- using Automatic Diagnostic Repository (ADR)
+Hi everyone,
+Being an advanced RDBMS, Oracle databases could face incidents that should be troubleshooted.
+
+In this section, you will learn about using the Automatic Diagnostic Repository or ADR. This utility makes it easy to manage Oracle database incidents and gather information about it for Oracle support.
+
+We'll see you in the next lecture.
+

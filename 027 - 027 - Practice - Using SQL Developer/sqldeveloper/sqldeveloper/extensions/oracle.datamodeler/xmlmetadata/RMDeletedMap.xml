@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.xtdmapping.RMDeletedMap>
+   <collection name="deletedMappings" dataType="java.util.List" xmlName="mappings" itemXmlName="delm" getter="getDeletedMappings" createItem="createMapping" getItemByID="getDeltedMappingByID" addItem="addDeletedMapping" orderImportant="false" itemClass="oracle.dbtools.crest.model.xtdmapping.XtdMapping"/>
+</oracle.dbtools.crest.model.xtdmapping.RMDeletedMap>

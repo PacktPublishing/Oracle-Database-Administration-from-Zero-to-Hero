@@ -1,0 +1,10 @@
+-- Managing Fast Recovery Area and Redo Log
+hi everyone, 
+
+In this section, we will discuss about Fast Recovery Area and managing Redo Log in Oracle databases.
+
+Specifically, we will learn how to configure FRA, manage the redo log, and enabling ARCHIVELOG mode in Oracle databases.
+
+Nearly all production databases are working in ARCHIVELOG mode. So, it is essential for DBAs to mastering managing the redo log in Oracle databases.
+
+So, let's dive in and learn about managing the redo log in Oracle databases.

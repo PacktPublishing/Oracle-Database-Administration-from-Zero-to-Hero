@@ -1,0 +1,8 @@
+-- Database Recovery
+Hi everyone, 
+
+In this section of the course, we will cover the database recovery procedures. 
+
+We will learn about how to configure RMAN persistence settings, carry out database recovery scenarios, and automate RMAN backup scripts.
+
+See you guys in the next lecture.

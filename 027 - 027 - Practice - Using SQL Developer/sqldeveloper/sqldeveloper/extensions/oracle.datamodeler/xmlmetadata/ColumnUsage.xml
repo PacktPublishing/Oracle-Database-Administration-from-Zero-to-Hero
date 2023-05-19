@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.ColumnUsage parentClass="java.lang.Object">
+   <aaproperty name="ownerTableID" dataType="java.lang.String" defaultValue="" xmlName="ownerTableID" xmlType="element" getter="getClustTableID" setter="setClustTableID" reffered="false"/>
+   <property name="usedColumnID" dataType="java.lang.String" defaultValue="" xmlName="usedColumnID" xmlType="element" getter="getColumnID" setter="setColumnID" reffered="false"/>
+   <property name="columnName" dataType="java.lang.String" defaultValue="" xmlName="columnName" xmlType="element" getter="getColumnName" setter="setColumnName" reffered="false"/>
+   <aaproperty name="groupID" dataType="int" defaultValue="" xmlName="groupID" xmlType="element" getter="getGroupID" setter="setGroupID" reffered="false"/>
+   <property name="position" dataType="int" defaultValue="" xmlName="position" xmlType="element" getter="getPosition" setter="setPosition" reffered="false"/>
+   <property name="schema" dataType="java.lang.String" defaultValue="" xmlName="schema" xmlType="element" getter="getSchema" setter="setSchema" reffered="false"/>
+   <property name="tableName" dataType="java.lang.String" defaultValue="" xmlName="tableName" xmlType="element" getter="getTableName" setter="setTableName" reffered="false"/>
+   <roproperty name="ownerTableSchema" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" getter="getOwnerTableSchema"/>
+   <roproperty name="ownerTable" dataType="oracle.dbtools.crest.model.design.relational.Table" getter="getOwnerTable"/>
+   <roproperty name="column" dataType="oracle.dbtools.crest.model.design.relational.Column" getter="getColumn"/>
+</oracle.dbtools.crest.model.design.relational.ColumnUsage>

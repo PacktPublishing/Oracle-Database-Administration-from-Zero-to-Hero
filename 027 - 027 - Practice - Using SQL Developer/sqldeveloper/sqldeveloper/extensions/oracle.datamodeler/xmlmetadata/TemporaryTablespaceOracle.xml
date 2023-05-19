@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.TemporaryTablespaceOracle parentClass="oracle.dbtools.crest.model.design.storage.oracle.AbstractStorageObjectOracle">
+   <property name="autoextend" dataType="java.lang.String" defaultValue="ON" xmlName="autoextend" xmlType="element" getter="getAutoextend" setter="setAutoextend" search="true" reffered="false"/>
+   <property name="filename" dataType="java.lang.String" defaultValue="" xmlName="filename" xmlType="element" getter="getFilename" setter="setFilename" search="true" reffered="false"/>
+   <property name="maxSize" dataType="java.lang.String" defaultValue="UNLIMITED" xmlName="maxSize" xmlType="element" getter="getMaxSize" setter="setMaxSize" search="true" reffered="false"/>
+   <property name="measureUnitSize" dataType="java.lang.String" defaultValue="K" xmlName="measureUnitSize" xmlType="element" getter="getMeasureUnitSize" setter="setMeasureUnitSize" search="true" reffered="false"/>
+   <property name="measureUnitUniformSize" dataType="java.lang.String" defaultValue="K" xmlName="measureUnitUniformSize" xmlType="element" getter="getMeasureUnitUniformSize" setter="setMeasureUnitUniformSize" search="true" reffered="false"/>
+   <property name="nextBlockSize" dataType="int" defaultValue="1" xmlName="nextBlockSize" xmlType="element" getter="getNextBlockSize" setter="setNextBlockSize" search="true" reffered="false"/>
+   <property name="reuse" dataType="java.lang.String" defaultValue="NO" xmlName="reuse" xmlType="element" getter="getReuse" setter="setReuse" search="true" reffered="false"/>
+   <property name="size" dataType="long" defaultValue="0" xmlName="size" xmlType="element" getter="getSize" setter="setSize" search="true" reffered="false"/>
+   <property name="uniformSize" dataType="long" defaultValue="0" xmlName="uniformSize" xmlType="element" getter="getUniformSize" setter="setUniformSize" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.TemporaryTablespaceOracle>

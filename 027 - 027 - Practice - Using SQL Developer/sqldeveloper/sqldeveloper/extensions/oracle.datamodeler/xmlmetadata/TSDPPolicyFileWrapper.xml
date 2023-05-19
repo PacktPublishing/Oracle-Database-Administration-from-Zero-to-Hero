@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.TSDPPolicyFileWrapper parentClass="java.lang.Object">
+<collection name="tsdpPolicies" dataType="java.util.List" xmlName="tsdpPolicies" itemXmlName="TSDPPolicy" getter="getTSDPPolicies" createItem="createTSDPPolicy" removeItem="removeTSDPPolicy" getItemByID="getTSDPPolicyByID"  nativeList="true"/>
+<roproperty name="tsdpPolicyByID" dataType="oracle.dbtools.crest.model.TSDPPolicy" getter="getTSDPPolicyByID"/>
+</oracle.dbtools.crest.model.TSDPPolicyFileWrapper>

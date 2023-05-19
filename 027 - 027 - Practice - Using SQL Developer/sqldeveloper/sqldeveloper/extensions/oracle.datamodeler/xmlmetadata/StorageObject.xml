@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.StorageObject parentClass="oracle.dbtools.crest.model.ModelIDObject">
+   <aa_property name="generatedInRDBMS" dataType="boolean" defaultValue="" xmlName="generatedInRDBMS" xmlType="element" getter="isGeneratedInRDBMS" setter="setGeneratedInRDBMS" reffered="false"/>
+   <property name="nameChanged" dataType="boolean" defaultValue="false" xmlName="nameChanged" xmlType="element" getter="isNameChanged" setter="setNameChanged" reffered="false"/>
+   <property_moved_to_modelIdObject name="nameHasQuotes" dataType="boolean" defaultValue="false" xmlName="nameHasQuotes" xmlType="element" getter="getNameHasQuotes" setter="setNameHasQuotes" reffered="false"/>
+   <property name="rawObject" dataType="boolean" defaultValue="false" xmlName="rawObject" xmlType="element" getter="isRawObject" setter="setRawObject" reffered="false"/>
+   <property name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="element" getter="getSchemaObject" setter="setSchemaObject" reffered="true"/>
+   <aa_property name="storageDesign" dataType="oracle.dbtools.crest.model.design.storage.StorageDesign" defaultValue="" xmlName="storageDesign" xmlType="element" getter="getStorageDesign" setter="setStorageDesign" reffered="true"/>
+   <roproperty name="designStorageObject" dataType="boolean" getter="isDesignStorageObject"/>
+   <property name="nullInstance" dataType="boolean" defaultValue="false" xmlName="nullInstance" xmlType="element" getter="isNullInstance" setter="setIsNullInstance" reffered="false"/>
+   <property name="storableNullInstance" dataType="boolean" defaultValue="false" xmlName="storableNullInstance" xmlType="element" getter="isStorableNullInstance" setter="setStorableNullInstance" reffered="false"/>
+   <roproperty name="ownedobject" dataType="boolean" getter="isOwnedObject"/>
+   <roproperty name="physicalObjectproxy" dataType="boolean" getter="isPhysicalObjectProxy"/>
+   <roproperty name="sitestorageObject" dataType="boolean" getter="isSiteStorageObject"/>
+   <roproperty name="topLevelObject" dataType="boolean" getter="isTopLevelObject"/>
+   <roproperty name="additionalactions" dataType="interface java.util.List" getter="getAdditionalActions"/>
+   <roproperty name="fullyQualifiedName" dataType="java.lang.String" getter="getFullyQualifiedName"/>
+   <roproperty name="nameSubstitutionType" dataType="java.lang.String" getter="getNameSubstitutionType"/>
+   <roproperty name="propertyHolder" dataType="oracle.dbtools.crest.model.propertyholder.PropertyHolder" getter="getPropertyHolder"/>
+   <roproperty name="rdBMSSite" dataType="oracle.dbtools.crest.model.design.storage.RDBMSSite" getter="getRDBMSSite"/>
+   <roproperty name="rdBMSType" dataType="oracle.dbtools.crest.model.design.storage.RDBMSType" getter="getRDBMSType"/>
+   <roproperty name="relativePath" dataType="[Ljava.lang.String" getter="getRelativePath"/>
+</oracle.dbtools.crest.model.design.storage.StorageObject>

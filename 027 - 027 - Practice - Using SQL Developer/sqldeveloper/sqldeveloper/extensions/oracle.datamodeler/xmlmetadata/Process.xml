@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.process.Process parentClass="oracle.dbtools.crest.model.design.process.Transformation">
+   <property name="type" dataType="int" defaultValue="0" xmlName="type" xmlType="element"  getter="getType" setter="setType" reffered="false"/>
+   <property name="batchMinimumTransactions" dataType="int" defaultValue="" xmlName="batchMinimumTransactions" xmlType="element" getter="getBatchMinimumTransactions" setter="setBatchMinimumTransactions" search="true" reffered="false"/>
+   <property name="batchTimeUnit" dataType="java.lang.String" defaultValue="" xmlName="batchTimeUnit" xmlType="element" getter="getBatchTimeUnit" setter="setBatchTimeUnit" search="true" reffered="false"/>
+   <property name="diagram" dataType="oracle.dbtools.crest.model.design.process.DataFlowDesign" defaultValue="" xmlName="diagram" xmlType="element" getter="getDiagram" setter="setDiagram" search="true" reffered="true"/>
+   <property name="footNote" dataType="java.lang.String" defaultValue="" xmlName="footNote" xmlType="element" getter="getFootNote" setter="setFootNote" search="true" reffered="false"/>
+   <property name="frequencyTimeUnit" dataType="java.lang.String" defaultValue="" xmlName="frequencyTimeUnit" xmlType="element" getter="getFrequencyTimeUnit" setter="setFrequencyTimeUnit" search="true" reffered="false"/>
+   <property name="frequencyTimes" dataType="int" defaultValue="" xmlName="frequencyTimes" xmlType="element" getter="getFrequencyTimes" setter="setFrequencyTimes" search="true" reffered="false"/>
+   <property name="interactiveLongestResponseTime" dataType="int" defaultValue="" xmlName="interactiveLongestResponseTime" xmlType="element" getter="getInteractiveLongestResponseTime" setter="setInteractiveLongestResponseTime" search="true" reffered="false"/>
+   <property name="interactiveResponseTimeUnit" dataType="java.lang.String" defaultValue="" xmlName="interactiveResponseTimeUnit" xmlType="element" getter="getInteractiveResponseTimeUnit" setter="setInteractiveResponseTimeUnit" search="true" reffered="false"/>
+   <property name="mode" dataType="java.lang.String" defaultValue="" xmlName="mode" xmlType="element" getter="getMode" setter="setMode" search="true" reffered="false"/>
+   <property name="paramsWrappersString" dataType="java.lang.String" defaultValue="" xmlName="paramsWrappersString" xmlType="element" getter="getParamsWrappersString" setter="setParamsWrappersString" search="true" reffered="false"/>
+   <property name="priority" dataType="java.lang.String" defaultValue="" xmlName="priority" xmlType="element" getter="getPriority" setter="setPriority" search="true" reffered="false"/>
+   <property name="transformationtask" dataType="oracle.dbtools.crest.model.design.process.TransformationTask" defaultValue="" xmlName="transformationtask" xmlType="element" getter="getTransformationTask" setter="setTransformationTask" search="true" reffered="true"/>
+   <property name="peakPeriodsString" dataType="java.lang.String" defaultValue="" xmlName="peakPeriodsString" xmlType="element" getter="getPeakPeriodsString" setter="setPeakPeriodsString" search="true" reffered="false"/>
+   <collection name="events" dataType="java.util.List" xmlName="events" itemXmlName="eventRef" getter="getEvents" itemIsRef="true" refsXMLName="eventRefs" removeItem="removeEvent" addItem="addEvent" getItemByID="getEventByID" nativeList="true" orderTheList="true"/>
+   <roproperty name="componentFlowsFor" dataType="interface java.util.Collection" getter="getComponentFlowsFor"/>
+   <roproperty name="eventsNonFlow" dataType="java.util.ArrayList" getter="getEvents" itemClass="oracle.dbtools.crest.model.design.process.Event" useInReport="true" search="true"/>
+   <roproperty name="flowEvents" dataType="java.util.ArrayList" getter="getFlowEvents" itemClass="oracle.dbtools.crest.model.design.process.Event" useInReport="true" search="true"/>
+   <roproperty name="allEvents" dataType="java.util.ArrayList" getter="getAllEvents" itemClass="oracle.dbtools.crest.model.design.process.Event" useInReport="true" search="true"/>
+   <roproperty name="paramMapping" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getParamMapping"/>
+   <roproperty name="paramsWrappers" dataType="interface java.util.List" getter="getParamsWrappers"/>
+   <roproperty name="processTypeName" dataType="java.lang.String" getter="getProcessTypeName" search="true"/>
+   <roproperty name="parentCompositeProcess" dataType="oracle.dbtools.crest.model.design.process.Process" getter="getParentProcess" search="true"/>
+   <roproperty name="parentDFD" dataType="oracle.dbtools.crest.model.design.process.DataFlowDesign" getter="getDesignPart" search="true"/>
+   <roproperty name="parentprocessInDFD" dataType="oracle.dbtools.crest.model.design.process.Process" getter="getParentProcessInDFD"/>
+   <roproperty name="peakperiods" dataType="[Z" getter="getPeakPeriods"/>
+   <roproperty name="processedAttributesAndFlows" dataType="java.util.List" getter="getProcessedAttributesAndFlows"/>
+   <roproperty name="processedEntitiesAndFlows" dataType="java.util.List" getter="getProcessedEntitiesAndFlows"/>
+   <roproperty name="processedAttributesAsString" dataType="java.lang.String" getter="getProcessedAttributesAsString" search="true"/>
+   <roproperty name="processedEntitiesAsString" dataType="java.lang.String" getter="getProcessedEntitiesAsString" search="true"/>
+</oracle.dbtools.crest.model.design.process.Process>

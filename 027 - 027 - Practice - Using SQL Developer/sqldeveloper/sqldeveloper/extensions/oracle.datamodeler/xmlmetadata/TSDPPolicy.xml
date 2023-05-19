@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.TSDPPolicy parentClass="oracle.dbtools.crest.model.ModelIDObject">
+   <property name="generateInDDL" dataType="boolean" defaultValue="true" xmlName="generateInDDL" xmlType="element" getter="getGenerateInDDL" setter="setGenerateInDDL" reffered="false"/>
+   <collection name="sensitiveTypes" dataType="java.util.List" xmlName="sensitiveTypes" itemXmlName="container" itemIsRef="true" getter="getSensitiveTypesList" nativeList="true" orderTheList="true"/>
+   <collection name="subPolicies" dataType="java.util.List" xmlName="subPolicies" itemXmlName="subPolicy" getter="getElements" createItem="createSubPolicy" getItemByID="getElementByID" moveMethod="moveElementToIndex"/>
+</oracle.dbtools.crest.model.TSDPPolicy>

@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.datatypes.DistinctType parentClass="oracle.dbtools.crest.model.design.datatypes.AbstractDTObject">
+   <property name="logicalDataType" dataType="oracle.dbtools.crest.model.design.LogicalDatatype" defaultValue="" xmlName="logicalDataType" xmlType="element" getter="getLogicalDataType" setter="setLogicalDataType" reffered="true" search="true"/>
+   <property name="precision" dataType="int" defaultValue="" xmlName="precision" xmlType="element" getter="getPrecision" setter="setPrecision" reffered="false" search="true"/>
+   <property name="scale" dataType="int" defaultValue="" xmlName="scale" xmlType="element" getter="getScale" setter="setScale" reffered="false" search="true"/>
+   <property name="size" dataType="java.lang.String" defaultValue="" xmlName="size" xmlType="element" getter="getSize" setter="setSize" reffered="false" search="true"/>
+   <roproperty name="byteSize" dataType="int" getter="getByteSize"/>
+   <roproperty name="dataTypeString" dataType="java.lang.String" getter="getDataTypeString"/>
+</oracle.dbtools.crest.model.design.datatypes.DistinctType>

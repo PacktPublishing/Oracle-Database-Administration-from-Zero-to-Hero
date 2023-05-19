@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.MaterializedViewLogOracle parentClass="oracle.dbtools.crest.model.design.storage.oracle.AbstractStorageObjectOracle">
+     <property name="rowIDLogged" dataType="java.lang.String" defaultValue="" xmlName="rowIDLogged" xmlType="element" getter="getRowIDLogged" setter="setRowIDLogged" reffered="false"/>
+	 <property name="pkLogged" dataType="java.lang.String" defaultValue="" xmlName="pkLogged" xmlType="element" getter="getPkLogged" setter="setPkLogged" reffered="false"/>
+	 <property name="newValues" dataType="java.lang.String" defaultValue="" xmlName="newValues" xmlType="element" getter="getNewValues" setter="setNewValues" reffered="false"/>
+	 <property name="cache" dataType="java.lang.String" defaultValue="NONE" xmlName="cache" xmlType="element" getter="getCache" setter="setCache" search="true" reffered="false"/>
+	 <property name="parallel" dataType="java.lang.String" defaultValue="" xmlName="parallel" xmlType="element" getter="getParallel" setter="setParallel" reffered="false"/>
+	 <property name="degree" dataType="java.lang.String" defaultValue="" xmlName="degree" xmlType="element" getter="getDegree" setter="setDegree" reffered="false"/>
+	 <property name="sequenceLogged" dataType="java.lang.String" defaultValue="" xmlName="sequenceLogged" xmlType="element" getter="getSequenceLogged" setter="setSequenceLogged" reffered="false"/>
+	 <property name="logging" dataType="java.lang.String" defaultValue="" xmlName="logging" xmlType="element" getter="getLogging" setter="setLogging" reffered="false"/>
+	 <property name="bufferPool" dataType="java.lang.String" defaultValue="" xmlName="bufferPool" xmlType="element" getter="getBufferPool" setter="setBufferPool" reffered="false"/>
+	 <property name="percentFree" dataType="java.lang.String" defaultValue="" xmlName="percentFree" xmlType="element" getter="getPercentFree" setter="setPercentFree" reffered="false"/>
+	 <property name="initrans" dataType="java.lang.String" defaultValue="" xmlName="initrans" xmlType="element" getter="getInitrans" setter="setInitrans" reffered="false"/>
+	 <property name="freelists" dataType="java.lang.String" defaultValue="" xmlName="freelists" xmlType="element" getter="getFreelists" setter="setFreelists" reffered="false"/>
+	 <property name="percentUsed" dataType="java.lang.String" defaultValue="" xmlName="percentUsed" xmlType="element" getter="getPercentUsed" setter="setPercentUsed" reffered="false"/>
+	 <property name="freelistGroups" dataType="java.lang.String" defaultValue="" xmlName="freelistGroups" xmlType="element" getter="getFreelistGroups" setter="setFreelistGroups" reffered="false"/>
+	 <property name="initialExtent" dataType="java.lang.String" defaultValue="" xmlName="initialExtent" xmlType="element" getter="getInitialExtent" setter="setInitialExtent" reffered="false"/>
+	 <property name="initialExtentUnit" dataType="java.lang.String" defaultValue="" xmlName="initialExtentUnit" xmlType="element" getter="getInitialExtentUnit" setter="setInitialExtentUnit" reffered="false"/>
+	 <property name="minExtent" dataType="java.lang.String" defaultValue="" xmlName="minExtent" xmlType="element" getter="getMinExtent" setter="setMinExtent" reffered="false"/>
+	 <property name="minExtentUnit" dataType="java.lang.String" defaultValue="" xmlName="minExtentUnit" xmlType="element" getter="getMinExtentUnit" setter="setMinExtentUnit" reffered="false"/>
+	 <property name="percentIncrease" dataType="java.lang.String" defaultValue="" xmlName="percentIncrease" xmlType="element" getter="getPercentIncrease" setter="setPercentIncrease" reffered="false"/>
+	 <property name="nextExtent" dataType="java.lang.String" defaultValue="" xmlName="nextExtent" xmlType="element" getter="getNextExtent" setter="setNextExtent" reffered="false"/>
+	 <property name="nextExtentUnit" dataType="java.lang.String" defaultValue="" xmlName="nextExtentUnit" xmlType="element" getter="getNextExtentUnit" setter="setNextExtentUnit" reffered="false"/>
+	 <property name="maxExtent" dataType="java.lang.String" defaultValue="" xmlName="maxExtent" xmlType="element" getter="getMaxExtent" setter="setMaxExtent" reffered="false"/>
+	 <property name="maxExtentUnit" dataType="java.lang.String" defaultValue="" xmlName="maxExtentUnit" xmlType="element" getter="getMaxExtentUnit" setter="setMaxExtentUnit" reffered="false"/>
+     <property name="maxExtentUnlimited" dataType="boolean" defaultValue="true" xmlName="maxExtentUnlimited" xmlType="element" getter="isMaxExtentUnlimited" setter="setMaxExtentUnlimited" reffered="false"/>
+     <property name="columns" dataType="java.lang.String" defaultValue="" xmlName="columns" xmlType="element" listOfRefs="true" getter="getColumns" setter="setColumns" search="true" reffered="false"/>
+     <property name="columnNames" dataType="java.lang.String" defaultValue="" xmlName="columnNames" xmlType="element" getter="getSortedColumnNames" setter="setColumnNames" search="true" reffered="false"/>
+     <property name="tablespace" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableSpaceOracle" defaultValue="" xmlName="tablespace" xmlType="element" getter="getTablespace" setter="setTablespace" search="true" reffered="true"/>
+     <property name="tableProxy" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableProxyOracle" defaultValue="" xmlName="tableProxy" xmlType="element" getter="getTableProxy" setter="setTableProxy" search="true" reffered="true"/>
+     <property name="logTableProxy" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableProxyOracle" defaultValue="" xmlName="logTableProxy" xmlType="element" getter="getLogTableProxy" setter="setLogTableProxy" search="true" reffered="true"/>
+     <property name="tableSchema" dataType="java.lang.String" defaultValue="" xmlName="tableSchema" xmlType="element" getter="getTableSchema" setter="setTableSchema" reffered="false"/>
+     <property name="tableName" dataType="java.lang.String" defaultValue="" xmlName="tableName" xmlType="element" getter="getTableName" setter="setTableName" reffered="false"/>
+     <property name="logTableName" dataType="java.lang.String" defaultValue="" xmlName="logTableName" xmlType="element" getter="getLogTableName" setter="setLogTableName" reffered="false"/>
+     <property name="segment" dataType="oracle.dbtools.crest.model.design.storage.oracle.SegmentOracle" defaultValue="" xmlName="segment" xmlType="element" getter="getSegment" setter="setSegment" search="true" reffered="true"/>
+     <property name="purgeType" dataType="java.lang.String" defaultValue="IMMEDIATE SYNCHRONOUS" xmlName="purgeType" xmlType="element" getter="getPurgeType" setter="setPurgeType" reffered="false"/>
+     <property name="refreshType" dataType="java.lang.String" defaultValue="" xmlName="refreshType" xmlType="element" getter="getRefreshType" setter="setRefreshType" reffered="false"/>
+     <property name="purgeSWExpression" dataType="java.lang.String" defaultValue="" xmlName="purgeSWExpression" xmlType="element" getter="getPurgeSWExpression" setter="setPurgeSWExpression" reffered="false"/>
+     <property name="purgeNextExpression" dataType="java.lang.String" defaultValue="" xmlName="purgeNextExpression" xmlType="element" getter="getPurgeNextExpression" setter="setPurgeNextExpression" reffered="false"/>
+     <property name="purgeRIExpression" dataType="java.lang.String" defaultValue="" xmlName="purgeRIExpression" xmlType="element" getter="getPurgeRIExpression" setter="setPurgeRIExpression" reffered="false"/>
+     <property name="refreshSLName" dataType="java.lang.String" defaultValue="" xmlName="refreshSLName" xmlType="element" getter="getRefreshSLName" setter="setRefreshSLName" reffered="false"/>
+     <property name="objectIDLogged" dataType="java.lang.String" defaultValue="" xmlName="objectIDLogged" xmlType="element" getter="getObjectIDLogged" setter="setObjectIDLogged" reffered="false"/>
+     <property name="commitSCN" dataType="boolean" defaultValue="false" xmlName="commitSCN" xmlType="element" getter="isCommitSCN" setter="setCommitSCN" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.MaterializedViewLogOracle>

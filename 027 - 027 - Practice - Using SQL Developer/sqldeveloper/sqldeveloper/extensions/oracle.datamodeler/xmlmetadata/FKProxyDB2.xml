@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.db2.FKProxyDB2 parentClass="oracle.dbtools.crest.model.design.storage.IndexProxy">
+   <property name="deleteRule" dataType="java.lang.String" defaultValue="" xmlName="deleteRule" xmlType="element" getter="getDeleteRule" setter="setDeleteRule" reffered="false"/>
+   <property name="enforced" dataType="java.lang.String" defaultValue="" xmlName="enforced" xmlType="element" getter="getEnforced" setter="setEnforced" reffered="false"/>
+   <roproperty name="columns" dataType="java.lang.String" getter="getColumns"/>
+   <roproperty name="key" dataType="oracle.dbtools.crest.model.design.KeyObject" getter="getKey"/>
+   <roproperty name="refColumns" dataType="[Loracle.dbtools.crest.model.design.relational.Column" getter="getRefColumns"/>
+   <roproperty name="referenceColumns" dataType="java.lang.String" getter="getReferenceColumns"/>
+   <roproperty name="referenceTable" dataType="java.lang.String" getter="getReferenceTable"/>
+   <roproperty name="remoteTable" dataType="oracle.dbtools.crest.model.design.relational.Table" getter="getRemoteTable"/>
+   <roproperty name="tableName" dataType="java.lang.String" getter="getTableName"/>
+</oracle.dbtools.crest.model.design.storage.db2.FKProxyDB2>

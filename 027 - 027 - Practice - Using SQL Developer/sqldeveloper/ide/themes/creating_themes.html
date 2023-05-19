@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+
+  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="KEYWORDS" content="Defining Visual Themes,Implementing Visual Themes">
+<meta name="robots" content="index,follow">
+<title>Defining Visual Themes</title>
+</head><body class="ns-0">
+    <div id="globalWrapper">
+      <div id="column-content">
+	<div id="content">
+	  <a name="top" id="top"></a>
+	  	  <h1 class="firstHeading">Defining Visual Themes</h1>
+	  <div id="bodyContent">
+	    <div id="contentSub"></div>
+	    	    	    <!-- start content -->
+	    <table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Contents</h2> 
+	    </div>
+<ul>
+<li class="toclevel-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1"><a href="#Anatomy_of_a_Theme"><span class="tocnumber">2</span> <span class="toctext">Anatomy of a Theme</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Name"><span class="tocnumber">2.1</span> <span class="toctext">Name</span></a></li>
+<li class="toclevel-2"><a href="#Color_Scheme"><span class="tocnumber">2.2</span> <span class="toctext">Color Scheme</span></a></li>
+<li class="toclevel-2"><a href="#Parts_and_States"><span class="tocnumber">2.3</span> <span class="toctext">Parts and States</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Painters"><span class="tocnumber">3</span> <span class="toctext">Painters</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Empty_Painter_.28empty.29"><span class="tocnumber">3.1</span> <span class="toctext">Empty Painter (empty)</span></a></li>
+<li class="toclevel-2"><a href="#Centered_Image_Painter_.28center.29"><span class="tocnumber">3.2</span> <span class="toctext">Centered Image Painter (center)</span></a></li>
+<li class="toclevel-2"><a href="#Safely_Stretched_Image_Painter_.28stretch.29"><span class="tocnumber">3.3</span> <span class="toctext">Safely Stretched Image Painter (stretch)</span></a></li>
+<li class="toclevel-2"><a href="#Gradient_Painter_.28gradient.29"><span class="tocnumber">3.4</span> <span class="toctext">Gradient Painter (gradient)</span></a></li>
+<li class="toclevel-2"><a href="#Matte_Painter_.28matte.29"><span class="tocnumber">3.5</span> <span class="toctext">Matte Painter (matte)</span></a></li>
+<li class="toclevel-2"><a href="#Edge_Painter_.28edge.29"><span class="tocnumber">3.6</span> <span class="toctext">Edge Painter (edge)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Value_Types"><span class="tocnumber">4</span> <span class="toctext">Value Types</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Colors"><span class="tocnumber">4.1</span> <span class="toctext">Colors</span></a></li>
+<li class="toclevel-2"><a href="#Insets"><span class="tocnumber">4.2</span> <span class="toctext">Insets</span></a></li>
+<li class="toclevel-2"><a href="#Borders"><span class="tocnumber">4.3</span> <span class="toctext">Borders</span></a></li>
+<li class="toclevel-2"><a href="#Fonts"><span class="tocnumber">4.4</span> <span class="toctext">Fonts</span></a></li>
+<li class="toclevel-2"><a href="#Images"><span class="tocnumber">4.5</span> <span class="toctext">Images</span></a></li>
+<li class="toclevel-2"><a href="#Direction"><span class="tocnumber">4.6</span> <span class="toctext">Direction</span></a></li>
+<li class="toclevel-2"><a href="#Edge"><span class="tocnumber">4.7</span> <span class="toctext">Edge</span></a></li>
+<li class="toclevel-2"><a href="#Painter_Types"><span class="tocnumber">4.8</span> <span class="toctext">Painter Types</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Assembly_and_Deployment"><span class="tocnumber">5</span> <span class="toctext">Assembly and Deployment</span></a></li>
+<li class="toclevel-1"><a href="#Classloading"><span class="tocnumber">6</span> <span class="toctext">Classloading</span></a></li>
+<li class="toclevel-1"><a href="#The_Fusion_Blue_Theme"><span class="tocnumber">7</span> <span class="toctext">The Fusion Blue Theme</span></a></li>
+</ul>
+</td></tr></tbody></table>
+
+<div class="editsection" style="float: right; margin-left: 5px;"></div>
+<a name="Overview"></a><h2> Overview </h2>
+<p>The 11g release of the IDE framework introduces a themes engine. The
+themes engine makes it easy to alter the color scheme and visual design
+of a product based on the IDE framework without editing code.
+</p><p>Editing and assembling a theme is very straightforward, and
+primarily involves modifying text and image files, and assembling them
+into a jar which can be deployed directly into a product based on the
+IDE framework.
+</p>
+<p>The focus of this document is on <i>theme providers</i> - those
+who are defining the visual characteristics of the product by creating
+or modifying theme definitions. A separate document, Implementing Visual Themes
+is of interest to extension developers who want to use the theme engine
+to allow the visual design of their components to be customized.
+<em>Note: this document is not yet available in the JDeveloper Technology Preview. </em></p>
+<p><i>Note on Availability:</i> The themes engine is not available
+in the version of the IDE framework used as the basis for Oracle SQL
+Developer 1.0 or 1.1. The earliest versions of Oracle products which
+support the themes engine are:
+</p>
+<table border="1">
+  <tbody><tr>
+    <th>Product</th>
+    <th>Earliest Version Supported</th>
+  </tr>
+  <tr>
+    <td>JDeveloper</td>
+    <td>Oracle JDeveloper 11g Technology Preview (11.1.1)</td>
+  </tr>
+  <tr>
+    <td>SQL Developer</td>
+    <td>Oracle SQL Developer 2.0 (Not yet available)</td>
+  </tr>
+</tbody></table>
+<p>You can determine whether a product based on the Oracle IDE Platform supports themes by looking for the directory <code>ide/themes</code> in its installation directory.
+</p><p>The theme engine and the syntax of themes.properties may undergo
+significant changes in the future as additional requirements evolve.
+There are therefore no guarantees that a theme which works in one
+version of an IDE-based product will continue to work in a future
+version of that product. Likewise, there's no guarantee that themes
+will be portable across products (e.g. that a theme for SQL Developer
+will work in JDeveloper).
+</p>
+<a name="Anatomy_of_a_Theme"></a>
+<h2> Anatomy of a Theme </h2>
+<p>A theme is defined in a file using the Java Properties syntax called <code>theme.properties</code>.
+The themes engine provides access to information in this file to
+extension writers and components in the core IDE platform, and this
+information is used to render the visual appearance of components.
+</p><p>Most of the property keys in <code>theme.properties</code> have a dot separated hierarchy. This section explains some of the keys which may be used in this file.
+</p>
+<a name="Name"></a>
+<h3> Name </h3>
+<p>Every theme must have a <code>name</code> property, which defines
+the user-visible name of the theme as presented in the Themes drop down
+list on the Environment page in preferences. For example, here is a
+fragment from the fusion blue theme:
+</p>
+<pre>name=Fusion Blue (Default)
+</pre>
+<p>Every theme should have a unique name.
+</p>
+<a name="Color_Scheme"></a>
+<h3> Color Scheme </h3>
+<p>A theme can control the look and feel color scheme used throughout the product by defining properties under the <code>colors</code> hierarchy. 
+</p><p>The sub keys of <code>colors</code> correspond to values on the <a href="http://java.sun.com/javase/6/docs/api/javax/swing/plaf/metal/MetalTheme.html" class="external text" title="http://java.sun.com/javase/6/docs/api/javax/swing/plaf/metal/MetalTheme.html" rel="nofollow">javax.swing.plaf.metal.MetalTheme</a>
+API. You can take any method described in the javadoc for this class,
+remove the leading "get", convert the next letter to lowercase, and
+then use this as a subkey of <code>colors</code> to define that color value in the theme.
+</p><p>Here are some examples:
+</p>
+<pre>colors.control=#a0a0a0
+colors.menuDisabledForeground=#505050
+</pre>
+<a name="Parts_and_States"></a>
+<h3> Parts and States </h3>
+<p>Most of the properties in <code>theme.properties</code> are concerned with the visual appearance of <i>parts</i>.
+A part is an area of the user interface which has been exposed to the
+theme engine by the IDE platform or an extension writer. </p><p>The term "part" is deliberately used instead of "component",
+since component has a very specific meaning in Swing / AWT
+applications, and the theme engine does not necessarily require a
+one-to-one correspondence between parts and components. Sometimes, a
+single component may be made up of multiple parts from the point of
+view of the theme. A good example of this is a scrollbar, which is made
+up of several parts such as the track, the thumb, the gripper, and the
+scroll buttons.
+</p><p>Typically, the appearance of a part changes depending on some
+state that it has. For example, a button part might have a normal
+state, a disabled state, a mouseover state, and a pressed state. The
+themes engine doesn't define specific parts and states - it can
+flexibly support whatever parts and states are required by the
+implementation. </p><p>By convention, keys other than the color scheme and the name in <code>theme.properties</code> follow this pattern:
+</p><p><code>
+</code></p>
+<pre><i>part</i>.<i>state</i>.<i>propertyname</i>
+</pre>
+<p>
+</p><p>Here's an example which specifies that a part called <code>button</code> should be painted with a solid black background when disabled:
+</p>
+<pre>button.disabled.bg.type=matte
+button.disabled.bg.color=#000000
+</pre>
+<a name="Painters"></a>
+<h2> Painters </h2>
+<p>Painters are an important feature of the themes engine. Parts are
+often drawn using painters. Theme providers can customize the
+appearance of parts by describing which painters to use for parts in
+various states.
+</p><p>A painter is specified by setting the a <code>type</code> sub property to one of the six permitted types described in <a href="#Painter_Types" title="Defining Visual Themes">Painter Types</a>. Many of the painters require additional subproperties that define how the painter operates.
+</p>
+<p>This section describes each of the painters and the properties they require.
+</p>
+<a name="Empty_Painter_.28empty.29"></a>
+<h3> Empty Painter (<code>empty</code>) </h3>
+<p><i>Required Properties:</i>
+</p><p>None
+</p><p><i>Description:</i>
+</p><p>The empty painter paints nothing at all. This can be useful when
+you want to make the background of a component invisible (transparent)
+in a particular state. A good example of this is a toolbar button when
+the mouse is not hovering over it.
+</p><p>Here's an example that sets the <code>bg</code> painter for the <code>normal</code> state of the <code>button</code> part to the empty painter:
+</p>
+<pre>button.normal.bg.type=empty
+</pre>
+<a name="Centered_Image_Painter_.28center.29"></a>
+<h3> Centered Image Painter (<code>center</code>) </h3>
+<p><i>Required Properties:</i>
+</p>
+<table border="1">
+<tbody><tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td><i><a href="#Images" title="Defining Visual Themes">ThemeImage</a></i></td>
+<td>An image to paint</td>
+</tr>
+</tbody></table>
+<p><i>Description:</i>
+</p><p>The <code>center</code> painter paints an image in the center of
+the part. It does not scale the image at all. If the image is larger
+than the current size of the part, then nothing is painted.
+</p><p>Example:
+</p>
+<pre>button.normal.bg.type=center
+button.normal.bg.image=mybuttonimage.png
+</pre>
+<a name="Safely_Stretched_Image_Painter_.28stretch.29"></a>
+<h3> Safely Stretched Image Painter (<code>stretch</code>) </h3>
+<p><i>Required Properties:</i>
+</p>
+<table border="1">
+<tbody><tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td><i><a href="#Images" title="Defining Visual Themes">ThemeImage</a></i></td>
+<td>An image to paint</td>
+</tr>
+<tr>
+<td><code>sizingmargin</code></td>
+<td><i><a href="#Insets" title="Defining Visual Themes">ThemeInsets</a></i></td>
+<td>Describes the area of the image which may safely be stretched.</td>
+</tr>
+</tbody></table>
+<p><i>Description:</i>
+</p><p>The <code>stretch</code> painter is a powerful painter that
+paints an image stretched to fit the area of the part. Rather than just
+crudely stretching the image uniformly across the whole area of the
+part, the <code>sizingmargin</code> insets are used to define the
+corners of the image (which are not stretched at all), and the top,
+left, bottom, and right edges (which are stretched only in one
+direction: horizontally for the top and bottom, and vertically for the
+left and right). </p><p>This stretching method allows the image to be scaled up to whatever size the part happens to be with a minimum of distortion.
+</p><p>The following diagram describes how to calculate the sizing
+margins for an image. Generally, it's advisable to make the sizing
+margins as small as possible while ensuring that they completely
+capture the corners which must not be resized.
+</p><p></p><center>
+  <img src="sizingmargins.png" alt="image:Sizingmargins.png" width="397" height="339" border="0" longdesc="/doc/Image:Sizingmargins.png">
+</center>
+<p>Example:
+</p>
+<pre>button.normal.bg.type=stretch
+button.normal.bg.image=mybuttonimage.png
+button.normal.bg.sizingmargin=2 2 2 2
+</pre>
+<a name="Gradient_Painter_.28gradient.29"></a>
+<h3> Gradient Painter (<tt>gradient</tt>) </h3>
+<p><i>Required Properties:</i>
+</p>
+<table border="1">
+<tbody><tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr>
+<td><code>startcolor</code></td>
+<td><i><a href="#Colors" title="Defining Visual Themes">ThemeColor</a></i></td>
+<td>The start color for the gradient.</td>
+</tr>
+<tr>
+<td><code>endcolor</code></td>
+<td><i><a href="#Colors" title="Defining Visual Themes">ThemeColor</a></i></td>
+<td>The end color for the gradient.</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td><i><a href="#Direction" title="Defining Visual Themes">ThemeDirection</a></i></td>
+<td>The direction to paint the gradient (horizontal or vertical).</td>
+</tr>
+</tbody></table>
+<p><i>Description:</i>
+</p><p>The <code>gradient</code> painter paints a linear gradient starting at the top of the part or the left of the part depending on whether the <code>direction</code> is <code>vertical</code> or <code>horizontal</code> respectively. The gradient will transition from the <code>startcolor</code> to the <code>endcolor</code>
+</p><p>Example:
+</p>
+<pre>button.normal.bg.type=gradient
+button.normal.bg.startcolor=#ff0000
+button.normal.bg.endcolor=#ffffff
+button.normal.bg.direction=vertical
+</pre>
+<a name="Matte_Painter_.28matte.29"></a>
+<h3> Matte Painter (<code>matte</code>) </h3>
+<p><i>Required Properties:</i>
+</p>
+<table border="1">
+<tbody><tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td><i><a href="#Colors" title="Defining Visual Themes">ThemeColor</a></i></td>
+<td>The fill color to use.</td>
+</tr>
+</tbody></table>
+<p><i>Description:</i>
+</p><p>The <code>matte</code> painter fills the entire content area of the part with a single, solid color, defined by the <code>color</code> property value.
+</p><p>Example:
+</p>
+<pre>button.normal.bg.type=matte
+button.normal.bg.color=#ff0000
+</pre>
+<a name="Edge_Painter_.28edge.29"></a>
+<h3> Edge Painter (<code>edge</code>) </h3>
+<p><i>Required Properties:</i>
+</p>
+<table border="1">
+<tbody><tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td><i><a href="#Image" title="Defining Visual Themes">ThemeImage</a></i></td>
+<td>The image to paint</td>
+</tr>
+<tr>
+<td><code>edge</code></td>
+<td><i><a href="#Edge" title="Defining Visual Themes">ThemeEdge</a></i></td>
+<td>The edge of the part along which to stretch the painted image.</td>
+</tr>
+</tbody></table>
+<p><i>Description:</i>
+</p><p>The <code>edge</code> painter draws an image along a single edge
+of the part, stretching it horizontally if the top or bottom edge is
+specified, or vertically if the left or right edge is specified.
+</p><p>Example:
+</p>
+<pre>button.normal.bg.type=edge
+button.normal.bg.image=myimage.png
+button.normal.bg.edge=left
+</pre>
+<a name="Value_Types"></a>
+<h2> Value Types </h2>
+<p>The themes engine recognizes several <i>value types</i>, which are particular expressions that can appear as the value of a property in <code>theme.properties</code>. The syntax of value types is described in this document using grammar notation similar to that introduced in <a href="http://java.sun.com/docs/books/jls/third_edition/html/grammars.html#2.4" class="external text" title="http://java.sun.com/docs/books/jls/third edition/html/grammars.html#2.4" rel="nofollow">§2.4</a> of the <a href="http://java.sun.com/docs/books/jls/third_edition/html/j3TOC.html" class="external text" title="http://java.sun.com/docs/books/jls/third edition/html/j3TOC.html" rel="nofollow">Java Language Specification</a>.
+</p>
+<a name="Colors"></a>
+<h3> Colors </h3>
+<p>A <i>ThemeColor</i> value is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>LookAndFeelColorName:</i>
+       any symbolic color name in the look and feel UI defaults table
+ <i>ThemeColor:</i>
+       ui: <i>LookAndFeelColorName</i>
+       <i>DecodableString</i>
+</pre>
+<p>
+</p><p>Where <i>DecodableString</i> is defined in the javadoc for <a href="http://java.sun.com/javase/6/docs/api/java/lang/Integer.html#decode%28java.lang.String%29" class="external text" title="http://java.sun.com/javase/6/docs/api/java/lang/Integer.html#decode(java.lang.String)" rel="nofollow">Integer.decode(String)</a>.
+</p><p>Some examples of valid color values are:
+</p>
+<pre># The color red
+firstcolor=#ff0000
+
+# Whatever the UI defaults table defines as the window background color ("window")
+secondcolor=ui:window
+</pre>
+<a name="Insets"></a>
+<h3> Insets </h3>
+<p>A <i>ThemeInsets</i> value is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>Space:</i>
+      <i>'</i> <i>'</i> <i>Space<sub>opt</sub></i>
+ <i>TopPixels:</i>
+      <i>Digits</i>
+ <i>LeftPixels:</i>
+      <i>Digits</i>
+ <i>BottomPixels:</i>
+      <i>Digits</i>
+ <i>RightPixels:</i>
+      <i>Digits</i>
+ <i>ThemeInsets:</i>
+      <i>TopPixels</i> 
+      <i>TopPixels</i> <i>Space</i> <i>LeftPixels</i>
+      <i>TopPixels</i> <i>Space</i> <i>LeftPixels</i> <i>Space</i> <i>BottomPixels</i>
+      <i>TopPixels</i> <i>Space</i> <i>LeftPixels</i> <i>Space</i> <i>BottomPixels</i> <i>Space</i> <i>RightPixels</i>
+</pre>
+<p>
+</p><p>Where <i>Digits</i> is defined in <a href="http://java.sun.com/docs/books/jls/third_edition/html/lexical.html#3.10.1" class="external text" title="http://java.sun.com/docs/books/jls/third edition/html/lexical.html#3.10.1" rel="nofollow">§3.10.1</a> of the <a href="http://java.sun.com/docs/books/jls/third_edition/html/j3TOC.html" class="external text" title="http://java.sun.com/docs/books/jls/third edition/html/j3TOC.html" rel="nofollow">Java Language Specification</a>.
+</p><p>Any omitted inset component is defaulted to 0. 
+</p><p>Some examples of valid theme insets are:
+</p>
+<pre>zeroinsets=0 0 0 0
+eveninsets=2 4 6 8
+twoabove=2
+</pre>
+<a name="Borders"></a>
+<h3> Borders </h3>
+<p>A <i>ThemeBorder</i> value is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>BorderWidth:</i>
+       thin
+       <i>Digits</i> px
+ <i>BorderStyle:</i>
+       solid
+       none
+       hidden
+ <i>BorderColor:</i>
+       <i>DecodableString</i>
+ <i>ThemeBorder:</i>
+       <i>BorderWidth</i>
+       <i>BorderWidth</i> <i>Space</i> <i>BorderStyle</i>
+       <i>BorderWidth</i> <i>Space</i> <i>BorderStyle</i> <i>Space</i> <i>BorderColor</i>
+</pre>
+<p>
+</p><p>A <code>thin</code> <i>BorderWidth</i> is equivalent to <code>1px</code>, i.e. a one pixel thick border.
+</p><p>The default <i>BorderStyle</i> if not specified is <code>solid</code>. A <code>none</code> style border has no width (regardless of the <i>BorderWidth</i> value). A <code>hidden</code> style border reserves the space specified by <i>BorderWidth</i>, but is invisible (regardless of the color specified by the <i>BorderColor</i> value.
+</p><p>Some examples of valid borders are:
+</p>
+<pre># A simple 1 pixel wide black border
+firstborder=thin
+
+# A solid 5 pixel red border
+secondborder=5px solid #ff0000
+
+# An invisible 2 pixel border
+thirdborder=2px hidden
+</pre>
+<a name="Fonts"></a>
+<h3> Fonts </h3>
+<p>Unlike other properties in <code>theme.properties</code>, fonts are usually <i>derived</i> from existing fonts provided by the look and feel. Normatively, a derived font is specified by property keys which end with <code>font-weight</code> and <code>font-size</code>.
+</p><p>A <i>ThemeFontWeight</i> value is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>ThemeFontWeight:</i>
+       normal
+       bold
+</pre>
+<p>
+</p><p>A <i>ThemeFontSize</i> value is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>ThemeFontSize:</i>
+       <i>Digits</i> pt
+       <i>Digits</i> %
+</pre>
+<p>
+</p><p>A <i>ThemeFontSize</i> using a <code>pt</code> value specifies an exact point value to use for the font size. 
+</p><p>The default values for these properties retain the existing weight and size of the base font.
+</p><p>By contrast a percentage value specified using <code>%</code>
+will derive the font size from the size of the original font. If the
+original font was 9pt, a derived font size specified as 150% would be
+1.5 x 9pt = 13.5pt.
+</p><p>Some examples of valid font properties:
+</p>
+<pre># A bold font at 2pt.
+myfont.font-weight=bold
+myfont.font-size=12pt
+
+# A font at 50% of its base size, retaining the weight of the base font.
+myfont.font-size=50%
+</pre>
+<a name="Images"></a>
+<h3> Images </h3>
+<p>A <i>ThemeImage</i> value is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>ResourceChar:</i>
+       any character that is valid as a classpath resource name
+ <i>ResourceName:</i>
+       <i>ResourceChar</i> <i>ResourceName<sub>opt</sub></i>
+ <i>ThemeImage:</i>
+       <i>ResourceName</i>
+</pre>
+<p>
+</p><p>A <i>ThemeImage</i> value specifies the location of an image
+file. The value is interpreted as a resource path. It is appended to a
+string containing the value of the global <code>imagebase</code> property and resolved using <a href="http://java.sun.com/javase/6/docs/api/java/lang/ClassLoader.html#getResource%28java.lang.String%29" class="external text" title="http://java.sun.com/javase/6/docs/api/java/lang/ClassLoader.html#getResource(java.lang.String)" rel="nofollow">ClassLoader.getResource(String)</a>.
+Themes are loaded in a special classloading environment that does not
+necessarily have visibility to images outside the theme jar; see <a href="#Classloading" title="">Classloading</a> for details.
+</p><p>An example of a valid <i>ThemeImage</i>:
+</p>
+<pre>mybackground=basic.png
+</pre>
+<a name="Direction"></a>
+<h3> Direction </h3>
+<p>A <i>ThemeDirection</i> is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>ThemeDirection:</i>
+       horizontal
+       vertical
+</pre>
+<p>
+</p><p>The <i>ThemeDirection</i> type is currently used only by the <a href="#Gradient_Painter" title="Defining Visual Themes">gradient painter</a>.
+</p>
+<a name="Edge"></a>
+<h3> Edge </h3>
+<p>A <i>ThemeEdge</i> is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>ThemeEdge:</i>
+       top
+       left
+       bottom
+       right
+</pre>
+<p>
+</p><p>The <i>ThemeEdge</i> type is currently used only by the <a href="#Edge_Painter" title="Defining Visual Themes">edge painter</a>.
+</p>
+<p>&nbsp;</p>
+<a name="Painter_Types"></a>
+<h3> Painter Types </h3>
+<p>Painters describe compound operations that are used to graphically
+render a component. The themes engine defines several painter types.
+See <a href="#Painters" title="">Painters</a> for more information.
+</p><p>A <i>ThemePainterType</i> is specified as:
+</p><p><code>
+</code></p>
+<pre> <i>ThemePainterType:</i>
+       empty
+       stretch
+       center
+       gradient
+       matte
+       edge
+</pre>
+<p>
+</p><p><a name="Assembly_and_Deployment"></a>
+</p>
+<h2> Assembly and Deployment </h2>
+<p>A theme is packaged as a jar file with a simple structure. The <code>theme.properties</code> file must be located within the <code>META-INF</code> directory of the jar. The jar should contain any image resources referenced by <a href="#Images" title="Defining Visual Themes">image</a> property values in <code>theme.properties</code>.</p>
+<p>Here is an example of the contents of a simple theme jar:
+</p>
+<pre>mytheme.jar/
++- META-INF/
+   +- theme.properties
++- org/
+   +- acme/
+      +- images/
+         +- tb.png
+         +- cb.png
+</pre>
+<p>You can use the <a href="http://java.sun.com/javase/6/docs/technotes/guides/jar/index.html" class="external text" title="http://java.sun.com/javase/6/docs/technotes/guides/jar/index.html" rel="nofollow">jar</a>
+tool to assemble a theme jar as follows. First change into a directory
+matching the structure shown above for the contents of the theme jar,
+then type:
+</p>
+<pre>jar cf mytheme.jar *
+</pre>
+<p>To deploy a theme, simply copy the theme jar into the <code>ide/themes</code>
+directory of a supported product. The theme will appear on the
+Environment page in Tools-Preferences after you restart the product.
+</p>
+<a name="Classloading"></a>
+<h2> Classloading </h2>
+<p>When the IDE starts, it will look for a jar file in <code>ide/themes</code>
+corresponding to the currently selected theme. The IDE stores the name
+of the theme jar in persistent preferences (so it's a good idea not to
+rename a theme once it has shipped). If it successfully locates the
+theme, it creates an isolated classloading environment containing just
+that single theme jar, then loads the theme properties file and
+initializes the look and feel of the product based on that theme.
+</p><p>The ide will also scan the other jar files in the <code>ide/themes</code> directory in order to populate the "Theme" drop down list on the Environment page in Tools-&gt;Preferences.
+</p><p>For theme writers, the primary repercussion of the way themes
+are loaded is that they cannot refer to images outside the theme jar. A
+theme jar must be completely self contained.
+</p>
+<a name="The_Fusion_Blue_Theme"></a>
+<h2> The Fusion Blue Theme </h2>
+<p>JDeveloper 11g ships with a default theme called "Fusion Blue". The
+easiest way to start creating your own theme is to copy the contents of
+the Fusion Blue theme and customize it. You can use the jar tool or a
+zip utility such as WinZip to extract the contents of the theme jar,
+which can be found in <code>ide/themes/fusionblue.jar</code>. This jar contains all of the images and the <code>theme.properties</code> file used by JDeveloper 11g out of the box. 
+</p><p>If you create a theme based on Fusion Blue, remember to change its name to something else.
+</p>
+	  </div>
+	</div>
+      </div>
+      <div id="footer">
+        <ul id="f-list">
+	  <li id="f-lastmod"> This document was last modified 02:27, 18 April 2007.</li>	  
+	  </ul>
+      </div>
+    </div>
+</body></html>

@@ -1,0 +1,7 @@
+oracle.external.awxml,12.2.0,../external/oracle.external.awxml.jar,4,false
+oracle.external.olap_api,12.2.0,../external/oracle.external.olap_api.jar,4,false
+oracle.external.rsyntaxtextarea,12.2.0,../external/oracle.external.rsyntaxtextarea.jar,4,false
+oracle.external.pdfbox,12.2.0,../external/oracle.external.pdfbox.jar,4,false
+oracle.external.itext,12.2.0,../external/oracle.external.itext.jar,4,false
+oracle.datamodeler,12.2.0,../sqldeveloper/extensions/oracle.datamodeler.jar,4,false
+

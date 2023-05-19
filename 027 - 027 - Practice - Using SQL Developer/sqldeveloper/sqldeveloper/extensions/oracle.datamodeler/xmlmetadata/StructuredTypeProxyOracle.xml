@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.StructuredTypeProxyOracle parentClass="oracle.dbtools.crest.model.design.storage.StructuredTypeProxy">
+   <property name="invokerRights" dataType="java.lang.String" defaultValue="" xmlName="invokerRights" xmlType="element" getter="getInvokerRights" setter="setInvokerRights" search="true" reffered="false"/>
+   <property name="mapOrderFunction" dataType="oracle.dbtools.crest.model.design.storage.oracle.MethodProxyOracle" defaultValue="" xmlName="mapOrderFunction" xmlType="element" getter="getMapOrderFunction" setter="setMapOrderFunction" search="true" reffered="true"/>
+   <property name="mapOrderType" dataType="java.lang.String" defaultValue="MAP" xmlName="mapOrderType" xmlType="element" getter="getMapOrderType" setter="setMapOrderType" search="true" reffered="false"/>
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.storage.oracle.UserOracle" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" search="true" reffered="true"/>
+   <collection name="attributes" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="attributes" itemXmlName="Attribute" getter="getElements" proxyItem="true"  itemClass="oracle.dbtools.crest.model.design.storage.oracle.v9i.TypeElementProxyOraclev9i" useInReport="true"/>
+   <collection name="methods" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="methods" itemXmlName="Method" getter="getMethods" proxyItem="true"  itemClass="oracle.dbtools.crest.model.design.storage.oracle.v9i.MethodProxyOraclev9i" useInReport="true"/>
+   <collection name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="synonyms" itemXmlName="Synonym" getter="getSynonyms" addItem="addSynonym" createItem="createSynonym" />
+   <roproperty name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getSynonyms"/>
+</oracle.dbtools.crest.model.design.storage.oracle.StructuredTypeProxyOracle>

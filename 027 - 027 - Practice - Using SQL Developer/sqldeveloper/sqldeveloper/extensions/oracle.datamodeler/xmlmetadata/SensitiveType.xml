@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.SensitiveType parentClass="oracle.dbtools.crest.model.ModelIDObject">
+    <property name="generateInDDL" dataType="boolean" defaultValue="true" xmlName="generateInDDL" xmlType="element" getter="getGenerateInDDL" setter="setGenerateInDDL" reffered="false"/>
+    <property name="enable" dataType="boolean" defaultValue="true" xmlName="enable" xmlType="element" getter="isEnable" setter="setEnable" reffered="false"/>
+    <property name="description" dataType="java.lang.String" defaultValue="" xmlName="description" xmlType="element" getter="getDescription" setter="setDescription" reffered="false"/>
+</oracle.dbtools.crest.model.SensitiveType>

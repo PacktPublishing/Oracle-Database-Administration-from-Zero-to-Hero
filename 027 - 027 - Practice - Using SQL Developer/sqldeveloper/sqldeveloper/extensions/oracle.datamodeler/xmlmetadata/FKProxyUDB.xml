@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.FKProxyUDB parentClass="oracle.dbtools.crest.model.design.storage.IndexProxy">
+   <property name="onDelete" dataType="java.lang.String" defaultValue="NO ACTION" xmlName="onDelete" xmlType="element" getter="getOnDelete" setter="setOnDelete" reffered="false"/>
+   <property name="onUpdate" dataType="java.lang.String" defaultValue="NO ACTION" xmlName="onUpdate" xmlType="element" getter="getOnUpdate" setter="setOnUpdate" reffered="false"/>
+   <roproperty name="columns" dataType="java.lang.String" getter="getColumns"/>
+   <roproperty name="fkTable" dataType="oracle.dbtools.crest.model.design.relational.Table" getter="getFKTable"/>
+   <roproperty name="refColumns" dataType="[Loracle.dbtools.crest.model.design.relational.Column" getter="getRefColumns"/>
+   <roproperty name="referenceColumns" dataType="java.lang.String" getter="getReferenceColumns"/>
+   <roproperty name="referenceTable" dataType="java.lang.String" getter="getReferenceTable"/>
+</oracle.dbtools.crest.model.design.storage.udb.FKProxyUDB>

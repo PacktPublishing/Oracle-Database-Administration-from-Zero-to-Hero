@@ -1,0 +1,332 @@
+/* 
+ Oracle Data Modeler Reporting 
+ Common styling for all outputs
+*/
+
+html * {
+	font-size:xx-small;
+	font-family: Tahoma;
+	font-weight: normal;
+    text-align:left;
+	vertical-align:top;
+	word-wrap:break-word;
+}
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+a:link, a:visited {
+	color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.table {
+   table-layout: fixed;
+   display: block;
+   width: 100%;
+   border-collapse: collapse;
+   border-spacing: 0px;
+   font-size:xx-small;
+   border: 0.01cm solid black;
+}
+
+.td {
+	border: 0.01cm solid black;
+	padding: 3px;
+	vertical-align: top;
+	text-align: left;
+	white-space: pre-wrap;
+ 	word-wrap: break-word;
+}
+
+.td_c {
+	border: 0.01cm solid black;
+	padding: 3px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.td_r {
+	border: 0.01cm solid black;
+	padding: 3px;
+	vertical-align: top;
+	text-align: right;
+}
+
+.td_h_v {
+    background-color: rgb(231,249,255);
+    border: 0.01cm solid black;
+	vertical-align: top;
+	text-align: left;
+	padding: 3px;
+}
+
+.td_h_h {
+
+    background-color: rgb(231,249,255);
+	border: 0.01cm solid black;
+	vertical-align: center;
+	text-align: center;
+	padding: 0;
+}
+
+.td_h_h_s1 {
+    background-color: rgb(247,255,253);
+	border: 0.01cm solid black;
+	vertical-align: center;
+	text-align: center;
+	padding: 3px;
+}
+
+.t_cap {
+	font-size:xx-small;
+	font-style: italic;
+}
+
+
+.obj_name {
+    background-color: rgb(217,245,255);
+	font-size: 10pt;
+	padding: 1px;    
+}
+
+.obj_name > a {
+    font-size: small;
+}
+
+.footer{
+	font-family: Tahoma;
+	font-size: 8pt;
+}
+
+.footer_l{
+	font-family: Tahoma;
+	font-size: 6pt;
+	font-weight: normal;
+	text-align: left;
+	white-space: pre-wrap;
+ 	word-wrap: break-word;
+}
+
+.footer_r{
+	font-family: Tahoma;
+	font-size: 6pt;
+	font-weight: normal;
+	text-align: right;
+}
+
+.caption {
+	font-size: medium;
+	text-align: center;
+	display: block;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0;
+}
+
+.t_item{
+    margin-left: 5px;
+}
+
+.w_0p8{
+    width: 0.8cm;
+}
+
+.w_1{
+    width: 1cm;
+}
+
+.w_1p5{
+    width: 1.5cm;
+}
+
+.w_1p8{
+    width: 1.8cm;
+}
+
+.w_1p9{
+    width: 1.9cm;
+}
+
+.w_2{
+    width: 2cm;
+}
+
+.w_2p5{
+    width: 2.5cm;
+}
+
+.w_2p9{
+    width: 2.9cm;
+}
+
+.w_3{
+    width: 3cm;
+}
+
+.w_3p8{
+    width: 3.5cm;
+}
+
+.w_3p9{
+    width: 3.8cm;
+}
+
+.w_3p9{
+    width: 3.9cm;
+}
+
+.w_4{
+    width: 4cm;
+}
+
+.w_5{
+    width: 5cm;
+}
+
+.w_5p1{
+    width: 5.1cm;
+}
+
+.w_5p38{
+    width: 5.38cm;
+}
+
+.w_5p5{
+    width: 5.5cm;
+}
+
+.w_5p9{
+    width: 5.9cm;
+}
+
+.w_6{
+    width: 6cm;
+}
+
+.w_6p52{
+    width: 6.52cm;
+}
+
+.w_7{
+    width: 7cm;
+}
+
+.w_7p5{
+    width: 7.5cm;
+}
+
+.w_8{
+    width: 8cm;
+}
+
+.w_8p5{
+    width: 8.5cm;
+}
+
+.w_8p8{
+    width: 8.8cm;
+}
+
+.w_9{
+    width: 9cm;
+}
+
+.w_11{
+    width: 11cm;
+}
+
+.w_11p5{
+    width: 11.5cm;
+}
+
+.w_12{
+    width: 12cm;
+}
+
+.w_12p5{
+    width: 12.5cm;
+}
+
+.w_12p8{
+    width: 12.8cm;
+}
+
+.w_13{
+    width: 13cm;
+}
+
+.w_14{
+    width: 14cm;
+}
+
+.w_14p6{
+    width: 14.6cm;
+}
+
+.w_15{
+    width: 15cm;
+}
+
+.w_15p5{
+    width: 15.5cm;
+}
+
+.w_15p8{
+    width: 15.8cm;
+}
+
+.w_16{
+    width: 16cm;
+}
+
+.w_17{
+    width: 17cm;
+}
+
+.w_17p5{
+    width: 17.5cm;
+}
+
+.w_18p8{
+    width: 18.8cm;
+}
+
+.w_19{
+    width: 19cm;
+}
+
+.w_19p5{
+    width: 19.5cm;
+}
+
+.w_20{
+    width: 20cm;
+}
+
+.w_21p8{
+    width: 21.8cm;
+}
+
+.w_22{
+    width: 22cm;
+}
+
+.w_24p5{
+    width: 24.8cm;
+}
+
+.w_25{
+    width: 25cm;
+}

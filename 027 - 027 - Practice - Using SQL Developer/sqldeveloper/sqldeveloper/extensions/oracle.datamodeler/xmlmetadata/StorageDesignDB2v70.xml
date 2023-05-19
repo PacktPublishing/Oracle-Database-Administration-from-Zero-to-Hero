@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.design.storage.db2.v70.StorageDesignDB2v70 parentClass="oracle.dbtools.crest.model.design.storage.db2.AbstractStorageDesignDB2">
+<roproperty name="indexSpaceSet" dataType="oracle.dbtools.crest.model.design.storage.db2.IndexSpaceSetDB2" getter="getIndexSpaceSet"/>
+<roproperty name="sortedTriggerset" dataType="oracle.dbtools.crest.model.design.storage.db2.v70.TriggerSetDB2v70" getter="getSortedTriggerSet"/>
+<roproperty name="subViewIndexProxyset" dataType="oracle.dbtools.crest.model.design.storage.IndexProxySet" getter="getSubViewIndexProxySet"/>
+<roproperty name="subViewTriggerset" dataType="oracle.dbtools.crest.model.design.storage.db2.TriggerSetDB2" getter="getSubViewTriggerSet"/>
+<roproperty name="visibleTables" dataType="oracle.dbtools.crest.model.design.storage.db2.VisibleTablesCollection" getter="getVisibleTables"/>
+</oracle.dbtools.crest.model.design.storage.db2.v70.StorageDesignDB2v70>

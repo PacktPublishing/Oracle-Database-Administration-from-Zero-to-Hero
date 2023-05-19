@@ -1,0 +1,8 @@
+-- Performing Flashback Database
+hi every one,
+
+RMAN is desinged to cover all practical recovery scenarios in Oracle databases. However, Flashback database provides a better recovery option in some recovery scenarios.
+
+In this seciton we will learn how to configure and use flashback database in Oracle databases.
+
+Let's dive in and learn about it.

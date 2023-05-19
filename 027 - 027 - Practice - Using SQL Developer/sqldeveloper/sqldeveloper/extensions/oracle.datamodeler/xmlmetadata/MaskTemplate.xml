@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle.dbtools.crest.model.MaskTemplate parentClass="oracle.dbtools.crest.model.ModelIDObject">
+<property name="dataType" dataType="int" defaultValue="" xmlName="dataType" xmlType="element" getter="getDataType" setter="setDataType" reffered="false"/>
+<property name="day" dataType="java.lang.String" defaultValue="" xmlName="day" xmlType="element" getter="getDay" setter="setDay" reffered="false"/>
+<property name="functionType" dataType="int" defaultValue="" xmlName="functionType" xmlType="element" getter="getFunctionType" setter="setFunctionType" reffered="false"/>
+<property name="hour" dataType="java.lang.String" defaultValue="" xmlName="hour" xmlType="element" getter="getHour" setter="setHour" reffered="false"/>
+<property name="inputFormat" dataType="java.lang.String" defaultValue="" xmlName="inputFormat" xmlType="element" getter="getInputFormat" setter="setInputFormat" reffered="false"/>
+<property name="maskChar" dataType="java.lang.String" defaultValue="" xmlName="maskChar" xmlType="element" getter="getMaskChar" setter="setMaskChar" reffered="false"/>
+<property name="maskFrom" dataType="int" defaultValue="" xmlName="maskFrom" xmlType="element" getter="getMaskFrom" setter="setMaskFrom" reffered="false"/>
+<property name="maskTo" dataType="int" defaultValue="" xmlName="maskTo" xmlType="element" getter="getMaskTo" setter="setMaskTo" reffered="false"/>
+<property name="matchParameter" dataType="java.lang.String" defaultValue="" xmlName="matchParameter" xmlType="element" getter="getMatchParameter" setter="setMatchParameter" reffered="false"/>
+<property name="minute" dataType="java.lang.String" defaultValue="" xmlName="minute" xmlType="element" getter="getMinute" setter="setMinute" reffered="false"/>
+<property name="month" dataType="java.lang.String" defaultValue="" xmlName="month" xmlType="element" getter="getMonth" setter="setMonth" reffered="false"/>
+<property name="occurrence" dataType="int" defaultValue="" xmlName="occurrence" xmlType="element" getter="getOccurrence" setter="setOccurrence" reffered="false"/>
+<property name="outputFormat" dataType="java.lang.String" defaultValue="" xmlName="outputFormat" xmlType="element" getter="getOutputFormat" setter="setOutputFormat" reffered="false"/>
+<property name="pattern" dataType="java.lang.String" defaultValue="" xmlName="pattern" xmlType="element" getter="getPattern" setter="setPattern" reffered="false"/>
+<property name="position" dataType="int" defaultValue="" xmlName="position" xmlType="element" getter="getPosition" setter="setPosition" reffered="false"/>
+<property name="replaceString" dataType="java.lang.String" defaultValue="" xmlName="replaceString" xmlType="element" getter="getReplaceString" setter="setReplaceString" reffered="false"/>
+<property name="second" dataType="java.lang.String" defaultValue="" xmlName="second" xmlType="element" getter="getSecond" setter="setSecond" reffered="false"/>
+<property name="year" dataType="java.lang.String" defaultValue="" xmlName="year" xmlType="element" getter="getYear" setter="setYear" reffered="false"/>
+<roproperty name="fullString" dataType="java.lang.String" getter="getFullString"/>
+</oracle.dbtools.crest.model.MaskTemplate>

@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.StoredProcedureOracle parentClass="oracle.dbtools.crest.model.design.storage.oracle.PlSqlSourceStorageObjectOracle">
+   <aa_same_as_source_property name="body" dataType="java.lang.String" defaultValue="" xmlName="body" xmlType="element" getter="getBody" setter="setBody" search="true" reffered="false"/>
+   <collection name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="synonyms" itemXmlName="Synonym" getter="getSynonyms" addItem="addSynonym" createItem="createSynonym" />
+</oracle.dbtools.crest.model.design.storage.oracle.StoredProcedureOracle>

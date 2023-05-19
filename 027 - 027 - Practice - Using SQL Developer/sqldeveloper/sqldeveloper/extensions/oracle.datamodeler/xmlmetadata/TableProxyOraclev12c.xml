@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c parentClass="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g">
+   <property name="inMemory" dataType="java.lang.String" defaultValue="" xmlName="inMemory" xmlType="element" getter="getInMemory" setter="setInMemory" search="true" reffered="false"/>
+   <property name="inMemoryCompression" dataType="java.lang.String" defaultValue="" xmlName="inMemoryCompression" xmlType="element" getter="getInMemoryCompression" setter="setInMemoryCompression" search="true" reffered="false"/>
+   <property name="inMemoryDistribute" dataType="java.lang.String" defaultValue="" xmlName="inMemoryDistribute" xmlType="element" getter="getInMemoryDistribute" setter="setInMemoryDistribute" search="true" reffered="false"/>
+   <property name="inMemoryDuplicate" dataType="java.lang.String" defaultValue="" xmlName="inMemoryDuplicate" xmlType="element" getter="getInMemoryDuplicate" setter="setInMemoryDuplicate" search="true" reffered="false"/>
+   <property name="inMemoryPriority" dataType="java.lang.String" defaultValue="" xmlName="inMemoryPriority" xmlType="element" getter="getInMemoryPriority" setter="setInMemoryPriority" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.IndexOnViewSqlServerv2k5 parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.IndexOnViewSqlServer">
+   <property name="allowPageLocks" dataType="java.lang.String" defaultValue="ON" xmlName="allowPageLocks" xmlType="element" getter="getAllowPageLocks" setter="setAllowPageLocks" reffered="false"/>
+   <property name="allowRowLocks" dataType="java.lang.String" defaultValue="ON" xmlName="allowRowLocks" xmlType="element" getter="getAllowRowLocks" setter="setAllowRowLocks" reffered="false"/>
+   <property name="dropExisting" dataType="java.lang.String" defaultValue="OFF" xmlName="dropExisting" xmlType="element" getter="getDropExisting" setter="setDropExisting" reffered="false"/>
+   <property name="maxdop" dataType="int" defaultValue="0" xmlName="maxdop" xmlType="element" getter="getMaxdop" setter="setMaxdop" reffered="false"/>
+   <property name="onlineChoice" dataType="java.lang.String" defaultValue="OFF" xmlName="onlineChoice" xmlType="element" getter="getOnlineChoise" setter="setOnlineChoise" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.IndexOnViewSqlServerv2k5>

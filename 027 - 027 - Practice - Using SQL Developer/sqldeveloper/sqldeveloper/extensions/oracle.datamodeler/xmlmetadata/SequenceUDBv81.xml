@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.v81.SequenceUDBv81 parentClass="oracle.dbtools.crest.model.design.storage.udb.SequenceUDB">
+   <roproperty name="propertyWrapperList" dataType="interface java.util.List" getter="getPropertyWrapperList"/>
+</oracle.dbtools.crest.model.design.storage.udb.v81.SequenceUDBv81>

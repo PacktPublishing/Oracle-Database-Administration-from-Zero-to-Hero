@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.db2.ColumnProxyDB2 parentClass="oracle.dbtools.crest.model.design.storage.ColumnProxy">
+   <property name="averageLength" dataType="float" defaultValue="-1.0" xmlName="averageLength" xmlType="element" getter="getAverageLength" setter="setAverageLength" reffered="false"/>
+   <property name="bitData" dataType="java.lang.String" defaultValue="" xmlName="bitData" xmlType="element" getter="getBitData" setter="setBitData" reffered="false"/>
+   <property name="columnIdentity" dataType="oracle.dbtools.crest.model.design.storage.db2.ColumnIdentityDB2" defaultValue="" xmlName="columnIdentity" xmlType="element" getter="getColumnIdentity" setter="setColumnIdentity" createItem="createColumnIdentity" removeItem="removeColumnIdentity" reffered="false"/>
+   <property name="constant" dataType="java.lang.String" defaultValue="" xmlName="constant" xmlType="element" getter="getConstant" setter="setConstant" reffered="false"/>
+   <property name="default" dataType="boolean" defaultValue="false" xmlName="default" xmlType="element" getter="getDefault" setter="setDefault" reffered="false" search="true"/>
+   <property name="defaultValue" dataType="java.lang.String" defaultValue="" xmlName="defaultValue" xmlType="element" getter="getDefaultValue" setter="setDefaultValue" reffered="false"/>
+   <property name="defaultValueConstant" dataType="java.lang.String" defaultValue="" xmlName="defaultValueConstant" xmlType="element" getter="getDefaultValueConstant" setter="setDefaultValueConstant" reffered="false"/>
+   <property name="frequencyCount" dataType="long" defaultValue="1" xmlName="frequencyCount" xmlType="element" getter="getFrequencyCount" setter="setFrequencyCount" reffered="false"/>
+   <property name="frequencyPercent" dataType="float" defaultValue="0.0" xmlName="frequencyPercent" xmlType="element" getter="getFrequencyPercent" setter="setFrequencyPercent" reffered="false"/>
+   <property name="growthPercent" dataType="float" defaultValue="0.0" xmlName="growthPercent" xmlType="element" getter="getGrowthPercent" setter="setGrowthPercent" reffered="false"/>
+   <property name="initial" dataType="long" defaultValue="1" xmlName="initial" xmlType="element" getter="getInitial" setter="setInitial" reffered="false"/>
+   <property name="label" dataType="java.lang.String" defaultValue="" xmlName="label" xmlType="element" getter="getLabel" setter="setLabel" reffered="false" search="true"/>
+   <property name="program" dataType="java.lang.String" defaultValue="" xmlName="program" xmlType="element" getter="getProgram" setter="setProgram" reffered="false"/>
+   <property name="updateRatePercent" dataType="float" defaultValue="0.0" xmlName="updateRatePercent" xmlType="element" getter="getUpdateRatePercent" setter="setUpdateRatePercent" reffered="false"/>
+   <property name="useIdentity" dataType="boolean" defaultValue="true" xmlName="useIdentity" xmlType="element" getter="isUseIdentity" setter="setUseIdentity" reffered="false"/>
+   <roproperty name="colno" dataType="int" getter="getColno"/>
+   <roproperty name="distinctType" dataType="oracle.dbtools.crest.model.design.storage.db2.DistinctTypeDB2" getter="getDistinctType"/>
+   <roproperty name="keyseq" dataType="int" getter="getKeyseq"/>
+</oracle.dbtools.crest.model.design.storage.db2.ColumnProxyDB2>

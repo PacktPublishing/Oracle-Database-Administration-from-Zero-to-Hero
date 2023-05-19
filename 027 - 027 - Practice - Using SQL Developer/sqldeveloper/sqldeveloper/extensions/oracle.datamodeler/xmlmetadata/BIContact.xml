@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.businessinfo.BIContact parentClass="oracle.dbtools.crest.model.design.DesignObject">
+   <collection name="emails" dataType="java.util.List" xmlName="emails" itemXmlName="email" itemIsRef="true" getter="getEmails" addItem="addEmail" nativeList="true" orderTheList="true"/>
+   <collection name="locations" dataType="java.util.List" xmlName="locations" itemXmlName="location" itemIsRef="true" getter="getLocations" addItem="addLocation" nativeList="true" orderTheList="true"/>
+   <collection name="phones" dataType="java.util.List" xmlName="phones" itemXmlName="phone" itemIsRef="true" getter="getPhones" addItem="addPhone" nativeList="true" orderTheList="true"/>
+   <collection name="urls" dataType="java.util.List" xmlName="urls" itemXmlName="urls" itemIsRef="true" getter="getUrls" addItem="addUrl" nativeList="true" orderTheList="true"/>
+   <roproperty name="emails" dataType="interface java.util.List" getter="getEmails"/>
+   <roproperty name="locations" dataType="interface java.util.List" getter="getLocations"/>
+   <roproperty name="parties" dataType="interface java.util.List" getter="getParties"/>
+   <roproperty name="phones" dataType="interface java.util.List" getter="getPhones"/>
+   <roproperty name="urls" dataType="interface java.util.List" getter="getUrls"/>
+</oracle.dbtools.crest.model.businessinfo.BIContact>

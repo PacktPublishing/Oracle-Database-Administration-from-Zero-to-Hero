@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.DesignPart parentClass="oracle.dbtools.crest.model.ModelIDObject">
+   <aa_property name="fullExport" dataType="boolean" defaultValue="" xmlName="fullExport" xmlType="element" getter="isFullExport" setter="setFullExport" reffered="false"/>
+   <aa_property name="loaded" dataType="boolean" defaultValue="" xmlName="loaded" xmlType="element" getter="isLoaded" setter="setLoaded" reffered="false"/>
+   <aa_property name="mainViewVisible" dataType="boolean" defaultValue="" xmlName="mainViewVisible" xmlType="element" getter="isMainViewVisible" setter="setMainViewVisible" reffered="false"/>
+   <aa_property name="newModel" dataType="boolean" defaultValue="" xmlName="newModel" xmlType="element" getter="isNewModel" setter="setNewModel" reffered="false"/>
+   <property name="shouldBeOpen" dataType="boolean" defaultValue="" xmlName="shouldBeOpen" xmlType="element" getter="isShouldBeOpen" setter="setShouldBeOpen" reffered="false"/>
+   <aa_property name="visible" dataType="boolean" defaultValue="" xmlName="visible" xmlType="element" getter="isVisible" setter="setVisible" reffered="false"/>
+   <property name="mainViewID" dataType="java.lang.String" defaultValue="" xmlName="mainViewID" xmlType="attribute" getter="getMainViewID" setter="setMainViewID" reffered="false"/>
+   <property name="mainView" external="true" dataType="oracle.dbtools.crest.swingui.DesignPartView" processing="afterColletions" defaultValue="" xmlName="mainView" xmlType="element" getter="getMainView" createItem="getMainView" removeItem="getMainView" reffered="false"/>
+   <collection name="documents" dataType="java.util.List" xmlName="documents" itemXmlName="Document" getter="getDocumentIDList" isMapItem="true" applyList="applyDocumentIDList" /> 
+   <collection name="responsibleParties" dataType="java.util.List" xmlName="responsibleParties" itemXmlName="Party" getter="getResponsiblePartyIDList" isMapItem="true" applyList="applyResponsiblePartyIDList"/>
+   <roproperty name="deleting" dataType="boolean" getter="isDeleting"/>
+   <processing afterInitExt="doAfterExternalLoad" />
+   <roproperty name="empty" dataType="boolean" getter="isEmpty"/>
+   <roproperty name="includedinExport" dataType="boolean" getter="isIncludedInExport"/>
+   <roproperty name="listOfObjectsChanged" dataType="boolean" getter="isListOfObjectsChanged"/>
+   <roproperty name="allDPVPlaceHolders" dataType="interface java.util.List" getter="getAllDPVPlaceHolders"/>
+   <roproperty name="allTopLevelObjects" dataType="interface java.util.Collection" getter="getAllTopLevelObjects"/>
+   <roproperty name="designSubviews" dataType="oracle.dbtools.crest.model.SubViewObjectSet" getter="getDesignSubviews"/>
+   <roproperty name="diagramViewSet" dataType="oracle.dbtools.crest.model.design.DiagramViewSet" getter="getDiagramViewSet"/>
+   <roproperty name="documents" dataType="interface java.util.List" getter="getDocuments"/>
+   <roproperty name="exportedSubViews" dataType="interface java.util.List" getter="getExportedSubViews"/>
+   <roproperty name="labelSet" dataType="oracle.dbtools.crest.model.design.LabelSet" getter="getLabelSet"/>
+   <roproperty name="mainDPVPlaceHolder" dataType="oracle.dbtools.crest.model.placeholder.DesignPartViewPlaceHolder" getter="getMainDPVPlaceHolder"/>
+   <roproperty name="namingOptionsHolderFor" dataType="oracle.dbtools.crest.model.NamingOptionsHolder" getter="getNamingOptionsHolderFor"/>
+   <roproperty name="namingOptionsHolderList" dataType="interface java.util.List" getter="getNamingOptionsHolderList"/>
+   <roproperty name="noteSet" dataType="oracle.dbtools.crest.model.design.NoteSet" getter="getNoteSet"/>
+   <roproperty name="objectsToDeleteFromRepository" dataType="interface java.util.List" getter="getObjectsToDeleteFromRepository"/>
+   <roproperty name="orderedTypes" dataType="interface java.util.List" getter="getOrderedTypes"/>
+   <roproperty name="responsibleParties" dataType="interface java.util.List" getter="getResponsibleParties"/>
+   <roproperty name="storableDesignObjects" dataType="interface java.util.Collection" getter="getStorableDesignObjects"/>
+   <roproperty name="subViewByID" dataType="oracle.dbtools.crest.swingui.DesignPartView" getter="getSubViewByID"/>
+   <roproperty name="subViewByName" dataType="oracle.dbtools.crest.swingui.DesignPartView" getter="getSubViewByName"/>
+   <roproperty name="subViewGeneratedByDPV" dataType="oracle.dbtools.crest.swingui.DesignPartView" getter="getSubViewGeneratedByDPV"/>
+   <roproperty name="subViewTypeName" dataType="java.lang.String" getter="getSubViewTypeName"/>
+   <roproperty name="typeOrder" dataType="interface java.util.List" getter="getTypeOrder"/>
+   <roproperty name="undoManager" dataType="oracle.dbtools.crest.model.design.undo.DP_UndoManager" getter="getUndoManager"/>
+</oracle.dbtools.crest.model.design.DesignPart>

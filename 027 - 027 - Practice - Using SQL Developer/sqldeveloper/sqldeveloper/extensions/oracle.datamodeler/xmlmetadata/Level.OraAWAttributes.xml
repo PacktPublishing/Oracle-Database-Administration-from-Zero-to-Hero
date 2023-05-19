@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.multidimensional.Level.OraAWAttributes parentClass="java.lang.Object" innerClass="true">
+   <property name="longDesc" dataType="oracle.dbtools.crest.model.design.ContainedObject" defaultValue="" xmlName="longDesc" xmlType="element" getter="getLongDesc" setter="setLongDesc" reffered="true"/>
+   <property name="shortDesc" dataType="oracle.dbtools.crest.model.design.ContainedObject" defaultValue="" xmlName="shortDesc" xmlType="element" getter="getShortDesc" setter="setShortDesc" reffered="true"/>
+   <property name="timeEnd" dataType="oracle.dbtools.crest.model.design.ContainedObject" defaultValue="" xmlName="timeEnd" xmlType="element" getter="getTimeEnd" setter="setTimeEnd" reffered="true"/>
+   <property name="timeSpan" dataType="oracle.dbtools.crest.model.design.ContainedObject" defaultValue="" xmlName="timeSpan" xmlType="element" getter="getTimeSpan" setter="setTimeSpan" reffered="true"/>
+</oracle.dbtools.crest.model.design.multidimensional.Level.OraAWAttributes>

@@ -1,0 +1,11 @@
+hi guys,
+
+In this we will get into the practical side of managing Oracle databases.
+
+We will see how to install Oracle software in Linux and Windows platforms.
+
+After that, we will create Oracle databases in two virtual machines: one is a Linux vm and the other is a Windows vm.
+
+Finally, we will get familiar with two common tools: SQL*Plus and SQL Developer.
+
+Let's dive in!

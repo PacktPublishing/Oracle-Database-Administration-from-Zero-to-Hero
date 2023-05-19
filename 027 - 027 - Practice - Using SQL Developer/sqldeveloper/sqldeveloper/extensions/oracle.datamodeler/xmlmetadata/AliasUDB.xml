@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.udb.AliasUDB parentClass="oracle.dbtools.crest.model.design.storage.db2.AbstractStorageObjectDB2">
+   <property name="referencedObject" dataType="oracle.dbtools.crest.model.design.storage.StorageObject" defaultValue="" xmlName="referencedObject" xmlType="element" getter="getReferencedObject" setter="setReferencedObject" reffered="true" search="true"/>
+   <property name="schema" dataType="oracle.dbtools.crest.model.design.storage.udb.SchemaUDB" defaultValue="" xmlName="schema" xmlType="element" getter="getSchema" setter="setSchema" reffered="true" search="true"/>
+</oracle.dbtools.crest.model.design.storage.udb.AliasUDB>

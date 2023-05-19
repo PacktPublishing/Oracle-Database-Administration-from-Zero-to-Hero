@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+      Copyright 2005 by Oracle USA
+      500 Oracle Parkway, Redwood Shores, California, 94065, U.S.A.
+      All rights reserved.
+-->
+
+<xs:schema targetNamespace="http://jcp.org/jsr/198/extension-manifest"
+           xmlns="http://jcp.org/jsr/198/extension-manifest"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:md="http://xmlns.oracle.com/bali/xml/metadata"
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+  
+  <xs:annotation>
+    <xs:appinfo>
+      <md:grammarMetadata>
+        <md:globalMetadata>
+          <md:categoryDefinitions>
+            <md:category id="ide-hooks">
+              <md:displayName>Commonly Used Hooks</md:displayName>
+              <md:preferredPageRank>1</md:preferredPageRank>
+            </md:category>
+          </md:categoryDefinitions>
+        </md:globalMetadata>
+      </md:grammarMetadata>
+    </xs:appinfo>
+  </xs:annotation>
+           
+  <!-- Root element declaration============================================ -->
+  <xs:element name="extension">
+    <xs:annotation>
+      <xs:documentation>An extension is a unit of functionality that plugs into
+                        an ide.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="identifiableType">
+          <xs:sequence>
+            <xs:element name="name" type="i18n_string" minOccurs="1">
+              <xs:annotation>
+                <xs:documentation>The name of this extension.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="owner" type="i18n_string" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>The individual or group responsible for this
+                                  extension.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="dependencies" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>
+                  Dependencies this extension has on other extensions.
+                </xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="import" maxOccurs="unbounded" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Specifies a dependency on another extension. The text
+                        value of this element is the extension id of an
+                        extension the current extension depends on.
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="javaxIdentifier">
+                          <xs:attribute name="minVersion" type="versionNumber" use="optional">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Optionally specifies the minimum version of the
+                                dependency that must be installed.
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:attribute>
+                          <xs:attribute name="maxVersion" type="versionNumber">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Optionally specifies the maximum version of the
+                                dependency that must be installed.
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:attribute>
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="required-bundles" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>
+                  The OSGi bundles that this extension requires.
+                </xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="bundle" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>
+                        The bundle symbolic name of the required bundle.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="classpaths" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>
+                  Classpath entries that this extension reqiures.
+                </xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="classpath" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>
+                        A classpath entry. The text content of this element is
+                        the relative path of a jar file or directory that will
+                        be added to the classpath of this extension.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="platform-info" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Information about the platform this extension
+                                  requires.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="toolkit" type="toolkitType" maxOccurs="2">
+                    <xs:annotation>
+                      <xs:documentation>The UI toolkit this extension requires.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element ref="custom-extension-info" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Elements in the custom-extension-info substitution
+                                  group are allowed before the hooks element.
+                                  The custom-extension-info substitution group
+                                  allows JSR 198 implementations to add
+                                  implementation-specific content at this
+                                  location in extension.xml.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="hooks" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>All functionality provided by the extension is
+                                  described in the hooks section of the
+                                  extension manifest.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element ref="menu-hook" minOccurs="0"></xs:element>
+                  <xs:element name="document-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies custom document types and
+                                        listeners for document events this
+                                        extension contributes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:all>
+                            <xs:element name="documents" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Document types contributed by
+                                                  this extension.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:choice maxOccurs="unbounded">
+                                  <xs:element name="by-suffix" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>Registers a document
+                                                        type by suffix.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="suffix" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                                      </xs:sequence>
+                                      <xs:attribute name="document-class" use="required" type="className">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            document type to
+                                                            register. This
+                                                            should be a class
+                                                            extending
+                                                            javax.ide.model.Document.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="by-xml-root" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>Registers a recognizer
+                                                        that will identify
+                                                        document types based on
+                                                        the root element of an
+                                                        XML document.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="suffix" minOccurs="0" maxOccurs="unbounded" type="xs:string">
+                                          <xs:annotation>
+                                            <xs:documentation>The suffix to
+                                                              recognize. If none
+                                                              is specified, .xml
+                                                              is used.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="root-element" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                            <xs:documentation>The root element
+                                                              to recognize.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                            <xs:attribute name="namespace" use="required">
+                                              <xs:annotation>
+                                                <xs:documentation>The namespace
+                                                                  URI to
+                                                                  recognize.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="localName" use="required">
+                                              <xs:annotation>
+                                                <xs:documentation>The local
+                                                                  element name
+                                                                  to recognize.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:attribute>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                      <xs:attribute name="document-class" use="optional" type="className">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            document class to
+                                                            use when recognizing
+                                                            a file by its XML
+                                                            root. This should be
+                                                            a subclass of
+                                                            javax.ide.model.xml.XMLDocument.
+                                                            If no document class
+                                                            is specified, then
+                                                            XMLDocument is used.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="by-xml-doctype" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>Registers a recognizer
+                                                        that will identify
+                                                        document types based on
+                                                        the doctype of xml
+                                                        documents.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="suffix" maxOccurs="unbounded" minOccurs="0">
+                                          <xs:annotation>
+                                            <xs:documentation>The suffix to
+                                                              recognize. If none
+                                                              is specified, .xml
+                                                              is used.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="doc-type" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                            <xs:documentation>The document type
+                                                              to recognize.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                            <xs:attribute name="public-id">
+                                              <xs:annotation>
+                                                <xs:documentation>The public id
+                                                                  to recognize.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="system-id">
+                                              <xs:annotation>
+                                                <xs:documentation>The system id
+                                                                  to recognize.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:attribute>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                      <xs:attribute name="document-class" type="className">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            document class to
+                                                            use. Must be a
+                                                            subclass of
+                                                            javax.ide.model.xml.XMLDocument.
+                                                            If none is specifed,
+                                                            XMLDocument is used.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="by-recognizer" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>Registers a custom
+                                                        recognizer
+                                                        implementation.
+                                                        Extension writers should
+                                                        use this as a last
+                                                        resort if other
+                                                        recognizers are not
+                                                        suitable, it may have
+                                                        severe performance
+                                                        issues on some IDEs.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:attribute name="recognizer-class" use="required" type="className">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            recognizer to use.
+                                                            This should be a
+                                                            subclass of
+                                                            javax.ide.model.Recognizer.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:choice>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="listeners" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Listeners for document events
+                                                  contributed by this extension.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="document-listener" type="listenerType" minOccurs="0"
+                                              maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A listener for document
+                                                        events.</xs:documentation>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element name="property-listener" type="listenerType" minOccurs="0"
+                                              maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>Listens for property
+                                                        events.</xs:documentation>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:all>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ide-listener-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies listeners this extension
+                                        attaches to the IDE.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:all>
+                            <xs:element name="ide-listeners" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Listeners for IDE activation
+                                                  and deactivation events.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="listener-class" type="className" minOccurs="0"
+                                              maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>The fully qualified
+                                                        class name of a listener
+                                                        for ide activation and
+                                                        deactivation. The class
+                                                        must implement
+                                                        javax.ide.IDEListener.</xs:documentation>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:all>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="editor-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies custom editors, document
+                                        editor assignments, and listeners for
+                                        editor events that this extension
+                                        contributes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:all>
+                            <xs:element name="editors" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Specifies custom editors
+                                                  provided by this extension.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="editor" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A custom editor.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:all>
+                                        <xs:element name="name" type="i18n_string">
+                                          <xs:annotation>
+                                            <xs:documentation>The name of the
+                                                              editor.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                      </xs:all>
+                                      <xs:attribute name="editor-class" type="className" use="required">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            custom editor. The
+                                                            class must be a
+                                                            subclass of
+                                                            javax.ide.editor.Editor.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="mappings" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Mappings from document types
+                                                  to editors.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="mapping" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A mapping from a
+                                                        document type to an
+                                                        editor type. The mapping
+                                                        allows documents of the
+                                                        specified type to be
+                                                        opened with the
+                                                        specified editor types.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="open-with" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                            <xs:documentation>Specifies which
+                                                              editors to open
+                                                              the document type
+                                                              with.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                            <xs:attribute name="editor-class" type="className" use="required">
+                                              <xs:annotation>
+                                                <xs:documentation>The fully
+                                                                  qualified
+                                                                  class name of
+                                                                  an editor to
+                                                                  register the
+                                                                  document type
+                                                                  with. The
+                                                                  class should
+                                                                  be a subclass
+                                                                  of
+                                                                  javax.ide.editor.Editor.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="preferred" type="xs:boolean" use="optional"
+                                                          default="false">
+                                              <xs:annotation>
+                                                <xs:documentation>Specifies
+                                                                  whether this
+                                                                  is the
+                                                                  preferred
+                                                                  editor for the
+                                                                  specified
+                                                                  document type.
+                                                                  An IDE is free
+                                                                  to interpret
+                                                                  this attribute
+                                                                  however it
+                                                                  pleases. For
+                                                                  example, it
+                                                                  might open
+                                                                  documents in
+                                                                  the preferred
+                                                                  editor by
+                                                                  default on
+                                                                  double click.
+                                                                  The default
+                                                                  value for this
+                                                                  attribute if
+                                                                  not specified
+                                                                  is false.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:attribute>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                      <xs:attribute name="document-class" type="className" use="required">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of a
+                                                            document class to
+                                                            register a mapping
+                                                            for. The class
+                                                            should be a subclass
+                                                            of
+                                                            javax.ide.model.Document.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="editor-listeners" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Listeners for editor events.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="editor-listener" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A listener for editor
+                                                        events.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:complexContent>
+                                        <xs:extension base="listenerType"/>
+                                      </xs:complexContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:all>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="property-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies preference and settings pages
+                                        that this extension contributes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:sequence>
+                            <xs:element name="property-pages">
+                              <xs:annotation>
+                                <xs:documentation>Property pages.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="property-page" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A property page.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:all>
+                                        <xs:element name="label" type="i18n_string">
+                                          <xs:annotation>
+                                            <xs:documentation>The label for the
+                                                              property page.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="object-class" type="className">
+                                          <xs:annotation>
+                                            <xs:documentation>The fully
+                                                              qualified class
+                                                              name of the type
+                                                              of object this
+                                                              property page
+                                                              edits. JSR-198
+                                                              defines two
+                                                              standard object
+                                                              types:
+                                                              javax.ide.IDE for
+                                                              global IDE
+                                                              properties, and
+                                                              javax.ide.model.Project
+                                                              for project
+                                                              specific
+                                                              properties.
+                                                              Extensions can
+                                                              also provide other
+                                                              object types for
+                                                              which dependee
+                                                              extensions may
+                                                              register property
+                                                              pages. For more
+                                                              information, see
+                                                              javax.ide.property.PropertyPageRegistry
+                                                              javadoc.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                      </xs:all>
+                                      <xs:attribute name="property-page-class" type="className" use="required">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            property page. This
+                                                            should be a subclass
+                                                            of
+                                                            javax.ide.property.PropertyPage.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                      <xs:attribute name="parent-page" type="className">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            parent page of this
+                                                            page. If property
+                                                            pages are shown in a
+                                                            hierarchical mode,
+                                                            this provides a hint
+                                                            to the IDE about
+                                                            where to place this
+                                                            page. If
+                                                            unspecified, this is
+                                                            a top level property
+                                                            page. The class
+                                                            should be a subclass
+                                                            of
+                                                            javax.ide.property.PropertyPage.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="log-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies log pages that this extension
+                                        contributes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:all>
+                            <xs:element name="log-pages" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Custom log pages.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="log-page" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A custom log page.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:attribute name="log-page-class" type="className" use="required">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            custom log page.
+                                                            This must be a
+                                                            subclass of
+                                                            javax.ide.log.LogPage.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:all>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="wizard-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies wizards that this extension
+                                        contributes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:all>
+                            <xs:element name="wizards" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Wizards are user interface
+                                                  objects that can create new
+                                                  objects.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="wizard-category" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A category for wizards.
+                                                        IDEs may choose to use
+                                                        the categorization
+                                                        information to group
+                                                        wizards.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:complexContent>
+                                        <xs:extension base="identifiableType">
+                                          <xs:sequence>
+                                            <xs:element name="label" type="i18n_string">
+                                              <xs:annotation>
+                                                <xs:documentation>A label for
+                                                                  the category.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="parent-category" type="xs:string">
+                                            <xs:annotation>
+                                              <xs:documentation>The parent
+                                                                category for
+                                                                this category.
+                                                                If none is
+                                                                specified, then
+                                                                this is
+                                                                considered to be
+                                                                a root category.</xs:documentation>
+                                            </xs:annotation>
+                                          </xs:attribute>
+                                        </xs:extension>
+                                      </xs:complexContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="wizard" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>A wizard.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:all>
+                                        <xs:element name="label" type="i18n_string">
+                                          <xs:annotation>
+                                            <xs:documentation>A label for the
+                                                              wizard.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="iconpath" type="i18n_string">
+                                          <xs:annotation>
+                                            <xs:documentation>An icon for the
+                                                              wizard.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="tooltip" type="i18n_string">
+                                          <xs:annotation>
+                                            <xs:documentation>A tooltip for the
+                                                              wizard.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                      </xs:all>
+                                      <xs:attribute name="wizard-class" type="className" use="required">
+                                        <xs:annotation>
+                                          <xs:documentation>The fully qualified
+                                                            class name of the
+                                                            wizard
+                                                            implementation. This
+                                                            should be an
+                                                            implementation of
+                                                            javax.ide.wizard.Wizard.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                      <xs:attribute name="category-ref" type="className">
+                                        <xs:annotation>
+                                          <xs:documentation>The id of the
+                                                            category that this
+                                                            wizard should be
+                                                            displayed in, if the
+                                                            IDE supports wizard
+                                                            categorization. If
+                                                            no category is
+                                                            specified, then the
+                                                            IDE will display the
+                                                            wizard in a default
+                                                            category.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:all>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="build-system-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies listeners for build events
+                                        that this extension contributes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:all>
+                            <xs:element name="build-listeners" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Listeners for build events.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="listener-class" type="className" minOccurs="1"
+                                              maxOccurs="unbounded">
+                                    <xs:annotation>
+                                      <xs:documentation>The fully qualified
+                                                        class name of a
+                                                        listener. The class
+                                                        should be an
+                                                        implementation of
+                                                        javax.ide.build.BuildListener.</xs:documentation>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:all>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="feature-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies optional information about
+                                        this extension identifying the
+                                        functionality it provides to the user as
+                                        a feature.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:all>
+                        <xs:element name="license" type="i18n_string" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Licensing information about this
+                                              extension.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="copyright" type="i18n_string" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Copyright information about this
+                                              extension.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="iconpath" type="i18n_string" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>The path to an icon for this
+                                              extension.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="description" type="i18n_string" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>A description of the functionality
+                                              provided by this extension.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="optional" type="xs:boolean" default="true" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Whether this extension is
+                                              optional. Optional extensions can
+                                              be switched off by users via some
+                                              IDE specific extension
+                                              customization UI. By default,
+                                              extensions which have a
+                                              feature-hook are optional.
+                                              Extensions with no feature-hook
+                                              are not optional.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="part-of" type="javaxIdentifier" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>The id of an extension this
+                                              extension is logically part of.
+                                              There is no requirement that there
+                                              be an actual dependency between
+                                              the extensions.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:all>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="hook-handler-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies handlers this extension
+                                        contributes for custom hooks.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="hookType">
+                          <xs:sequence>
+                            <xs:element name="hook-handler" type="hookHandlerType" maxOccurs="unbounded" minOccurs="0">
+                              <xs:annotation>
+                                <xs:documentation>Registers a custom hook
+                                                  handler.</xs:documentation>
+                              </xs:annotation>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="vfs-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Specifies virtual file system helpers
+                                        contributed by this extension.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="helper" maxOccurs="unbounded">
+                          <xs:annotation>
+                            <xs:documentation>A virtual file system helper.</xs:documentation>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:attribute name="helper-class" type="className" use="required">
+                              <xs:annotation>
+                                <xs:documentation>The fully qualified class name
+                                                  of the helper implementation.
+                                                  This should be a subclass of
+                                                  javax.ide.net.VirtualFileSystemHelper.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                            <xs:attribute name="scheme" type="xs:string" use="required">
+                              <xs:annotation>
+                                <xs:documentation>The URI scheme to register
+                                                  this helper for.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element ref="custom-hook" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Abstract element representing custom
+                                        hooks.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="version" use="required" type="versionNumber">
+            <xs:annotation>
+              <xs:documentation>The version of this extension, should only
+                                contain digits and periods.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="esdk-version" use="required" type="esdkVersionNumber">
+            <xs:annotation>
+              <xs:documentation>The extension SDK this extension is compatible
+                                with. This currently must be "1.0".</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="rsbundle-class" type="className">
+            <xs:annotation>
+              <xs:documentation>The fully qualified class name of a resource
+                                bundle to use to look up translated strings in
+                                this extension manifest.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="loader" default="global" type="loaderType">
+            <xs:annotation> 
+              <xs:appinfo>
+                <md:grammarMetadata>
+                  <md:attributeMetadata>
+                    <md:deprecated>All extensions run in isolated classloaders in versions 11.1.2 and later.</md:deprecated>
+                  </md:attributeMetadata>
+                </md:grammarMetadata>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="custom-extension-info" type ="customExtensionInfoType" abstract="true" />
+  <xs:element name="custom-hook" type="customHookType" abstract="true"/>
+  <!-- Type declarations ============================================= -->
+  <!-- complexType declaration for identifiables -->
+  <xs:complexType name="identifiableType">
+    <xs:attribute name="id" type="javaxIdentifier" use="required">
+      <xs:annotation>
+        <xs:documentation>A unique identifier.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="customExtensionInfoType"></xs:complexType>
+
+  <xs:complexType name="customHookType"></xs:complexType>
+  <!-- Abstract hook type -->
+  <xs:complexType name="hookType" abstract="true"/>
+
+  <!-- hook-handler type -->
+  <xs:complexType name="hookHandlerType">
+    <xs:attribute name="namespace" type="xs:anyURI"
+                  use="required">
+      <xs:annotation>
+        <xs:documentation>The namespace URI of the
+                          xml element that this hook
+                          handler handles.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="tag-name" type="xs:NCName"
+                  use="required">
+      <xs:annotation>
+        <xs:documentation>The local element name of
+                          the XML element that this
+                          hook handler handles.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="handler-class"
+                  type="className" use="required">
+      <xs:annotation>
+        <xs:documentation>The fully qualified class
+                          name of the custom hook
+                          handler. This must be a
+                          subclass of
+                          javax.ide.extension.ExtensionHook.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="schema-location"
+                  type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The location of the XML
+                          schema for the custom hook
+                          grammar. This location is
+                          relative to the location
+                          of the extension.xml
+                          within the jar file
+                          providing this extension.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="typeType">
+    <xs:all>
+      <xs:element name="toggle" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="context-sensitive" type="xs:boolean" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="popupType">
+    <xs:complexContent>
+      <xs:extension base="sectionContainerType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Pulldown menu declaration -->
+  <xs:complexType name="menuBarType">
+    <xs:complexContent>
+      <xs:extension base="identifiableType">
+        <xs:sequence>
+          <xs:element name="menu" type="menuType" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Pulldown menu declaration -->
+  <xs:complexType name="sectionContainerType">
+    <xs:complexContent>
+      <xs:extension base="identifiableType">
+        <xs:sequence maxOccurs="unbounded" minOccurs="0">
+          <xs:element name="section" type="sectionType">
+            <xs:annotation>
+              <xs:documentation>A section containing items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Menu declaration -->
+  <xs:complexType name="menuType">
+    <xs:complexContent>
+      <xs:extension base="identifiableType">
+        <xs:sequence minOccurs="0">
+          <xs:element name="label" type="i18n_string" minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The label for the menu.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="mnemonic" type="i18n_char" minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The mnemonic for the menu.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="tooltip" type="i18n_string" minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The tooltip text for the menu.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="iconpath" type="i18n_string" minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The path to the icon for the menu. For top level
+                                menus, this property may be ignored.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="section" maxOccurs="unbounded" minOccurs="0"
+                      type="sectionType">
+            <xs:annotation>
+              <xs:documentation>A section containing items in a menu.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="defaultsection" type="xs:float"/>
+        <xs:attributeGroup ref="menuPositionAttributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Menu item declaration -->
+  <xs:attributeGroup name="menuPositionAttributes">
+    <xs:attribute name="before" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Specifies the id of a menu component the current
+                          component must come before.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="after" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Specifies the id of a menu component the current
+                          component must come after.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="weight" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>Specifies the weight of a menu component. This attribute is not yet supported for toolbar items.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:complexType name="itemType">
+    <xs:attribute name="action-ref" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>The action for this this menu or toolbar item.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="radiogroup-id">
+      <xs:annotation>
+        <xs:documentation>If this menu or toolbar item is in a radio group,
+                          specifies the id of the radio group. This id should be
+                          the same for all items in a given radio group.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attributeGroup ref="menuPositionAttributes"/>
+  </xs:complexType>
+  <!-- Menu section declaration -->
+  <xs:complexType name="sectionType">
+    <xs:complexContent>
+      <xs:extension base="identifiableType">
+        <xs:sequence>
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="item" type="itemType">
+              <xs:annotation>
+                <xs:documentation>An item in a menu or toolbar section.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="menu" type="menuType">
+              <xs:annotation>
+                <xs:documentation>A submenu in a section. For toolbar sections,
+                                  the behavior of this element is unspecifies.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="alphasort" type="xs:boolean" default="false">
+          <xs:annotation>
+            <xs:documentation>Determines whether menu items in this section are sorted by their label.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="resolveMnemonics" type="xs:boolean" default="false">
+          <xs:annotation>
+            <xs:documentation>Determines whether a MnemonicSolver is used to resolve mnemonics for the menu items in this section.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="displayName" type="xs:string" use="optional">
+          <xs:annotation>
+            <xs:documentation>Sets an optional display name for a section.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attributeGroup ref="menuPositionAttributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="toolbarsType">
+    <xs:sequence>
+      <xs:element name="toolbar" type="sectionContainerType"
+                  maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>A toolbar.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Tool declaration -->
+  <!-- Toolbar section declaration -->
+  <xs:complexType name="toolSectionType">
+    <xs:complexContent>
+      <xs:extension base="identifiableType">
+        <xs:sequence>
+          <xs:element name="item" type="itemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Radio group declaration -->
+  <xs:complexType name="radioGroupType">
+    <xs:complexContent>
+      <xs:extension base="identifiableType">
+        <xs:sequence>
+          <xs:element name="radio-item" type="itemType" minOccurs="2"
+                      maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="weight" type="xs:float"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Type declarations ================================================== -->
+  <!-- Localizable string type -->
+  <xs:complexType name="i18n_string">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="rskey" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              The name of a key in the resource bundle specified by the
+              rsbundle-class root element of the extension.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:string">
+      <xs:length value="1" fixed="true"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="i18n_char">
+    <xs:simpleContent>
+      <xs:extension base="char">
+        <xs:attribute name="rskey" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              The name of a key in the resource bundle specified by the
+              rsbundle-class root element of the extension.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="docTypeType">
+    <xs:attribute name="public-id" type="xs:string"/>
+    <xs:attribute name="system-id" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="listenerType">
+    <xs:attribute name="listener-class" type="className" use="required">
+      <xs:annotation>
+        <xs:documentation>The listener to register.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="source-class" type="className" use="optional">
+      <xs:annotation>
+        <xs:documentation>The object to register the listener for.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <!-- Custom type for xml elements or attributes which are class names. -->
+  <xs:simpleType name="className">
+    <xs:annotation>
+      <xs:documentation>
+        A fully qualified class name.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:normalizedString"/>
+  </xs:simpleType>
+  <!-- Custom type for allowed toolkit types. -->
+  <xs:simpleType name="toolkitType">
+    <xs:annotation>
+      <xs:documentation>A UI toolkit.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="swing">
+        <xs:annotation>
+          <xs:documentation>The Swing UI toolkit.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="swt">
+        <xs:annotation>
+          <xs:documentation>The SWT UI toolkit.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- Custom type for loader types -->
+  <xs:simpleType name="loaderType">
+    <xs:annotation>
+      <xs:documentation>The preferred classloader for an extension</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="isolated">
+        <xs:annotation>
+          <xs:documentation>When an extension is loaded in an isolated loader, it can only see classes from extensions it depends on, their dependencies, or classpath entries they provide.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="global">
+        <xs:annotation>
+          <xs:documentation>When an extension is loaded in a global loader, it can see classes from all other extensions loaded in the global loader.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="versionNumber">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[\.0-9]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="esdkVersionNumber">
+    <xs:annotation>
+      <xs:documentation>The version of the JSR-198 spec this extension manifest conforms to. Must currently be either 1.0 or 2.0.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="versionNumber">
+      <xs:enumeration value="1.0" />
+      <xs:enumeration value="2.0" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="javaxIdentifier">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[\.\-A-Za-z0-9_]+" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:group name="menuGroup">
+    <xs:all>
+      <xs:element name="actions" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Actions contributed by this
+                            extension.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="action" minOccurs="0"
+                        maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>A user invokable action.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="identifiableType">
+                    <xs:all>
+                      <xs:element name="label"
+                                  type="i18n_string"
+                                  minOccurs="1">
+                        <xs:annotation>
+                          <xs:documentation>The label for
+                                            this action.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="mnemonic"
+                                  type="i18n_char"
+                                  minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>The mnemonic
+                                            character to
+                                            use for this
+                                            action.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="tooltip"
+                                  type="i18n_string"
+                                  minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>The tooltip
+                                            text to use
+                                            for this
+                                            action.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="iconpath"
+                                  type="i18n_string"
+                                  minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>The path to
+                                            the icon to
+                                            use for this
+                                            action. This
+                                            is usually a
+                                            resource
+                                            available on
+                                            the classpath
+                                            of the
+                                            extension.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="enabled"
+                                  type="xs:boolean"
+                                  minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>Whether this
+                                            action is
+                                            enabled by
+                                            default.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="checked"
+                                  type="xs:boolean"
+                                  minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>Whether this
+                                            action is
+                                            checked by
+                                            default. This
+                                            property only
+                                            applies to
+                                            actions which
+                                            have the
+                                            toggle
+                                            attribute set
+                                            to true.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="invoke-class"
+                                  type="className"
+                                  minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>The fully
+                                            qualified
+                                            class name of
+                                            an invoke
+                                            handler for
+                                            this action.
+                                            The specified
+                                            class must be
+                                            an
+                                            implementation
+                                            of
+                                            javax.ide.command.InvokeHandler.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="update-class"
+                                  type="className"
+                                  minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>The fully
+                                            qualified
+                                            class name of
+                                            an update
+                                            handler for
+                                            this action.
+                                            The specified
+                                            class must be
+                                            an
+                                            implementation
+                                            of
+                                            javax.ide.command.UpdateHandler.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:all>
+                    <xs:attribute name="toggle"
+                                  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Whether this
+                                          action is a
+                                          toggle action.
+                                          Toggle actions
+                                          have a notion of
+                                          a selection
+                                          state, which can
+                                          be either true
+                                          or false.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="action-override"
+                        minOccurs="0"
+                        maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>An override of an action
+                                  provided by another
+                                  extension. This
+                                  mechanism allows
+                                  extension writers to
+                                  register invoke and
+                                  update handlers for
+                                  actions provided by
+                                  other extensions and
+                                  optionally override the
+                                  default behavior of the
+                                  action.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="invoke-class"
+                              type="className">
+                    <xs:annotation>
+                      <xs:documentation>The fully
+                                        qualified class
+                                        name of the invoke
+                                        handler for the
+                                        overridden action.
+                                        This must be an
+                                        implmentation of
+                                        javax.ide.command.InvokeHandler.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="update-class"
+                              type="className"
+                              minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>The fully
+                                        qualified class
+                                        name of the update
+                                        handler for the
+                                        overridden action.
+                                        This must be an
+                                        implmentation of
+                                        javax.ide.command.UpdateHandler.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:all>
+                <xs:attribute name="action-ref"
+                              use="required">
+                  <xs:annotation>
+                    <xs:documentation>The id of the action
+                                      being overridden.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="menus" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Menus contributed by this
+                            extension.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:element name="menubar" type="menuBarType"
+                        maxOccurs="unbounded"
+                        minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Menu bars contributed by
+                                  this extension.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="popup" type="popupType"
+                        minOccurs="0"
+                        maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Popup menus contributed
+                                  by this extension.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="toolbars" type="toolbarsType"
+                  minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Toolbars contributed by this
+                            extension.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="item-factories" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Factories to create custom
+                            toolbar items contributed by
+                            this extension.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="item-factory-class"
+                        minOccurs="1"
+                        maxOccurs="unbounded"
+                        type="className">
+              <xs:annotation>
+                <xs:documentation>The fully qualified
+                                  class name of an
+                                  ItemFactory which
+                                  provides a custom GUI
+                                  component for a menu or
+                                  toolbar item. In the
+                                  current release of
+                                  JSR-198, only toolbar
+                                  items support
+                                  customizability. The
+                                  specified class must be
+                                  a subclass of
+                                  javax.ide.menu.ItemFactory.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:group>
+
+  <xs:complexType name="menuHookType">
+    <xs:complexContent>
+      <xs:extension base="hookType">
+        <xs:group ref="menuGroup"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- menu-hook refactored out so it can be reused in other contexts.
+       It's not entirely obvious why there are both hookType
+       and customHookType, since the former could easily have
+       been folded into the latter. But for reusability all
+       hooks should be custom hooks, so all are on an equal footing. -->
+  <xs:element name="menu-hook" type="customMenuHookType"
+    substitutionGroup="custom-hook">
+    <xs:annotation>
+      <xs:documentation>Specifies functionality this extension
+                        contributes to menus and toolbars.</xs:documentation>
+                        
+      <xs:appinfo>
+        <md:grammarMetadata>
+          <md:elementMetadata>
+            <md:categoryId>ide-hooks</md:categoryId>
+          </md:elementMetadata>
+        </md:grammarMetadata>
+      </xs:appinfo>
+    </xs:annotation>
+
+  </xs:element>
+
+  <xs:complexType name="customMenuHookType">
+    <xs:complexContent>
+      <xs:extension base="customHookType">
+        <xs:group ref="menuGroup"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>

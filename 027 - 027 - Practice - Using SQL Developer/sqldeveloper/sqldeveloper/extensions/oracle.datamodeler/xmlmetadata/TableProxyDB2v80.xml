@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.db2.v80.TableProxyDB2v80 parentClass="oracle.dbtools.crest.model.design.storage.db2.TableProxyDB2">
+   <property name="materializedQuery" dataType="java.lang.String" defaultValue="" xmlName="materializedQuery" xmlType="element" getter="getMaterializedQuery" setter="setMaterializedQuery" search="true" reffered="false"/>
+   <property name="materializedQueryChanged" dataType="boolean" defaultValue="true" xmlName="materializedQueryChanged" xmlType="element" getter="isMaterializedQueryChanged" setter="setMaterializedQueryChanged" reffered="false"/>
+   <property name="mqColumnDefaults" dataType="java.lang.String" defaultValue="" xmlName="mqColumnDefaults" xmlType="element" getter="getMqColumnDefaults" setter="setMqColumnDefaults" search="true" reffered="false"/>
+   <property name="mqIdentityColumnAttr" dataType="java.lang.String" defaultValue="" xmlName="mqIdentityColumnAttr" xmlType="element" getter="getMqIdentityColumnAttr" setter="setMqIdentityColumnAttr" search="true" reffered="false"/>
+   <property name="mqmaintenance" dataType="java.lang.String" defaultValue="" xmlName="mqmaintenance" xmlType="element" getter="getMqMaintenance" setter="setMqMaintenance" search="true" reffered="false"/>
+   <property name="mqQueryDefinition" dataType="java.lang.String" defaultValue="" xmlName="mqQueryDefinition" xmlType="element" getter="getMqQueryDefinition" setter="setMqQueryDefinition" search="true" reffered="false"/>
+   <property name="mqQueryDefinitionChanged" dataType="boolean" defaultValue="true" xmlName="mqQueryDefinitionChanged" xmlType="element" getter="isMqQueryDefinitionChanged" setter="setMqQueryDefinitionChanged" reffered="false"/>
+   <property name="mqQueryOptimization" dataType="java.lang.String" defaultValue="" xmlName="mqQueryOptimization" xmlType="element" getter="getMqQueryOptimization" setter="setMqQueryOptimization" search="true" reffered="false"/>
+   <property name="mqStatus" dataType="java.lang.String" defaultValue="" xmlName="mqStatus" xmlType="element" getter="getMqStatus" setter="setMqStatus" search="true" reffered="false"/>
+   <property name="partitioned" dataType="java.lang.String" defaultValue="" xmlName="partitioned" xmlType="element" getter="getPartitioned" setter="setPartitioned" reffered="false" search="true"/>
+   <property name="partitioningKey" dataType="java.lang.String" defaultValue="" xmlName="partitioningKey" xmlType="element" getter="getPartitioningKey" setter="setPartitioningKey" reffered="false" listOfRefs="true"/>
+   <property name="tableAccess" dataType="java.lang.String" defaultValue="" xmlName="tableAccess" xmlType="element" getter="getTableAccess" setter="setTableAccess" search="true" reffered="false"/>
+   <collection name="foreignKeys" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="foreignKeys" itemXmlName="ForeignKey" getter="getFkeys" proxyItem="true" />
+   <collection name="tablePartitions" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="tablePartitions" itemXmlName="Partition" getter="getTablePartitions" createItem="createPartition" />
+   <roproperty name="fkeys" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getFkeys"/>
+   <roproperty name="numParts" dataType="int" getter="getNumParts"/>
+   <roproperty name="partKeySortOrder" dataType="java.lang.String" getter="getPartKeySortOrder"/>
+   <roproperty name="partitioningKeySet" dataType="oracle.dbtools.crest.model.design.storage.db2.v80.TableProxyDB2v80$InlineList" getter="getPartitioningKeySet"/>
+   <roproperty name="partitions" dataType="[Loracle.dbtools.crest.model.design.storage.db2.TablePartitionDB2" getter="getPartitions"/>
+   <roproperty name="tablePartitions" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getTablePartitions"/>
+</oracle.dbtools.crest.model.design.storage.db2.v80.TableProxyDB2v80>

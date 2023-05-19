@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.IndexProxySqlServerv2k5 parentClass="oracle.dbtools.crest.model.design.storage.sqlserver.IndexProxySqlServer">
+   <property name="allowPageLocks" dataType="java.lang.String" defaultValue="ON" xmlName="allowPageLocks" xmlType="element" getter="getAllowPageLocks" setter="setAllowPageLocks" reffered="false"/>
+   <property name="allowRowLocks" dataType="java.lang.String" defaultValue="ON" xmlName="allowRowLocks" xmlType="element" getter="getAllowRowLocks" setter="setAllowRowLocks" reffered="false"/>
+   <property name="dropExisting" dataType="java.lang.String" defaultValue="OFF" xmlName="dropExisting" xmlType="element" getter="getDropExisting" setter="setDropExisting" reffered="false"/>
+   <property name="includeColumns" dataType="java.lang.String" defaultValue="" xmlName="includeColumns" xmlType="element" getter="getIncludeColumns" setter="setIncludeColumns" reffered="false" listOfRefs="true"/>
+   <property name="maxdop" dataType="int" defaultValue="0" xmlName="maxdop" xmlType="element" getter="getMaxdop" setter="setMaxdop" reffered="false"/>
+   <property name="onlineChoice" dataType="java.lang.String" defaultValue="OFF" xmlName="onlineChoice" xmlType="element" getter="getOnlineChoise" setter="setOnlineChoise" reffered="false"/>
+   <property name="partitionScheme" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.PartitionSchemeSqlServer" defaultValue="" xmlName="partitionScheme" xmlType="element" getter="getPartitionScheme" setter="setPartitionScheme" reffered="true"/>
+   <property name="partitioningColumn" dataType="oracle.dbtools.crest.model.design.storage.ColumnProxy" defaultValue="" xmlName="partitioningColumn" xmlType="element" getter="getPartitioningColumn" setter="setPartitioningColumn" reffered="true"/>
+   <roproperty name="primaryXmlIndex" dataType="boolean" getter="isPrimaryXmlIndex"/>
+   <roproperty name="regularIndex" dataType="boolean" getter="isRegularIndex"/>
+   <roproperty name="secondaryXmlIndex" dataType="boolean" getter="isSecondaryXmlIndex"/>
+   <bb_roproperty name="includeColumnsSet" dataType="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.IndexProxySqlServerv2k5$IncludeColumns" getter="getIncludeColumnsSet"/>
+   <roproperty name="indexType" dataType="java.lang.String" getter="getIndexType" search="true"/>
+   <collection name="secondaryXMLIndexes" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="secondaryXMLIndexes" itemXmlName="SecondaryXMLIndex" getter="getSecondaryXMLIndexs" createItem="createSecondaryXMLIndex"/>
+</oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.IndexProxySqlServerv2k5>

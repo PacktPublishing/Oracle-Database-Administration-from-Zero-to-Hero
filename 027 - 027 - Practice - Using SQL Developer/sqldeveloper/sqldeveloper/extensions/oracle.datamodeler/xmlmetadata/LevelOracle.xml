@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.LevelOracle parentClass="oracle.dbtools.crest.model.design.storage.oracle.AbstractStorageObjectOracle">
+   <property name="columns" dataType="java.lang.String" defaultValue="" xmlName="columns" xmlType="element" getter="getColumns" setter="setColumns" reffered="false" listOfRefs="true"/>
+   <roproperty name="dimension" dataType="oracle.dbtools.crest.model.design.storage.oracle.DimensionOracle" getter="getDimension"/>
+   <property name="levelTable" dataType="oracle.dbtools.crest.model.design.storage.TableProxy" defaultValue="" xmlName="levelTable" xmlType="element" getter="getLevelTable" setter="setLevelTable" reffered="true"/>
+   <property name="newname" dataType="java.lang.String" defaultValue="" xmlName="newname" xmlType="element" getter="getNewName" setter="setNewName" reffered="false"/>
+   <bb_roproperty name="columnSet" dataType="oracle.dbtools.crest.model.design.storage.oracle.LevelOracle$InlineList" getter="getColumnSet"/>
+   <roproperty name="tables" dataType="java.util.ArrayList" getter="getTables"/>
+</oracle.dbtools.crest.model.design.storage.oracle.LevelOracle>

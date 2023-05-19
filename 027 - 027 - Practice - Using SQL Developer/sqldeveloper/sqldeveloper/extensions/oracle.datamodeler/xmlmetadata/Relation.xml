@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.Relation parentClass="oracle.dbtools.crest.model.design.DesignObject">
+   <property name="useSurrogateKey" dataType="boolean" defaultValue="false" xmlName="useSurrogateKey" xmlType="element" getter="isUseSurrogateKey" setter="setUseSurrogateKey" reffered="false" search="true"/>
+   <property name="sourceTransferable" dataType="boolean" defaultValue="true" xmlName="sourceTransferable" xmlType="element" getter="isSourceTransferable" setter="setSourceTransferable" search="true" reffered="false"/>
+   <property name="targetTransferable" dataType="boolean" defaultValue="true" xmlName="targetTransferable" xmlType="element" getter="isTargetTransferable" setter="setTargetTransferable" search="true" reffered="false"/>
+   <property name="sourcePk" dataType="oracle.dbtools.crest.model.design.logical.CandidateKey" defaultValue="" xmlName="sourcePk" xmlType="element" getter="getSourcePk" setter="setSourcePk" search="true" reffered="true"/>
+   <property name="targetPk" dataType="oracle.dbtools.crest.model.design.logical.CandidateKey" defaultValue="" xmlName="targetPk" xmlType="element" getter="getTargetPk" setter="setTargetPk" search="true" reffered="true"/>
+   <property name="arc" dataType="oracle.dbtools.crest.model.design.logical.Arc" defaultValue="" xmlName="arc" xmlType="element" getter="getArc" setter="setArc" search="true" reffered="true"/>
+   <property name="dominantRole" dataType="oracle.dbtools.crest.model.design.logical.Entity" defaultValue="" xmlName="dominantRole" xmlType="element" getter="getDominantRole" setter="setDominantRole" reffered="true"/>
+   <property name="identifying" dataType="boolean" defaultValue="" xmlName="identifying" xmlType="element" getter="isIdentifying" setter="setIdentifying" search="true" reffered="false"/>
+   <aa_property name="nonEEntity" dataType="oracle.dbtools.crest.model.design.logical.Entity" defaultValue="" xmlName="nonEEntity" xmlType="element" getter="getNONEEntity" setter="setNONEEntity" reffered="true"/>
+   <property name="nameOnSource" dataType="java.lang.String" defaultValue="" xmlName="nameOnSource" xmlType="element" getter="getNameOnSource" setter="setNameOnSource" search="true" reffered="false"/>
+   <property name="nameOnTarget" dataType="java.lang.String" defaultValue="" xmlName="nameOnTarget" xmlType="element" getter="getNameOnTarget" setter="setNameOnTarget" search="true" reffered="false"/>
+   <property name="optionalSource" dataType="boolean" defaultValue="" xmlName="optionalSource" xmlType="element" getter="isOptionalSource" setter="setOptionalSource" search="true" reffered="false"/>
+   <property name="optionalTarget" dataType="boolean" defaultValue="" xmlName="optionalTarget" xmlType="element" getter="isOptionalTarget" setter="setOptionalTarget" search="true" reffered="false"/>
+   <property name="sourceCardinalityString" dataType="java.lang.String" defaultValue="" xmlName="sourceCardinality" xmlType="element" getter="getSourceCardinalityString" setter="setSourceCardinalityString" search="true" reffered="false"/>
+   <property name="sourceEntity" dataType="oracle.dbtools.crest.model.design.logical.Entity" defaultValue="" xmlName="sourceEntity" xmlType="element" getter="getSourceEntity" setter="setSourceEntity" reffered="true" search="true"/>
+   <aa_property name="sourceTV" dataType="oracle.dbtools.crest.swingui.logical.TVEntity" defaultValue="" xmlName="sourceTV" xmlType="element" getter="getSourceTV" setter="setSourceTV" reffered="true"/>
+   <aa_property name="sourceTopView" dataType="oracle.dbtools.crest.swingui.TopView" defaultValue="" xmlName="sourceTopView" xmlType="element" getter="getSourceTopView" setter="setSourceTopView" reffered="true"/>
+   <property name="targetCardinalityString" dataType="java.lang.String" defaultValue="" xmlName="targetCardinalityString" xmlType="element" getter="getTargetCardinalityString" setter="setTargetCardinalityString" search="true" reffered="false"/>
+   <property name="targetEntity" dataType="oracle.dbtools.crest.model.design.logical.Entity" defaultValue="" xmlName="targetEntity" xmlType="element" getter="getTargetEntity" setter="setTargetEntity" reffered="true" search="true"/>
+   <aa_property name="targettV" dataType="oracle.dbtools.crest.swingui.logical.TVEntity" defaultValue="" xmlName="targettV" xmlType="element" getter="getTargetTV" setter="setTargetTV" reffered="true"/>
+   <aa_property name="targettopView" dataType="oracle.dbtools.crest.swingui.TopView" defaultValue="" xmlName="targettopView" xmlType="element" getter="getTargetTopView" setter="setTargetTopView" reffered="true"/>
+   <property name="transferable" dataType="boolean" defaultValue="" xmlName="transferable" xmlType="element" getter="isTransferable" setter="setTransferable" reffered="false"/>
+   <property name="deleteRule" dataType="java.lang.String" defaultValue="RESTRICT" xmlName="deleteRule" xmlType="element" getter="getDeleteRule" setter="setDeleteRule" search="true" reffered="false"/>
+   <collection name="attributes" dataType="java.util.Collection" xmlName="attributes" itemXmlName="attribute" getter="getAttributesCollection" createItem="createAttribute" getItemByID="getAttributeByID" moveMethod="moveAttributeToIndex" itemClass="oracle.dbtools.crest.model.design.logical.Attribute" useInReport="true"/>
+   <roproperty name="hasAttributes" dataType="boolean" getter="hasAttributes" search="true"/>
+   <roproperty name="inheritanceRelation" dataType="boolean" getter="isInheritanceRelation"/>
+   <roproperty name="manyTomany" dataType="boolean" getter="isManyToMany" search="true"/>
+   <roproperty name="oneToone" dataType="boolean" getter="isOneToOne" search="true"/>
+   <roproperty name="optional" dataType="boolean" getter="isOptional"/>
+   <roproperty name="pkConsumer" dataType="boolean" getter="isPKConsumer"/>
+   <roproperty name="primaryForeignKey" dataType="boolean" getter="isPrimaryForeignKey"/>
+   <roproperty name="valid" dataType="boolean" getter="isValid"/>
+   <roproperty name="allTVRelations" dataType="interface java.util.List" getter="getAllTVRelations"/>
+   <roproperty name="allViews" dataType="interface java.util.List" getter="getAllViews"/>
+   <roproperty name="cardinality" dataType="oracle.dbtools.crest.model.design.logical.Relation$Cardinality" getter="getCardinality"/>
+   <roproperty name="connection" dataType="oracle.dbtools.crest.model.design.logical.Relation$Connection" getter="getConnection"/>
+   <roproperty name="dpVInfoFor" dataType="oracle.dbtools.crest.model.design.logical.Relation$dpvInfo" getter="getDPVInfoFor"/>
+   <roproperty name="deletedMapping" dataType="oracle.dbtools.crest.model.xtdmapping.XtdMapping" getter="getDeletedMapping"/>
+   <roproperty name="endPointFor" dataType="int" getter="getEndPointFor"/>
+   <roproperty name="entity" dataType="oracle.dbtools.crest.model.design.logical.Entity" getter="getEntity"/>
+   <roproperty name="fkAttributes" dataType="[Loracle.dbtools.crest.model.design.logical.Attribute" getter="getFKAttributes"/>
+   <roproperty name="labelText" dataType="java.lang.String" getter="getLabelText"/>
+   <roproperty name="nameOn" dataType="java.lang.String" getter="getNameOn"/>
+   <roproperty name="object" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getObject"/>
+   <roproperty name="optional" dataType="java.lang.Boolean" getter="getOptional"/>
+   <roproperty name="otherEndPoint" dataType="int" getter="getOtherEndPoint"/>
+   <roproperty name="otherEntity" dataType="oracle.dbtools.crest.model.design.logical.Entity" getter="getOtherEntity"/>
+   <roproperty name="pkproviderEndpoint" dataType="[I" getter="getPKProviderEndPoint"/>
+   <roproperty name="sourceConnection" dataType="oracle.dbtools.crest.model.design.logical.Relation$Connection" getter="getSourceConnection"/>
+   <roproperty name="sourceObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getSourceObject"/>
+   <roproperty name="sourceTVEntity" dataType="oracle.dbtools.crest.swingui.logical.TVEntity" getter="getSourceTVEntity"/>
+   <roproperty name="targetConnection" dataType="oracle.dbtools.crest.model.design.logical.Relation$Connection" getter="getTargetConnection"/>
+   <roproperty name="targetObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getTargetObject"/>
+   <roproperty name="targettVEntity" dataType="oracle.dbtools.crest.swingui.logical.TVEntity" getter="getTargetTVEntity"/>
+   <roproperty name="viewFor" dataType="oracle.dbtools.crest.swingui.TopView" getter="getViewFor"/>
+</oracle.dbtools.crest.model.design.logical.Relation>

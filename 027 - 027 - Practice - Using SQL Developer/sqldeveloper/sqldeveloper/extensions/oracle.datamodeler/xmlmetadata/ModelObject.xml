@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.ModelObject>
+   <property name="name" dataType="java.lang.String" defaultValue="" xmlName="name" xmlType="attribute" getter="getName" setter="setName" reffered="false" search="true"/>
+   <property name="sourceConnName" dataType="java.lang.String" defaultValue="" xmlName="sourceConnName" xmlType="element" getter="getSourceConnName" setter="setSourceConnName" search="true" reffered="false"/>
+   <property name="sourceObjSchema" dataType="java.lang.String" defaultValue="" xmlName="sourceObjSchema" xmlType="element" getter="getSourceObjSchema" setter="setSourceObjSchema" search="true" reffered="false"/>
+   <property name="sourceObjName" dataType="java.lang.String" defaultValue="" xmlName="sourceObjName" xmlType="element" getter="getSourceObjName" setter="setSourceObjName" search="true" reffered="false"/>
+   <property name="sourceDDLFile" dataType="java.lang.String" defaultValue="" xmlName="sourceDDLFile" xmlType="element" getter="getSourceDDLFile" setter="setSourceDDLFile" search="true" reffered="false"/>
+</oracle.dbtools.crest.model.ModelObject>

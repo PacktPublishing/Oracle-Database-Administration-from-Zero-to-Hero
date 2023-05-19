@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.TableViewProxyOracle parentClass="oracle.dbtools.crest.model.design.storage.TableViewProxy">
+   <property name="checkOptionName" dataType="java.lang.String" defaultValue="" xmlName="checkOptionName" xmlType="element" getter="getCheckOptionName" setter="setCheckOptionName" search="true" reffered="false"/>
+   <property name="force" dataType="java.lang.String" defaultValue="NO" xmlName="force" xmlType="element" getter="getForce" setter="setForce" search="true" reffered="false"/>
+   <aa_property name="oidAttributes" dataType="java.lang.String" defaultValue="" xmlName="oidAttributes" xmlType="element" getter="getOidAttributes" setter="setOidAttributes" search="true" reffered="false"/>
+   <property name="useOID" dataType="java.lang.String" defaultValue="" xmlName="useOID" xmlType="element" getter="getUseOID" setter="setUseOID" search="true" reffered="false"/>
+   <property name="user" dataType="oracle.dbtools.crest.model.design.storage.oracle.UserOracle" defaultValue="" xmlName="user" xmlType="element" getter="getUser" setter="setUser" search="true" reffered="true"/>
+   <property name="readOnly" dataType="java.lang.String" defaultValue="NO" xmlName="readOnly" xmlType="element" getter="getViewReadOnly" setter="setViewReadOnly" search="true" reffered="false"/>
+   <property name="xmlSchemaElement" dataType="java.lang.String" defaultValue="" xmlName="xmlSchemaElement" xmlType="element" getter="getXmlSchemaElement" setter="setXmlSchemaElement" search="true" reffered="false"/>
+   <property name="xmlSchemaUrl" dataType="java.lang.String" defaultValue="" xmlName="xmlSchemaUrl" xmlType="element" getter="getXmlSchemaUrl" setter="setXmlSchemaUrl" search="true" reffered="false"/>
+   <roproperty name="basedOnStructuredType" dataType="java.lang.String" getter="getBasedOnStructuredType"/>
+   <roproperty name="columnProxyByName" dataType="oracle.dbtools.crest.model.design.storage.oracle.ColumnProxyOracle" getter="getColumnProxyByName"/>
+   <collection name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" xmlName="synonyms" itemXmlName="Synonym" getter="getSynonyms" addItem="addSynonym" createItem="createSynonym" />
+   <roproperty name="synonyms" dataType="oracle.dbtools.crest.model.design.storage.StorageObjectCollection" getter="getSynonyms"/>
+</oracle.dbtools.crest.model.design.storage.oracle.TableViewProxyOracle>

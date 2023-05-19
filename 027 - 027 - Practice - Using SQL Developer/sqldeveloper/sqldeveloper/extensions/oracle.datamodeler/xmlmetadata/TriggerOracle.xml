@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.TriggerOracle parentClass="oracle.dbtools.crest.model.design.storage.Trigger">
+   <property name="columns" dataType="java.lang.String" defaultValue="" xmlName="columns" xmlType="element" getter="getColumns" setter="setColumns" reffered="false" listOfRefs="true"/>
+   <property name="condition" dataType="java.lang.String" defaultValue="" xmlName="condition" xmlType="element" getter="getCondition" setter="setCondition" cdata="true" search="true" reffered="false"/>
+   <property name="owner" dataType="oracle.dbtools.crest.model.design.storage.oracle.UserOracle" defaultValue="" xmlName="owner" xmlType="element" getter="getOwner" setter="setOwner" search="true" reffered="true"/>
+   <property name="ref_NEW_AS" dataType="java.lang.String" defaultValue="" xmlName="ref_NEW_AS" xmlType="element" getter="getRef_NEW_AS" setter="setRef_NEW_AS" search="true" reffered="false"/>
+   <property name="ref_OLD_AS" dataType="java.lang.String" defaultValue="" xmlName="ref_OLD_AS" xmlType="element" getter="getRef_OLD_AS" setter="setRef_OLD_AS" search="true" reffered="false"/>
+   <property name="ref_PARENT_AS" dataType="java.lang.String" defaultValue="" xmlName="ref_PARENT_AS" xmlType="element" getter="getRef_PARENT_AS" setter="setRef_PARENT_AS" search="true" reffered="false"/>
+   <property name="scope" dataType="java.lang.String" defaultValue="FOR EACH ROW" xmlName="scope" xmlType="element" getter="getScope" setter="setScope" search="true" reffered="false"/>
+   <property name="state" dataType="java.lang.String" defaultValue="" xmlName="state" xmlType="element" getter="getState" setter="setState" search="true" reffered="false"/>
+   <property name="table" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableProxyOracle" defaultValue="" xmlName="table" xmlType="element" getter="getTable" search="true" setter="setTable" reffered="true"/>
+   <property name="crossEdition" dataType="java.lang.String" defaultValue="NO" xmlName="crossEdition" xmlType="element" getter="getCrossEdition" search="true" setter="setCrossEdition" reffered="false"/>
+   <property name="view" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableViewProxyOracle" defaultValue="" xmlName="view" xmlType="element" getter="getView" search="true" setter="setView" reffered="true"/>
+   <bb_roproperty name="columnSet" dataType="oracle.dbtools.crest.model.design.storage.oracle.TriggerOracle$ArraySet" getter="getColumnSet"/>
+   <roproperty name="columnsNames" dataType="java.lang.String" getter="getColumnsNames"/>
+</oracle.dbtools.crest.model.design.storage.oracle.TriggerOracle>

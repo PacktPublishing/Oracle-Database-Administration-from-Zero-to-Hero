@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.Table parentClass="oracle.dbtools.crest.model.design.ContainerWithKeyObject">
+   <property name="abbreviation" dataType="java.lang.String" defaultValue="" xmlName="abbreviation" xmlType="element" getter="getAbbreviation" setter="setAbbreviation" reffered="false" search="true"/>
+   <property name="adequatelyNormalized" dataType="java.lang.String" defaultValue="NO" xmlName="adequatelyNormalized" xmlType="element" getter="getAdequatelyNormalized" setter="setAdequatelyNormalized" reffered="false"/>
+   <aa_property name="beingRecreated" dataType="boolean" defaultValue="" xmlName="beingRecreated" xmlType="element" getter="isBeingRecreated" setter="setBeingRecreated" reffered="false"/>
+   <property name="expectedVolumes" dataType="java.lang.String" defaultValue="0" xmlName="expectedVolumes" xmlType="element" getter="getExpectedVolumes" setter="setExpectedVolumes" reffered="false"/>
+   <property name="growthPercent" dataType="java.lang.String" defaultValue="0" xmlName="growthPercent" xmlType="element" getter="getGrowthPercent" setter="setGrowthPercent" reffered="false"/>
+   <property name="growthType" dataType="java.lang.String" defaultValue="Year" xmlName="growthType" xmlType="element" getter="getGrowthType" setter="setGrowthType" reffered="false"/>
+   <property name="maxVolumes" dataType="java.lang.String" defaultValue="9999999" xmlName="maxVolumes" xmlType="element" getter="getMaxVolumes" setter="setMaxVolumes" reffered="false"/>
+   <property name="minVolumes" dataType="java.lang.String" defaultValue="0" xmlName="minVolumes" xmlType="element" getter="getMinVolumes" setter="setMinVolumes" reffered="false"/>
+   <property name="normalForm" dataType="java.lang.String" defaultValue="Third" xmlName="normalForm" xmlType="element" getter="getNormalForm" setter="setNormalForm" reffered="false"/>
+   <bb_property name="primaryKey" dataType="oracle.dbtools.crest.model.design.relational.Index" defaultValue="" xmlName="primaryKey" xmlType="element" getter="getPK" setter="setPK" reffered="false"/>
+   <property name="oidIsPK" dataType="boolean" defaultValue="false" xmlName="oidIsPK" xmlType="element" getter="isOidIsPK" setter="setOidIsPK" reffered="false"/>
+   <aa_property name="oidPKColumns" dataType="interface java.util.List" defaultValue="" xmlName="oidPKColumns" xmlType="element" getter="getOidPKColumns" setter="setOidPKColumns" reffered="false"/>
+   <property name="scope" dataType="java.lang.String" defaultValue="" xmlName="scope" xmlType="element" getter="getScope" setter="setScope" reffered="false"/>
+   <aa_property name="spatialDefinitions" dataType="interface java.util.List" defaultValue="" xmlName="spatialDefinitions" xmlType="element" getter="getSpatialDefinitions" setter="setSpatialDefinitions" reffered="false"/>
+   <property name="basedOnStructuredType" dataType="oracle.dbtools.crest.model.design.datatypes.StructuredType" defaultValue="" xmlName="basedOnStructuredType" xmlType="element" getter="getBasedOnStructuredType" setter="setBasedOnStructuredType" reffered="true" search="true"/>
+   <property name="afterCreate" dataType="java.lang.String" defaultValue="" xmlName="afterCreate" xmlType="element" getter="getAfterCreate" setter="setAfterCreate" cdata="true" reffered="false" search="true"/>
+   <property name="beforeCreate" dataType="java.lang.String" defaultValue="" xmlName="beforeCreate" xmlType="element" getter="getBeforeCreate" setter="setBeforeCreate" cdata="true" reffered="false" mergeCompare="true" search="true"/>
+   <property name="beforeDrop" dataType="java.lang.String" defaultValue="" xmlName="beforeDrop" xmlType="element" getter="getBeforeDrop" setter="setBeforeDrop" cdata="true" reffered="false" mergeCompare="true" search="true"/>
+   <property name="endOfScript" dataType="java.lang.String" defaultValue="" xmlName="endOfScript" xmlType="element" getter="getEndOfScript" setter="setEndOfScript" cdata="true" reffered="false" mergeCompare="true" search="true"/>
+   <property name="shouldGeneratescript" dataType="boolean" defaultValue="false" xmlName="shouldGeneratescript" xmlType="element" getter="getShouldGenerateScript" setter="setShouldGenerateScript" reffered="false" search="true"/>
+   <property name="spatialTable" dataType="boolean" defaultValue="false" xmlName="spatialTable" xmlType="element" getter="isSpatialTable" setter="setSpatialTable" reffered="false" search="true"/>
+   <property name="splittedTableID" dataType="java.lang.String" defaultValue="" xmlName="splittedTableID" xmlType="element" getter="getSplittedTableID" setter="setSplittedTableID" reffered="false"/>
+   <property name="userDefinedOid" dataType="boolean" defaultValue="true" xmlName="userDefinedOid" xmlType="element" getter="isUserDefinedOid" setter="setUserDefinedOid" reffered="false"/>
+   <cccproperty name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="element" getter="getSchemaObject" setter="setSchemaObject" reffered="true" search="true"/>
+   <property_moved_to_ContainerObject name="schemaObject" dataType="oracle.dbtools.crest.model.design.relational.SchemaObject" defaultValue="" xmlName="schemaObject" xmlType="element" getter="getSchemaObject" setter="setSchemaObject" reffered="true"/>
+   <property name="allowColumnReorder" dataType="boolean" defaultValue="true" xmlName="allowColumnReorder" xmlType="element" getter="isAllowColumnReorder" setter="setAllowColumnReorder" reffered="false" search="true"/>
+   <property name="redactionPolicyName" dataType="java.lang.String" defaultValue="" xmlName="redactionPolicyName" xmlType="element" getter="getRedactionPolicyName" setter="setRedactionPolicyName" reffered="false" search="true"/>
+   <property name="redactionPolicyDefaultExpression" dataType="java.lang.String" defaultValue="" xmlName="redactionPolicyDefaultExpression" xmlType="element" getter="getRedactionPolicyDefaultExpression" setter="setRedactionPolicyDefaultExpression" reffered="false" search="true"/>
+   <property name="redactionPolicyEnabled" dataType="boolean" defaultValue="false" xmlName="redactionPolicyEnabled" xmlType="element" getter="isRedactionPolicyEnabled" setter="setRedactionPolicyEnabled" reffered="false" search="true"/>
+   <property name="redactionPolicyGenerateInDDL" dataType="boolean" defaultValue="false" xmlName="redactionPolicyGenerateInDDL" xmlType="element" getter="isRedactionPolicyGenerateInDDL" setter="setRedactionPolicyGenerateInDDL" reffered="false" search="true"/>
+   <property name="isEngineerToRelation" dataType="boolean" defaultValue="false" xmlName="isEngineerToRelation" xmlType="element" getter="isEngineerToRelation" setter="setEngineerToRelation" reffered="false" search="true"/>
+   <property name="existDependencyGenerateInDDl" dataType="boolean" defaultValue="false" xmlName="existDependencyGenerateInDDl" xmlType="element" getter="isExistDependencyGenerateInDDl" setter="setExistDependencyGenerateInDDl" reffered="false" search="true"/>
+   <property name="existDependencyConstraintName" dataType="java.lang.String" defaultValue="" xmlName="existDependencyConstraintName" xmlType="element" getter="getExistDependencyConstraintName" setter="setExistDependencyConstraintName" reffered="false" search="true"/>
+   <property name="existDependencyGenerationLevel" dataType="java.lang.String" defaultValue="Single statement" xmlName="existDependencyGenerationLevel" xmlType="element" getter="getExistDependencyGenerationLevel" setter="setExistDependencyGenerationLevel" reffered="false" search="true"/>
+   <property name="includeSchemaNameInQuery" dataType="boolean" defaultValue="false" xmlName="includeSchemaNameInQuery" xmlType="element" getter="includeSchemaNameInQuery" setter="setIncludeSchemaNameInQuery" reffered="false"/>
+   <property name="incorrectSQL" dataType="boolean" defaultValue="false" xmlName="incorrectSQL" xmlType="element" getter="isIncorrectSQL" setter="setIncorrectSQL" search="true" reffered="false"/>
+   <property name="materializedQueryTable" dataType="boolean" defaultValue="false" xmlName="materializedQueryTable" xmlType="element" getter="isMaterializedQueryTable" setter="setMaterializedQueryTable" search="true" reffered="false"/>
+   <property name="onPrebuiltTable" dataType="boolean" defaultValue="false" xmlName="onPrebuiltTable" xmlType="element" getter="isOnPrebuiltTable" setter="setOnPrebuiltTable" search="true" reffered="false"/>
+   <property name="parsed" dataType="boolean" defaultValue="false" xmlName="parsed" xmlType="element" getter="isParsed" setter="setParsed" search="true" reffered="false"/>
+   <property name="syntaxProvider" dataType="java.lang.String" defaultValue="Oracle" xmlName="syntaxProvider" xmlType="element" getter="getSyntaxProvider" setter="setSyntaxProvider" search="true" reffered="false"/>
+   <property name="useObjectsOnlyFrom" dataType="java.lang.String" defaultValue="" xmlName="useObjectsOnlyFrom" xmlType="element" getter="getUseObjectsOnlyFrom" setter="setUseObjectsOnlyFrom" reffered="false"/>
+   <property name="userDefinedSQL" dataType="java.lang.String" defaultValue="" xmlName="userDefinedSQL" xmlType="element" getter="getUserDefinedSQL" setter="setUserDefinedSQL" cdata="true" search="true" reffered="false" mergeCompare="true"/>
+   <property name="validSQL" dataType="boolean" defaultValue="true" xmlName="validSQL" xmlType="element" getter="isValidSQL" setter="setValidSQL" search="true" reffered="false"/>
+   <property name="oracleLogTable" dataType="boolean" defaultValue="false" xmlName="oracleLogTable" xmlType="element" getter="isOracleLogTable" setter="setOracleLogTable" search="true" reffered="false"/>
+   <property name="rowArchival" dataType="boolean" defaultValue="false" xmlName="rowArchival" xmlType="element" getter="isRowArchival" setter="setRowArchival" search="true" reffered="false"/>
+   <property name="clusteringType" dataType="java.lang.String" defaultValue="LINEAR" xmlName="clusteringType" xmlType="element" getter="getClusteringType" setter="setClusteringType" search="true" reffered="false"/>
+   <property name="clusteringOnLoad" dataType="boolean" defaultValue="false" xmlName="clusteringOnLoad" xmlType="element" getter="isClusteringOnLoad" setter="setClusteringOnLoad" search="true" reffered="false"/>
+   <property name="clusteringOnDataMovement" dataType="boolean" defaultValue="false" xmlName="clusteringOnDataMovement" xmlType="element" getter="isClusteringOnDataMovement" setter="setClusteringOnDataMovement" search="true" reffered="false"/>
+   <property name="clusteringWithZoneMap" dataType="boolean" defaultValue="false" xmlName="clusteringWithZoneMap" xmlType="element" getter="isClusteringWithZoneMap" setter="setClusteringWithZoneMap" search="true" reffered="false"/>
+   <property_web name="identiyColumn" dataType="oracle.dbtools.crest.model.design.relational.IdentiyColumnDescription" defaultValue="" skipClassName="true" afterCollection="columns" xmlName="identiyColumn" createItem="createIdentiyColumnDescription" xmlType="element" getter="getIdentiyColumnDescription" setter="setIdentiyColumnDescription" reffered="false"/>
+   <collection name="columns" dataType="java.util.Collection" xmlName="columns" itemXmlName="Column" getter="getElementsCollection" createItem="createColumn" getItemByID="getElementByID" moveMethod="moveToIndex" itemClass="oracle.dbtools.crest.model.design.relational.Column" useInReport="true"/>
+   <collection name="nestedColumns" dataType="java.util.List" xmlName="nestedColumns" itemXmlName="nestedColumn" getter="getNestedElements" createItem="createNestedColumn" getItemByID="getElementByID" itemClass="oracle.dbtools.crest.model.design.relational.Column" useInReport="true"/>
+   <collection name="indexes" dataType="java.util.List" xmlName="indexes" itemXmlName="ind_PK_UK" getter="getAllInds_FKeyInds" createItem="createIndex" getItemByID="getKeyObject" applyList="applyIndexOrderFromList" itemClass="oracle.dbtools.crest.model.design.relational.Index"/>
+   <collection name="tableCheckConstraints" dataType="java.util.List" xmlName="tableCheckConstraints" itemXmlName="tableCheckConstraint" getter="getCheckConstraints" createItem="createCheckConstraint" getItemByID="getCheckConstraintByID" removeItem="removeCheckConstraint" addItem="addCheckConstraint" nativeList="true" orderTheList="true" itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" useInReport="true"/>
+   <collection name="validTimeDimensions" dataType="java.util.List" xmlName="validTimeDimensions" itemXmlName="validTimeDimension" getter="getValidTimeDimensions" createItem="createValidTimeDimension" getItemByID="getValidTimeDimensionByID" removeItem="removeValidTimeDimension" addItem="addValidTimeDimension"/>
+   <collection name="columnGroups" dataType="java.util.List" xmlName="columnGroups" itemXmlName="columnGroup" getter="getColumnGroupsSet" createItem="createColumnGroup" getItemByID="getColumnGroupByID" removeItem="removeColumnGroup"  nativeList="true" orderTheList="true"/>
+   <collection name="spatialDefinitions" dataType="java.util.List" xmlName="spatialDefinitions" itemXmlName="spatialColumnDefinition" getter="getSpatialDefinitions" createItem="createSpatialDefinition" removeItem="removeSpatialDefinition" getItemByID="getSpatialDefinitionByID" />
+   <collection name="usedObjects" dataType="java.util.List" xmlName="usedObjects" itemXmlName="UsedObject" getter="getUsedObjectsList" createItem="createSQLNameHelper" addItem="addUsedObject" getItemByID="getSQLNameHelperByID"/>
+   <collection name="attributeClusteringList" dataType="java.util.List" xmlName="attributeClusteringList" itemXmlName="AttributeClustering" preProcessMethod="sortAttributeClusteringList" getter="getAttributeClusteringList" createItem="createAttributeClustering" itemClass="oracle.dbtools.crest.model.design.relational.ColumnUsage" useInReport="true"/>
+   <collection name="clusteringJoinList" dataType="java.util.List" xmlName="clusteringJoinList" itemXmlName="Join" getter="getClusteringJoinList" createItem="createClusteringJoin" itemClass="oracle.dbtools.crest.model.design.relational.Join" useInReport="true"/>
+   <collection name="impliedForeignKeys" dataType="java.util.List" xmlName="impliedForeignKeys" itemXmlName="impliedForeignKey" getter="getImpliedForeignKeyList" createItem="createImpliedForeignKey" itemClass="oracle.dbtools.crest.model.design.relational.ImpliedForeignKey" useInReport="true"/>
+   <roproperty name="associated" dataType="boolean" getter="isAssociated"/>
+   <roproperty name="mtoNjoinCandidate" dataType="boolean" getter="isMtoNjoinCandidate"/>
+   <roproperty name="referencedByFKs" dataType="boolean" getter="isReferencedByFKs"/>
+   <roproperty name="allFKColumns" dataType="[Loracle.dbtools.crest.model.design.relational.Column" getter="getAllFKColumns"/>
+   <roproperty name="allFKPlaceHolderColumns" dataType="[Loracle.dbtools.crest.model.design.relational.Column" getter="getAllFKPlaceHolderColumns"/>
+   <roproperty name="allInds_PK_UK_NoFKeys" dataType="java.util.ArrayList" getter="getAllInds_PK_UK_NoFKeys" search="true" itemClass="oracle.dbtools.crest.model.design.relational.Index" useInReport="true"/>
+   <roproperty name="allNestedElements" dataType="interface java.util.List" getter="getAllNestedElements"/>
+   <roproperty name="allPossibleElements" dataType="interface java.util.List" getter="getAllPossibleElements"/>
+   <roproperty name="allSubstitutionTables" dataType="interface java.util.List" getter="getAllSubstitutionTables"/>
+   <roproperty name="allowedStrTypeInstances" dataType="interface java.util.List" getter="getAllowedStrTypeInstances"/>
+   <roproperty name="arcs" dataType="interface java.util.List" getter="getArcs"/>
+   <roproperty name="byteSize" dataType="int" getter="getByteSize"/>
+   <roproperty name="checkconstraints" dataType="interface java.util.List" getter="getCheckConstraints"/>
+   <roproperty name="columnForDelegate" dataType="oracle.dbtools.crest.model.design.relational.Column" getter="getColumnForDelegate"/>
+   <roproperty name="columnGroupsSet" dataType="interface java.util.List" getter="getColumnGroupsSet"/>
+   <roproperty name="columnSet" dataType="oracle.dbtools.crest.model.design.relational.ColumnSet" getter="getColumnSet"/>
+   <roproperty name="deletedMapping" dataType="oracle.dbtools.crest.model.xtdmapping.XtdMapping" getter="getDeletedMapping"/>
+   <roproperty name="editableFonts" dataType="interface java.util.List" getter="getEditableFonts"/>
+   <roproperty name="engentity" dataType="oracle.dbtools.crest.model.design.logical.Entity" getter="getEngEntity"/>
+   <roproperty name="engRelation" dataType="oracle.dbtools.crest.model.design.logical.Relation" getter="getEngRelation"/>
+   <roproperty name="expectedVolumesInt" dataType="int" getter="getExpectedVolumesInt"/>
+   <roproperty name="fkAssociations" dataType="[Loracle.dbtools.crest.model.design.relational.FKIndexAssociation" getter="getFKAssociations"/>
+   <roproperty name="fkAssociationsCount" dataType="int" getter="getFKAssociationsCount"/>
+   <roproperty name="fkAssociationsList" dataType="java.util.ArrayList" getter="getFKAssociationsList" search="true"  itemClass="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" useInReport="true"/>
+   <roproperty name="fkIndexAssociationfor" dataType="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" getter="getFKIndexAssociationFor"/>
+   <roproperty name="fkIndexAssociationsWith" dataType="[Loracle.dbtools.crest.model.design.relational.FKIndexAssociation" getter="getFKIndexAssociationsWith"/>
+   <roproperty name="fkeysOnColumn" dataType="interface java.util.List" getter="getFKeysOnColumn"/>
+   <roproperty name="fontObject" dataType="oracle.dbtools.crest.model.design.FontObject" getter="getFontObject"/>
+   <roproperty name="growthPercentInt" dataType="int" getter="getGrowthPercentInt"/>
+   <roproperty name="indexByName" dataType="oracle.dbtools.crest.model.design.relational.Index" getter="getIndexByName"/>
+   <roproperty name="indexes" dataType="oracle.dbtools.crest.model.design.DesignObjectCollection" getter="getIndexes"/>
+   <roproperty name="mappingsToEntities" dataType="interface java.util.List" getter="getMappingsToEntities"/>
+   <roproperty name="maxVolumesInt" dataType="int" getter="getMaxVolumesInt"/>
+   <roproperty name="minVolumesInt" dataType="int" getter="getMinVolumesInt"/>
+   <roproperty name="nonStructuredElements" dataType="interface java.util.List" getter="getNonStructuredElements"/>
+   <roproperty name="numberOfFKAssociationFor" dataType="int" getter="getNumberOfFKAssociationFor"/>
+   <roproperty name="pkandUkConstraints" dataType="interface java.util.List" getter="getPKandUKConstraints"/>
+   <roproperty name="pkeys" dataType="oracle.dbtools.crest.model.design.DesignObjectCollection" getter="getPKeys"/>
+   <roproperty name="possibleSplits" dataType="interface java.util.List" getter="getPossibleSplits"/>
+   <roproperty name="ukeys" dataType="oracle.dbtools.crest.model.design.DesignObjectCollection" getter="getUKeys"/>
+   <roproperty name="validTimeDimensionsAsString" dataType="java.lang.String" getter="getValidTimeDimAsString" search="true"/>
+</oracle.dbtools.crest.model.design.relational.Table>

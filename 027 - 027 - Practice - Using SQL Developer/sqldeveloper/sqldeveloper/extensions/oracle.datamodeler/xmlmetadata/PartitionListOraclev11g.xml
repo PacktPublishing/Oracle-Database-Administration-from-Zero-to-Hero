@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g parentClass="oracle.dbtools.crest.model.design.storage.oracle.v10g.PartitionListOraclev10g">
+   <property name="intervalExpression" dataType="java.lang.String" defaultValue="" xmlName="intervalExpression" xmlType="element" getter="getIntervalExpression" setter="setIntervalExpression" reffered="false"/>
+   <property name="intervalTablespaces" dataType="java.lang.String" defaultValue="" xmlName="intervalTablespaces" xmlType="element" getter="getIntervalTablespaces" setter="setIntervalTablespaceSet" reffered="false" listOfRefs="true"/>
+   <property name="refConstraint" dataType="oracle.dbtools.crest.model.design.storage.oracle.FKProxyOracle" defaultValue="" xmlName="refConstraint" xmlType="element" getter="getRefConstraint" setter="setRefConstraint" reffered="true"/>
+   <property name="systemPartitions" dataType="int" defaultValue="1" xmlName="systemPartitions" xmlType="element" getter="getSystemPartitions" setter="setSystemPartitions" reffered="false"/>
+   <roproperty name="allIntervalTablespaces" dataType="java.lang.String" getter="getAllIntervalTablespaces"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g>

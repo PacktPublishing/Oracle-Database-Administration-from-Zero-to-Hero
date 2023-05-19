@@ -1,0 +1,3 @@
+[add it to the previous recording at 1:35]
+
+The parameter is set to zero because we disabled the AMM at the time of creating the database.

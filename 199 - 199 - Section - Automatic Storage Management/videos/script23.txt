@@ -1,0 +1,8 @@
+-- Automatic Storage Management
+Hi everyone,
+
+Oracle Automatic Storage Management or ASM was introduced in Oracle 10g. It is used as a replacement to traditional disk volume manager... though it provides the same basic functions like disk stripping and mirroring.
+
+In this section, we are introducing the ASM and learn how to use it to configure Oracle Restart option.
+
+Let's get started and see how ASM works.

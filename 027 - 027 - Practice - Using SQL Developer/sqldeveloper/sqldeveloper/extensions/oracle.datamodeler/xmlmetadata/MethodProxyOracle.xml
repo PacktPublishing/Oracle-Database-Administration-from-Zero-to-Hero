@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.MethodProxyOracle parentClass="oracle.dbtools.crest.model.design.storage.MethodProxy">
+   <property name="cLibrary" dataType="java.lang.String" defaultValue="" xmlName="cLibrary" xmlType="element" getter="getCLibrary" setter="setCLibrary" reffered="false" search="true"/>
+   <property name="cName" dataType="java.lang.String" defaultValue="" xmlName="cName" xmlType="element" getter="getCName" setter="setCName" reffered="false" search="true"/>
+   <property name="cParameters" dataType="java.lang.String" defaultValue="" xmlName="cParameters" xmlType="element" getter="getCPartemeters" setter="setCPartemeters" reffered="false" search="true"/>
+   <property name="implLanguage" dataType="java.lang.String" defaultValue="PL/SQL" xmlName="implLanguage" xmlType="element" getter="getImplLanguage" setter="setImplLanguage" reffered="false" search="true"/>
+   <property name="isStatic" dataType="java.lang.String" defaultValue="NO" xmlName="isStatic" xmlType="element" getter="getIsStatic" setter="setIsStatic" reffered="false" search="true"/>
+   <property name="javaName" dataType="java.lang.String" defaultValue="" xmlName="javaName" xmlType="element" getter="getJavaName" setter="setJavaName" reffered="false" search="true"/>
+   <property name="plSQLBody" dataType="java.lang.String" defaultValue="" xmlName="plSQLBody" xmlType="element" getter="getPLSQLBody" setter="setPLSQLBody" reffered="false" search="true"/>
+   <property name="pragmaClause" dataType="java.lang.String" defaultValue="" xmlName="pragmaClause" xmlType="element" getter="getPragmaClause" setter="setPragmaClause" reffered="false" search="true"/>
+   <property name="withContext" dataType="java.lang.String" defaultValue="NO" xmlName="withContext" xmlType="element" getter="getWithContext" setter="setWithContext" reffered="false" search="true"/>
+   <roproperty name="methodType" dataType="java.lang.String" getter="getMethodType"/>
+</oracle.dbtools.crest.model.design.storage.oracle.MethodProxyOracle>

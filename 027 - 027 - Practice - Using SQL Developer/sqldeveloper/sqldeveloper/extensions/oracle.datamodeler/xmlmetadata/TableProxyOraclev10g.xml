@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v10g.TableProxyOraclev10g parentClass="oracle.dbtools.crest.model.design.storage.oracle.TableProxyOracle">
+   <property name="supplementalLogColumns" dataType="java.lang.String" defaultValue="" xmlName="supplementalLogColumns" xmlType="element" getter="getSuplementalLogColumns" setter="setSuplementalLogColumns" reffered="false" listOfRefs="true"/>
+   <property name="supplementalLogColumnsNoLog" dataType="java.lang.String" defaultValue="" xmlName="supplementalLogColumnsNoLog" xmlType="element" getter="getSuplementalLogColumnsNoLog" setter="setSuplementalLogColumnsNoLog" reffered="false" listOfRefs="true"/>
+   <property name="supplementalLogConditions" dataType="java.lang.String" defaultValue="ON UPDATE" xmlName="supplementalLogConditions" xmlType="element" getter="getSuplementalLogConditions" setter="setSuplementalLogConditions" search="true" reffered="false"/>
+   <property name="supplementalLogGroupName" dataType="java.lang.String" defaultValue="" xmlName="supplementalLogGroupName" xmlType="element" getter="getSuplementalLogGroupName" setter="setSuplementalLogGroupName" search="true" reffered="false"/>
+   <property name="supplementalLogIDKeys" dataType="java.lang.String" defaultValue="PK-false,UK-false,FK-false,ALL-false" xmlName="supplementalLogIDKeys" xmlType="element" getter="getSupplementalLogIDKeys" setter="setSupplementalLogIDKeys" reffered="false"/>
+   <roproperty name="supplementalLogPK" dataType="boolean" defaultValue="NO" xmlName="supplementalLogPK" xmlType="element" getter="getSupplementalLogPK" setter="setSupplementalLogPK" search="true" reffered="false"/>
+   <roproperty name="supplementalLogUK" dataType="boolean" defaultValue="NO" xmlName="supplementalLogUK" xmlType="element" getter="getSupplementalLogUK" setter="setSupplementalLogUK" search="true" reffered="false"/>
+   <roproperty name="supplementalLogFK" dataType="boolean" defaultValue="NO" xmlName="supplementalLogFK" xmlType="element" getter="getSupplementalLogFK" setter="setSupplementalLogFK" search="true" reffered="false"/>
+   <roproperty name="supplementalLogALL" dataType="boolean" defaultValue="NO" xmlName="supplementalLogALL" xmlType="element" getter="getSupplementalLogALL" setter="setSupplementalLogALL" search="true" reffered="false"/>
+   <roproperty name="allSupplementalLogColumns" dataType="java.lang.String" getter="getAllSupplementalLogColumns"/>
+   <bb_roproperty name="suplementalLogColumnset" dataType="oracle.dbtools.crest.model.design.storage.oracle.TableProxyOracle$InlineList" getter="getLoggingGroups"/>
+   <collection name="loggingGroups" dataType="java.util.List" xmlName="loggingGroups" itemXmlName="logGroup" getter="getLoggingGroups" createItem="createSupplementalLogGroup" getItemByID="getSupplementalLogGroupByID" nativeList="true"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v10g.TableProxyOraclev10g>
